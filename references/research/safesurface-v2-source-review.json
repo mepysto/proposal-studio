@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+  "features": {
+    "path": "references/research/ecowayvision-FEATURES-2026-10-26.md",
+    "sha256": "051746e0a1e3896a2a76108232e800e1a3b002a16c845ee0ccf567579bd896d0",
+    "provenance": "Current user attachment FEATURES (1).md, source f023f1d; exact content copied unchanged",
+    "scope": "feature document, not code/test/runtime"
+  },
+  "manufacturerSources": [
+    {
+      "id": "nano-product",
+      "title": "나노일렉트로닉스 ECO WAY 제품 소개",
+      "scope": "general",
+      "url": "https://www.nanoelectronics.biz/ECOWAY",
+      "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+      "excerpt": "ECO WAY를 스노우멜팅 시스템으로 소개. 제조사의 실험실 비교·설치 사례를 제시.",
+      "applicability": "제조사 공개 설명. 비교시험의 현장·단위·조건 확인 전 절감률을 천안 성과로 전용하지 않음"
+    },
+    {
+      "id": "nano-film",
+      "title": "나노일렉트로닉스 3D나노히터 소재 설명",
+      "scope": "general",
+      "url": "https://www.nanoelectronics.biz/3DNANOHEATER",
+      "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+      "excerpt": "구리나노섬유 기반 필름, 섬유의 고른 분포와 면상 발열을 설명.",
+      "applicability": "제조사 소재 설명. 보행로 단면·시공 두께·전력밀도는 현장 설계에서 별도 확정"
+    },
+    {
+      "id": "nano-applications",
+      "title": "나노일렉트로닉스 생산·납품 사례",
+      "scope": "general",
+      "url": "https://www.nanoelectronics.biz/applications",
+      "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+      "excerpt": "에코웨이가 나노히팅필름을 기반으로 하는 도로히팅 시스템이며 도로·주차장 테스트와 교내 설치를 소개.",
+      "applicability": "제조사 공개 적용 유형. 천안시 설치 실적이나 해당 보행시설 적합성 증거 아님"
+    }
+  ],
+  "manual": {
+    "path": "references/research/ecowayvision-user-manual-2026-10-26.md",
+    "sha256": "f4eba106f988afdb7a516be394c82b910037bf2b9ccb1e2441a90756bd69c4b5",
+    "screenshotFilesAvailable": false
+  },
+  "rfp": {
+    "path": "references/나노히팅필름_적용_에너지절감_스노우멜팅_및_AI_원격관제_시스템_개발_의뢰서.pdf",
+    "pagesRead": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "status": "Development requirements/targets; not completed capability evidence"
+  },
+  "editorialDecision": "Front-load citizen and facility problem, then ECO WAY and EcowayVision; defer technical acceptance/licensing/lifecycle internals outside the first-meeting deck",
+  "finalApproval": false
+}

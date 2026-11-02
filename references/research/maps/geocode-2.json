@@ -1,0 +1,44 @@
+[
+  {
+    "place_id": 223238001,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 472154935,
+    "lat": "36.8007601",
+    "lon": "127.1352626",
+    "category": "amenity",
+    "type": "parking",
+    "place_rank": 30,
+    "importance": 5.99870298313423e-05,
+    "addresstype": "amenity",
+    "name": "봉명역 주차장",
+    "display_name": "봉명역 주차장, 차돌로, 봉명동, 쌍용1동, 동남구, 천안시, 충청남도, 31151, 대한민국",
+    "boundingbox": [
+      "36.8005461",
+      "36.8010295",
+      "127.1350079",
+      "127.1357729"
+    ]
+  },
+  {
+    "place_id": 223315536,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 472154933,
+    "lat": "36.8012932",
+    "lon": "127.1353727",
+    "category": "amenity",
+    "type": "parking",
+    "place_rank": 30,
+    "importance": 5.99870298313423e-05,
+    "addresstype": "amenity",
+    "name": "봉명역 주차장",
+    "display_name": "봉명역 주차장, 순천향3길, 봉명동, 쌍용동, 동남구, 천안시, 충청남도, 31151, 대한민국",
+    "boundingbox": [
+      "36.8011943",
+      "36.8013920",
+      "127.1352597",
+      "127.1354856"
+    ]
+  }
+]

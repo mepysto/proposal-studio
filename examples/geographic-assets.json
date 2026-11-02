@@ -1,0 +1,59 @@
+[
+  {
+    "id": "cheonan-center",
+    "path": "examples/assets/maps/cheonan-center.png",
+    "projection": "EPSG:3857",
+    "bounds": {
+      "west": 127.12,
+      "south": 36.79999127545404,
+      "east": 127.18,
+      "north": 36.82280872194702
+    },
+    "width": 1600,
+    "height": 760,
+    "attribution": "© OpenStreetMap contributors · ODbL",
+    "sourceClaimIds": [
+      "osm-geography"
+    ],
+    "dataSha256": "3d3081f80328e0b3685c8c2ed1eb82193482c2de0f61030be502bfdb164a2bf1",
+    "disclosure": "도로·철도·수계 참고도. 사업 경계·공사 출입구·보행 동선 실사가 아님."
+  },
+  {
+    "id": "station-context",
+    "path": "examples/assets/maps/station-context.png",
+    "projection": "EPSG:3857",
+    "bounds": {
+      "west": 127.12872288780761,
+      "south": 36.803999999999995,
+      "east": 127.1602771121924,
+      "north": 36.81600000000001
+    },
+    "width": 1600,
+    "height": 760,
+    "attribution": "© OpenStreetMap contributors · ODbL",
+    "sourceClaimIds": [
+      "osm-geography"
+    ],
+    "dataSha256": "3d3081f80328e0b3685c8c2ed1eb82193482c2de0f61030be502bfdb164a2bf1",
+    "disclosure": "도로·철도·수계 참고도. 사업 경계·공사 출입구·보행 동선 실사가 아님."
+  },
+  {
+    "id": "oryong-context",
+    "path": "examples/assets/maps/oryong-context.png",
+    "projection": "EPSG:3857",
+    "bounds": {
+      "west": 127.14722247564232,
+      "south": 36.80600000000001,
+      "east": 127.1787775243577,
+      "north": 36.818000000000005
+    },
+    "width": 1600,
+    "height": 760,
+    "attribution": "© OpenStreetMap contributors · ODbL",
+    "sourceClaimIds": [
+      "osm-geography"
+    ],
+    "dataSha256": "3d3081f80328e0b3685c8c2ed1eb82193482c2de0f61030be502bfdb164a2bf1",
+    "disclosure": "도로·철도·수계 참고도. 사업 경계·공사 출입구·보행 동선 실사가 아님."
+  }
+]

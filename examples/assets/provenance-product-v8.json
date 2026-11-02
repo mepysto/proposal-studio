@@ -1,0 +1,31 @@
+{
+  "origin": "Codex built-in imagegen",
+  "externalModelAPIUsed": false,
+  "assets": [
+    {
+      "path": "examples/assets/product-driver-led-v8.png",
+      "prompt": "Create one photorealistic architectural safety-system concept, LANDSCAPE 2:1, camera viewpoint FROM INSIDE a Korean construction yard looking OUT through an open vehicle gate toward a public sidewalk and street. Critical camera and equipment orientation: we see the rear-left or side-rear of a yellow dump truck in the LEFT foreground, it is waiting and facing AWAY from camera toward the gate. A LARGE outdoor LED screen stands on a demountable bolted frame on the INSIDE face of the fence at RIGHT of gate, in the truck driver's forward-right view. The LED screen front faces INTO THE YARD, toward both the driver's cab and this inside-yard camera. Thus the driver can clearly see the LED before moving out; it is NOT an outward-facing public billboard. The screen must show a stylized privacy-protected LIVE SIDEWALK VIEW with anonymous silhouettes in top 2/3, amber pedestrian warning icon, and distinct lower 1/3 construction-information strip with simple pictograms and bars, NO legible text. A single adult pedestrian on OUTSIDE public sidewalk is visible crossing in front of gate beyond truck. At gatepost show CCTV aimed at sidewalk, a directional horn loudspeaker aimed OUTWARD along the sidewalk, an amber beacon, tidy weatherproof control cabinet and protected cabling, visible bolts and removable modular supports. One safety marshal by gate. No collision, no injury, truck still safely stopped INSIDE before sidewalk. Natural restrained daylight, believable construction equipment and scale, precise refined high-resolution visualization, slate/gray/teal metal, yellow vehicle accent. All main devices entirely visible, generous margins. Generic proposed installation, not actual Cheonan location. NO logos, NO readable embedded text, NO arrows or floating callouts, NO futuristic UI.",
+      "purpose": "Inside-yard view: large driver-facing LED shows illustrative sidewalk feed and construction information; modules are proposed, not validated as-built equipment.",
+      "rights": "generated",
+      "evidenceStatus": "Proposed generic concept, not actual Cheonan installation, product specification, measured performance or real incident."
+    },
+    {
+      "path": "examples/assets/product-pedestrian-warning-v8.png",
+      "prompt": "Create ONE high resolution realistic architectural product concept, LANDSCAPE 3:2. View FROM PUBLIC SIDEWALK OUTSIDE a Korean construction gate. Focus on the pedestrian-facing SmartFence proposed safety module: white directional horn loudspeaker visibly aimed ALONG the public sidewalk, amber warning beacon lit, small outward-facing weatherproof LED warning sign mounted on modular teal/gray fence post, CCTV camera monitoring truck approach and sidewalk, sturdy protected cables with removable bolted bracket. A dump truck waits safely INSIDE the open gate in mid background. Two adult pedestrians approaching along a continuous accessible sidewalk clearly see the warning unit; no injury, no panic, no collision, truck not entering their space. The small sign shows only an amber truck caution pictogram, no readable text. The backside/edge of a LARGE inward-facing driver LED board can be seen INSIDE yard beyond gate, front screen NOT facing the public. A safety marshal controls gate. New technology is physically visible and believable, not just a generic construction photo. White/gray fence with teal posts, yellow/amber caution accents, natural overcast daylight, editorial architectural visualization, generic proposed location not an actual Cheonan site. No logos, no text, no floating sound-wave graphics, no labels, no statistics or futuristic effects. We will add editable Korean sound-message and function labels on the slide outside image.",
+      "purpose": "Outside sidewalk view: pedestrian-facing directional horn, amber warning and truck caution display.",
+      "rights": "generated",
+      "evidenceStatus": "Proposed generic concept, not actual Cheonan installation, product specification, measured performance or real incident."
+    },
+    {
+      "path": "examples/assets/product-sidewalk-feed-v8.png",
+      "prompt": "One ultra-wide 16:5 clean simulated CCTV viewport for a municipal construction-site driver guidance screen. Fixed elevated camera view from a construction gate aimed along the PUBLIC SIDEWALK, showing continuous paved sidewalk, curb, railing, street edge and gray temporary fence. Two adult pedestrians walking along sidewalk, rendered as realistic anonymous neutral silhouettes with faces unrecognizable / naturally blurred, no identifying detail. Soft daylight, crisp restrained realistic architectural-camera image, pale gray pavement, muted teal/slate fencing. No vehicle about to collide, no injury, no alarm graphics. NO timestamp, no text, no logos, no UI frames, no warning symbols, no floating boxes. This is a fictional illustrative video frame, not actual CCTV or a real Cheonan location. Keep people within central region; we will label it as illustrative simulated footage on the slide.",
+      "purpose": "Fictional anonymized illustrative sidewalk feed inside editable driver-screen mockup; not actual CCTV or demonstrated anonymization.",
+      "rights": "generated",
+      "evidenceStatus": "Proposed generic concept, not actual Cheonan installation, product specification, measured performance or real incident."
+    }
+  ],
+  "rejectedDraft": {
+    "path": "/Users/baekseongeun/.codex/generated_images/01a17891-e22e-7240-b4dc-76053d007aa6/exec-a9776a06-3f5a-467a-9c1d-f3e504227c1a.png",
+    "reason": "LED orientation did not clearly face the driver inside yard; not used in proposal."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-29",
+  "purpose": "제안 단계의 지역 문제→기존 대책→AI 보완 범위 연결",
+  "sources": [
+    {
+      "id": "baekseok-report",
+      "title": "CTN 백석5지구 공사장 입구 안전요원 배치 보도",
+      "url": "https://m.ctnews.kr/article.php?aid=1766396169435275047&page=4",
+      "publishedDate": "2025-12-22",
+      "paraphrase": "공사장 진출입로 신호수 미배치와 입구 안전요원 상주 시정 조치를 보도",
+      "limits": "언론 2차 보도·검색 색인 본문 열람, 원문 직접 접속 실패. 현재 상태·전체 현장 대표성·사고 원인·실증 대상 증명 아님",
+      "verification": "보도가 존재하고 해당 내용을 싣는다는 확인; 현장 사실 독립 확인 아님"
+    },
+    {
+      "id": "bongmyeong-report",
+      "title": "CTN 봉명동 철거공사 인근 보행 공간 보도",
+      "url": "https://m.ctnews.kr/article.php?aid=1791778935461319021",
+      "publishedDate": "2026-10-12",
+      "paraphrase": "가설울타리·기존 시설물로 제한된 보행 공간과 보행약자 불편 우려를 보도",
+      "limits": "언론 2차 보도·검색 색인 본문 열람, 원문 직접 접속 실패. 위법 여부·현장 실측·현재 미조치 상태 단정 불가",
+      "verification": "보도가 존재하고 해당 내용을 싣는다는 확인; 현장 사실 독립 확인 아님"
+    },
+    {
+      "id": "gwangdeok-report",
+      "title": "뉴시스 광덕 공영주차장 스마트 관제 도입 보도",
+      "url": "https://mobile.newsis.com/view/NISX20260710_0003703789",
+      "publishedDate": "2026-07-10",
+      "paraphrase": "종전 주차 가능 여부 사전 확인 곤란·불법주정차 문제와 CCTV 주차정보 인식·전광판 도입을 보도",
+      "limits": "천안시 발표를 인용한 언론 2차 보도. 광덕에는 해당 기능이 이미 도입됨; 신규 재구축 수요·성과 수치 증명 아님",
+      "verification": "보도가 존재하고 해당 내용을 싣는다는 확인; 현장 사실 독립 확인 아님"
+    },
+    {
+      "id": "flood-report",
+      "title": "쿠키뉴스 충남지사 호우 피해현장 점검 보도",
+      "url": "https://v.daum.net/v/VdYVKoyOjK",
+      "publishedDate": "2026-07-09",
+      "paraphrase": "청수지하차도·눈들교 방문과 청수지하차도 빗물 유입에 따른 차량 통행 통제를 보도",
+      "limits": "언론 2차 보도. 당시 안내 실패·AI 부재·현재 미복구를 증명하지 않음",
+      "verification": "보도가 존재하고 해당 내용을 싣는다는 확인; 현장 사실 독립 확인 아님"
+    },
+    {
+      "id": "festival-report",
+      "title": "충청뉴스 천안 축제 안전관리실무위원회 보도",
+      "url": "https://www.ccnnews.co.kr/news/articleView.html?idxno=385011",
+      "publishedDate": "2025-09-15",
+      "paraphrase": "피크타임·흥타령춤축제의 순간 최대 관람객 8천~1만 명 예상과 인파 대응 강화 논의",
+      "limits": "언론 2차 보도·사전 추산. 실제 동시 관람객·밀집 사고·현재 안내 부족을 뜻하지 않음",
+      "verification": "보도가 존재하고 해당 내용을 싣는다는 확인; 현장 사실 독립 확인 아님"
+    }
+  ],
+  "notUsed": [
+    {
+      "candidate": "천안시의회 2025.10.31 후진 장비 사고 검색 결과",
+      "reason": "검색 색인과 직접 열람 본문을 재대조하지 못해 이번 장표 근거에서 제외"
+    }
+  ],
+  "fieldSurveyPerformed": false,
+  "caseSitesAutomaticallySelectedForPilot": false
+}

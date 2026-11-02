@@ -1,0 +1,237 @@
+{
+  "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+  "method": "manual public web reads by assistant; no runtime search API",
+  "sources": [
+    {
+      "id": "C-URC",
+      "title": "천안시 도시재생지원센터 · 총괄사업현황",
+      "url": "https://www.cheonanurc.or.kr/68",
+      "scope": "local",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "오룡지구 민·관협력형도시재생 리츠사업 / 동남구 원성동 31-70 일원",
+      "applicability": "공개 사업 목록·영역 확인. 현장 공정·출입구·보행량을 확인한 자료가 아님."
+    },
+    {
+      "id": "C-STATION",
+      "title": "천안시 도시재생지원센터 · 천안역세권 혁신지구",
+      "url": "https://www.cheonanurc.or.kr/75",
+      "scope": "local",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "사업지역 천안시 서북구 와촌동 106-83 일원",
+      "applicability": "주소·복합시설 계획 확인. 게시 기간 2020~2027은 최신 공정 보증으로 사용하지 않음."
+    },
+    {
+      "id": "C-PLAN",
+      "title": "건축공간연구원 AURUM · 천안 스마트도시계획",
+      "url": "https://www.aurum.re.kr/Legal/LegalSub.aspx?pcode=B07",
+      "scope": "local",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "2029년 천안시 스마트도시계획 / 수립기간 2025 ~ 2029",
+      "applicability": "계획 아카이브의 기간·방향 확인. 개별 서비스 설치·API·예산 확보 증거가 아님."
+    },
+    {
+      "id": "C-MOLIT",
+      "title": "국토교통부 · 2024년 스마트도시 선정 발표",
+      "url": "https://m.korea.kr/news/policyNewsView.do?newsId=148930651",
+      "scope": "local",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "거점형에 충남 천안시 1곳",
+      "applicability": "2024년 선정 및 역세권·산단·캠퍼스 대상 방향. SmartFence 선정·예산·계약을 의미하지 않음."
+    },
+    {
+      "id": "C-COUNCIL",
+      "title": "천안시의회 · 2026.09.29 건설도시위원회",
+      "url": "https://www.cheonancouncil.go.kr/cms/mntsMbrSmplViewer.do?schMntsId=5019&schVar08=MBR0162",
+      "scope": "local",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "버스정류장, 횡단보도 등 다중이용시설",
+      "applicability": "해체 관련 조례안 심의에서 시민안전을 다룬 기록. 이 사업의 설치 허가나 현행 법 적용 판단으로 사용하지 않음."
+    },
+    {
+      "id": "C-FENCE",
+      "title": "충청뉴스 · 천안 가설울타리 디자인 조사 보도",
+      "url": "https://www.ccnnews.co.kr/news/articleView.html?idxno=383654",
+      "scope": "local",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "천안8경 공사장 가설울타리 디자인 만족도 조사",
+      "applicability": "2025년 지역 정책의 언론 보도. 조사 결과·현재 현장·저작물 사용허가를 확인한 것은 아님."
+    },
+    {
+      "id": "P-ASSUME",
+      "title": "제안자가 작성한 범위·예산·효과 산식 가정",
+      "scope": "project",
+      "materialId": "examples/smartfence-full.project.json",
+      "applicability": "확정 견적·예산·현장 성과가 아닌 기획 가정. 원본 Markdown 예산 범위를 기준으로 작성."
+    }
+  ],
+  "claims": [
+    {
+      "id": "city-smart",
+      "text": "천안시는 2024년 거점형 스마트도시 조성사업에 선정됐다. 역세권·산단·캠퍼스를 묶는 실증 방향이 발표됐다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-MOLIT"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "city-plan",
+      "text": "AURUM은 천안시 스마트도시계획의 수립기간을 2025~2029로 소개하고 시민체감형 서비스를 기본방향으로 설명한다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-PLAN"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "city-station",
+      "text": "천안역세권 혁신지구는 서북구 와촌동 106-83 일원이며 환승·주거·업무·상업 복합시설을 계획한다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-STATION"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "city-oryong",
+      "text": "도시재생지원센터의 공개 현황은 오룡지구 리츠사업을 동남구 원성동 31-70 일원으로 소개한다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-URC"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "city-bongmyeong",
+      "text": "공개 현황에는 봉명지구 도시재생사업이 동남구 봉명동 39-1 일원으로 기재돼 있다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-URC"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "city-council",
+      "text": "2026년 9월 시의회 건설도시위원회는 다중이용시설 주변 해체 안전을 다루는 건축물관리 조례안을 심의했다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-COUNCIL"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "city-fence",
+      "text": "2025년 천안시가 천안8경 가설울타리 디자인에 대한 시민 만족도 조사를 실시했다는 지역 보도가 있다.",
+      "status": "externally-verified",
+      "scope": "local",
+      "sourceIds": [
+        "C-FENCE"
+      ],
+      "evidenceKind": "document",
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00"
+    },
+    {
+      "id": "candidate-fit",
+      "text": "와촌동·원성동 공공·복합개발 현장은 출입구 단위 보행안전 실증의 조사 후보이며 현재 설치 적합성·공정·동의는 미확인이다.",
+      "status": "inference",
+      "scope": "project",
+      "sourceIds": [
+        "C-STATION",
+        "C-URC",
+        "M1"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "pilot-package",
+      "text": "출입구 1개소, 울타리 약 10~20m, 카메라 1~2대와 현장 분석·경고·조치 기록을 초도 실증 범위로 제안한다.",
+      "status": "user-provided",
+      "scope": "project",
+      "sourceIds": [
+        "M1"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "budget-plan",
+      "text": "원본 기획의 4,500만~1억800만원 범위에서 기준안 7,200만원(VAT 별도)을 가정했다. 실제 견적과 시 예산은 미확정이다.",
+      "status": "assumption",
+      "scope": "project",
+      "sourceIds": [
+        "M1",
+        "P-ASSUME"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "time-example",
+      "text": "하루 20건, 월20일, 건당 기록시간 5분에서2분이라는 계산용 가정은 월20시간의 작업시간 차이에 해당하며 실측·목표·예측이 아니다.",
+      "status": "assumption",
+      "scope": "project",
+      "sourceIds": [
+        "P-ASSUME"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "impact-hypothesis",
+      "text": "접근 알림·현장 통제·조치 이력을 결합하면 대응 확인과 관리 업무를 개선할 가능성이 있으나 효과는 현장 비교로 검증해야 한다.",
+      "status": "inference",
+      "scope": "project",
+      "sourceIds": [
+        "M1",
+        "P-ASSUME"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "roadmap-plan",
+      "text": "현장 협의·통합시험·설치·운영·평가를 착수 후 약8개월로 구성한 일정은 제안 가정이며 공정과 승인에 따라 조정한다.",
+      "status": "assumption",
+      "scope": "project",
+      "sourceIds": [
+        "M1",
+        "P-ASSUME"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "privacy-boundary",
+      "text": "촬영 범위·안내·권한·보존기간·삭제·원본 영상의 사용목적과 공공 안내장치의 설치 적합성을 도입 전에 개별 검토한다.",
+      "status": "user-provided",
+      "scope": "project",
+      "sourceIds": [
+        "M1"
+      ],
+      "evidenceKind": "document"
+    },
+    {
+      "id": "governance-plan",
+      "text": "에스엘티·강민코퍼레이션·비트리의 역할은 제공 기획상의 제안 구조이며 고객과의 계약·조달·권한을 확정한 상태가 아니다.",
+      "status": "user-provided",
+      "scope": "project",
+      "sourceIds": [
+        "M1"
+      ],
+      "evidenceKind": "document"
+    }
+  ],
+  "failedReads": [
+    "URC /73 and /72 direct fetch forbidden; used verified /68 public directory",
+    "National smartcity presentation PDF unavailable; used policybriefing primary text",
+    "privacy guide PDF timeout; no new legal conclusion claimed"
+  ],
+  "localFieldSurvey": false
+}

@@ -1,0 +1,4178 @@
+{
+  "schemaVersion": 1,
+  "id": "upgraded-showcase",
+  "title": "천안시 공사현장 보행안전 — 차세대 구도·시맨틱 프리미티브 실증 예제",
+  "proposer": {
+    "legalName": "(주)에스엘티",
+    "role": "제안 주관",
+    "collaborators": [
+      "강민코퍼레이션",
+      "비트리"
+    ],
+    "coverCollaborators": [
+      "강민코퍼레이션"
+    ],
+    "sourceClaimIds": [
+      "governance-plan"
+    ],
+    "contact": {
+      "logoPath": "examples/assets/slt-logo-source.png",
+      "phone": "(041) 571-2057/8",
+      "email": "slt888@hanmail.net",
+      "address": "충남 천안시 동남구\n청당산업길 143(구룡동)",
+      "sourceClaimIds": [
+        "slt-contact"
+      ]
+    }
+  },
+  "audience": "천안시 및 공공공사 발주기관",
+  "proposalType": "municipality-technology",
+  "mode": "quick",
+  "materials": [],
+  "design": {
+    "name": "SLT field response / authored compositions",
+    "layoutStandard": "technical-editorial-v2",
+    "font": "Apple SD Gothic Neo",
+    "colors": {
+      "ink": "242F35",
+      "paper": "FCFAF4",
+      "accent": "8A4A25",
+      "muted": "4A5C62",
+      "dark": "242F35"
+    },
+    "titleSize": 32,
+    "bodySize": 19,
+    "margin": 0.62,
+    "grid": 12,
+    "imageRule": "preserve-aspect; concept images must be labelled",
+    "chartStyle": "native editable chart; no unverified data",
+    "diagramStyle": "native PowerPoint shapes",
+    "iconStyle": "minimal line",
+    "tableRule": "editable rows, units and source required"
+  },
+  "designDirection": {
+    "concept": "물리적 위험 인지부터 인과 가설, 현장 전광판 화면, 주체별 책임 스윔레인까지 페이지마다 질문에 맞는 전용 시각 구조로 설명한다",
+    "visualThesis": "반복되는 3박스 나열을 배제하고, 12컬럼 그리드 위에서 장면·차트·인과사슬·주석화면·스윔레인·지도·일정표를 결합한다",
+    "brandConstraints": [
+      "제안 주관은 (주)에스엘티",
+      "실제 제공 명칭·근거·편집 가능 텍스트 유지"
+    ],
+    "avoid": [
+      "모든 장표에 같은 높이의 전폭 강조 띠",
+      "AI 감지를 물리적 통제 완료처럼 표현",
+      "위험도 순위·실증 성과의 임의 시각화"
+    ],
+    "references": [
+      {
+        "sourceId": "M1",
+        "role": "content",
+        "adopt": [
+          "물리적 분리와 현장 통제 우선"
+        ],
+        "reject": [
+          "과거 사례의 고정 구도 자동 승계"
+        ],
+        "reason": "제안의 현장 대응 논리를 구도의 기준으로 삼음"
+      },
+      {
+        "sourceId": "REF-UBER",
+        "role": "design",
+        "adopt": [
+          "설명 목적에 맞는 위계와 선택적 강조"
+        ],
+        "reject": [
+          "원문 브랜드·수치·표현·고객 로고의 복제"
+        ],
+        "reason": "공식 공개 자료의 일부 페이지를 직접 읽고 원리를 새 내용에 적용"
+      },
+      {
+        "sourceId": "REF-DUARTE",
+        "role": "design",
+        "adopt": [
+          "설명 목적에 맞는 위계와 선택적 강조"
+        ],
+        "reject": [
+          "원문 브랜드·수치·표현·고객 로고의 복제"
+        ],
+        "reason": "공식 공개 자료의 일부 페이지를 직접 읽고 원리를 새 내용에 적용"
+      },
+      {
+        "sourceId": "REF-AIRBNB",
+        "role": "design",
+        "adopt": [
+          "설명 목적에 맞는 위계와 선택적 강조"
+        ],
+        "reject": [
+          "원문 브랜드·수치·표현·고객 로고의 복제"
+        ],
+        "reason": "공식 공개 자료의 일부 페이지를 직접 읽고 원리를 새 내용에 적용"
+      }
+    ],
+    "palette": {
+      "blue": "335C81",
+      "amber": "975E19",
+      "tealTint": "F3E8DD"
+    },
+    "deliveryMode": "presented"
+  },
+  "sources": [
+    {
+      "id": "M1",
+      "title": "사용자 제공 SmartFence 사업기획 초안",
+      "scope": "project",
+      "materialId": "examples/Cheonan_SmartFence_AI.md"
+    },
+    {
+      "id": "H1",
+      "title": "HSE · Traffic management on site",
+      "scope": "general",
+      "applicability": "일반적인 건설현장 동선·시야 설계 원칙. 천안 사고·민원·설치 적합성 또는 한국 법규를 입증하지 않음.",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/vehiclestrafficmanagement.htm",
+      "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+      "excerpt": "provide separate entry and exit gateways for pedestrians and vehicles"
+    },
+    {
+      "id": "H2",
+      "title": "HSE · Protecting the public",
+      "scope": "general",
+      "applicability": "현장 출입 차량과 시민 통행의 접점을 다루는 일반 지침. 특정 천안 현장의 위험도는 관찰이 필요함.",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/publicprotection.htm",
+      "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+      "excerpt": "Make sure pedestrians cannot be struck by vehicles entering or leaving the site."
+    },
+    {
+      "id": "N1",
+      "title": "CDC/NIOSH · Construction Equipment Visibility",
+      "scope": "general",
+      "applicability": "차량 주변의 제한 시야에 대한 일반 근거. 차량 기종·울타리 배치별 실제 사각은 별도 실측.",
+      "url": "https://www.cdc.gov/niosh/motor-vehicle/constructionequipmentvisibilitydiagram/",
+      "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+      "excerpt": "Blind areas refer to spaces of limited visibility around construction vehicles and equipment."
+    },
+    {
+      "id": "AXIS-PUBLIC-20261030",
+      "title": "Axis 공식 영상 분석·오디오 연동·관제 기능 안내",
+      "scope": "general",
+      "applicability": "일부 지능형 CCTV 생태계의 공개 기능을 확인한 예시. 일반 CCTV 전체 기능·구매 구성·상대 성능을 뜻하지 않음.",
+      "url": "https://help.axis.com/en-us/axis-camera-station-feature-guide",
+      "checkedAt": "2026-10-30T00:00:00Z",
+      "excerpt": "AXIS Camera Station 5의 action rules / integration: 분석 이벤트로 녹화·오디오 메시지·출력·운영자 알림을 연계. 영상 분석은 카메라 엣지에서도 가능."
+    },
+    {
+      "id": "C-COUNCIL",
+      "title": "천안시의회 · 2026.09.29 건설도시위원회",
+      "scope": "local",
+      "applicability": "해체 관련 조례안 심의에서 시민안전을 다룬 기록. 이 사업의 설치 허가나 현행 법 적용 판단으로 사용하지 않음.",
+      "url": "https://www.cheonancouncil.go.kr/cms/mntsMbrSmplViewer.do?schMntsId=5019&schVar08=MBR0162",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "버스정류장, 횡단보도 등 다중이용시설"
+    },
+    {
+      "id": "C-FENCE",
+      "title": "충청뉴스 · 천안 가설울타리 디자인 조사 보도",
+      "scope": "local",
+      "applicability": "2025년 지역 정책의 언론 보도. 조사 결과·현재 현장·저작물 사용허가를 확인한 것은 아님.",
+      "url": "https://www.ccnnews.co.kr/news/articleView.html?idxno=383654",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "천안8경 공사장 가설울타리 디자인 만족도 조사"
+    },
+    {
+      "id": "C-MOLIT",
+      "title": "국토교통부 · 2024년 스마트도시 선정 발표",
+      "scope": "local",
+      "applicability": "2024년 선정 및 역세권·산단·캠퍼스 대상 방향. SmartFence 선정·예산·계약을 의미하지 않음.",
+      "url": "https://m.korea.kr/news/policyNewsView.do?newsId=148930651",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "거점형에 충남 천안시 1곳"
+    },
+    {
+      "id": "C-PIPELINE",
+      "title": "천안 도시재생 총괄사업현황 (후속 수요 탐색)",
+      "scope": "local",
+      "applicability": "공개 계획에 따른 후속 조사권역. 실제 공정·출입구·장비 수요·발주예산 미확정.",
+      "url": "https://www.cheonanurc.or.kr/68",
+      "checkedAt": "2026-10-28T05:19:37Z",
+      "excerpt": "와촌동 혁신지구 2020~2027, 오룡 리츠 2021~2029, 문성동 인정 2027~2029, 성정지구 정비 2027~2031 게시."
+    },
+    {
+      "id": "C-PLAN",
+      "title": "건축공간연구원 AURUM · 천안 스마트도시계획",
+      "scope": "local",
+      "applicability": "계획 아카이브의 기간·방향 확인. 개별 서비스 설치·API·예산 확보 증거가 아님.",
+      "url": "https://www.aurum.re.kr/Legal/LegalSub.aspx?pcode=B07",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "2029년 천안시 스마트도시계획 / 수립기간 2025 ~ 2029"
+    },
+    {
+      "id": "C-STATION",
+      "title": "천안시 도시재생지원센터 · 천안역세권 혁신지구",
+      "scope": "local",
+      "applicability": "주소·복합시설 계획 확인. 게시 기간 2020~2027은 최신 공정 보증으로 사용하지 않음.",
+      "url": "https://www.cheonanurc.or.kr/75",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "사업지역 천안시 서북구 와촌동 106-83 일원"
+    },
+    {
+      "id": "C-TRAFFIC-24",
+      "title": "대전일보 2025-02-26 · 2024년 천안시 교통사고 보도",
+      "scope": "local",
+      "applicability": "천안시·TAAS 수치를 인용한 언론 2차자료. 원자료 직접 조회가 아니며 공사장·후보지별 사고 통계가 아님.",
+      "url": "https://v.daum.net/v/20250226112656936",
+      "checkedAt": "2026-10-27T06:00:00+00:00",
+      "excerpt": "사망자 34명 · 보행 교통사고 사망자 17명"
+    },
+    {
+      "id": "C-TRAFFIC-25",
+      "title": "대전일보 2026-02-08 · 2025년 천안시 교통사고 보도",
+      "scope": "local",
+      "applicability": "TAAS를 인용한 언론 2차자료. 전체와 보행자는 중첩 집계이며 더할 수 없음. SmartFence 성과·현장 수요의 직접 증거가 아님.",
+      "url": "https://v.daum.net/v/bJDjdnrNsK",
+      "checkedAt": "2026-10-27T06:00:00+00:00",
+      "excerpt": "사망자 27명 · 보행 교통사고 사망자 13명"
+    },
+    {
+      "id": "C-URC",
+      "title": "천안시 도시재생지원센터 · 총괄사업현황",
+      "scope": "local",
+      "applicability": "공개 사업 목록·영역 확인. 현장 공정·출입구·보행량을 확인한 자료가 아님.",
+      "url": "https://www.cheonanurc.or.kr/68",
+      "checkedAt": "2026-10-27T03:13:39.014765+00:00",
+      "excerpt": "오룡지구 민·관협력형도시재생 리츠사업 / 동남구 원성동 31-70 일원"
+    },
+    {
+      "id": "G-OSM",
+      "title": "OpenStreetMap 지리자료 · 천안 원도심 도로·철도·수계",
+      "scope": "local",
+      "applicability": "EPSG:3857로 투영한 참고도. 행정 경계·사업 경계·공사 출입구 실사 아님. © OpenStreetMap contributors / ODbL.",
+      "url": "https://www.openstreetmap.org/copyright",
+      "checkedAt": "2026-10-27T06:00:00+00:00",
+      "excerpt": "OSM 도로·철도·수계 geometry 3,391개와 Nominatim 참고 좌표"
+    },
+    {
+      "id": "P-ASSUME",
+      "title": "제안자가 작성한 범위·예산·효과 산식 가정",
+      "scope": "project",
+      "applicability": "확정 견적·예산·현장 성과가 아닌 기획 가정. 원본 Markdown 예산 범위를 기준으로 작성.",
+      "materialId": "examples/smartfence-full.project.json"
+    },
+    {
+      "id": "U-CORE",
+      "title": "제안사 제품 역량 추가 설명",
+      "scope": "project",
+      "applicability": "제안사 제공 설명. 최고 성능 순위·실측·보드 제작은 강민코퍼레이션이며 NPU 칩 제조를 뜻하지 않음.",
+      "materialId": "conversation-product-capabilities-2026-10-28",
+      "excerpt": "강민코퍼레이션이 NPU 칩을 탑재한 보드를 제작. 칩 자체 제조 아님. 신제품으로 사양·시험자료는 추후 정식 제안 첨부 예정. 현 제안은 담당자 설득에 집중."
+    },
+    {
+      "id": "U-INTEGRATED",
+      "title": "에스엘티 중심 통합 제품·시각 개선 사용자 지시",
+      "scope": "project",
+      "applicability": "제안 브랜드와 대외 표기 지침. 세부 기술 주체의 이력·공급 사실은 기존 원장에 보존.",
+      "materialId": "conversation-integrated-offering-2026-10-28",
+      "excerpt": "에스엘티 제안, 강민코퍼레이션·비트리는 기술참여. 업체별 시스템명보다 AI 제품 보유 기업들의 통합 제품으로 소개. 관제명은 AI 지능형 안전 관제. 11 비교 우위, 14 객체인식/유도원 통제/전광판 프레임, 19 이미지·블록·화살표 재구성."
+    },
+    {
+      "id": "U-PLATFORM",
+      "title": "사용자 제품 명칭·독립 기능·통합관제 추가 설명",
+      "scope": "project",
+      "applicability": "사용자 제공 제품 설명. 칩 자체 제조나 실측 사양을 뜻하지 않음. 화면 배치·표출 권한·경보 우선순위는 제안 운영 설계.",
+      "materialId": "conversation-product-platform-2026-10-28",
+      "excerpt": "3사 협력 제품의 대외 명칭은 자체 제작 AI NPU 안전관리 장치, 컬러 LED AIoT 전광판. 전광판은 센서 데이터·CCTV·AI 콘텐츠 생성 기능과 공공 목적 광고 표출을 포함. 두 제품 자체 기능과 비트리 통합관제 제품을 함께 제공."
+    },
+    {
+      "id": "U-PRODUCT",
+      "title": "사용자 추가 사업 요구 · 양방향 안내·대형 LED·회수/재배치",
+      "scope": "project",
+      "applicability": "사용자 제시 기능·운영전략. 제품 규격·현재 성능·인증·시 보관 장소·계약·금액은 확인 전.",
+      "materialId": "docs/product-strategy-v8.md"
+    },
+    {
+      "id": "U-PUBLIC-SAFETY",
+      "title": "공사장 외 공공안전 공간 적용·기존 CCTV 차별화 사용자 요청",
+      "scope": "project",
+      "applicability": "추가 제안 기획의 방향. 신규 설치 수요·성능·사업 확정 근거 아님.",
+      "materialId": "conversation-public-safety-2026-10-30",
+      "excerpt": "공사장뿐 아니라 여러 공공 안전이 필요한 공간에 설치 가능성을 기획하고 기존 CCTV와의 차별성을 제안 장표에 추가."
+    },
+    {
+      "id": "U-SLT-CONTACT",
+      "title": "사용자 제공 에스엘티 원본 제안서 13페이지 · 로고와 연락처",
+      "scope": "project",
+      "applicability": "PDF 텍스트의 숫자 CID 누락을 원본 페이지 렌더로 대조해 전사. 로고는 같은 원본 PDF의 실제 표장을 추출. 제공 자료 기준이며 외부 최신성 재확인 아님.",
+      "materialId": "references/AI스마트도시정보시스템제안서(에스엘티)_천안.pdf#page=13",
+      "excerpt": "(주)에스엘티 / (041) 571-2057/8 / slt888@hanmail.net / 충남 천안시 동남구 청당산업길 143(구룡동)"
+    },
+    {
+      "id": "V-AXIS",
+      "title": "Axis 공식 Object Analytics·D4100-E 기술 문서",
+      "scope": "general",
+      "applicability": "기능군 참고. 천안시 경쟁입찰 참여나 동일 패키지·가격 비교가 아님.",
+      "url": "https://help.axis.com/en-us/axis-object-analytics",
+      "checkedAt": "2026-10-28T05:19:37Z",
+      "excerpt": "엣지 사람/차량 분석과 영역·선 통과 이벤트, D4100-E MQTT 경광·사이렌 연계 예시."
+    },
+    {
+      "id": "V-SAMSUNG",
+      "title": "Samsung XHB-F 공식 Outdoor LED 사양서",
+      "scope": "general",
+      "applicability": "디스플레이 부품군 참고. SmartFence 성능이나 동일 용도 패키지의 우열을 증명하지 않음.",
+      "url": "https://image-us.samsung.com/SamsungUS/samsungbusiness/displays/direct-view-led/xhb-series/xhb-f-outdoor/XHB-F-Outdoor-Leaflet.pdf",
+      "checkedAt": "2026-10-28T05:19:37Z",
+      "excerpt": "옥외 컬러 LED 제품의 밝기·명암비·시야각·디밍 사양 공개."
+    },
+    {
+      "id": "REF-UBER",
+      "title": "Uber / Transplace Acquisition — design reference",
+      "scope": "general",
+      "applicability": "디자인 원리만 참고. 해당 회사 수치·로고·실적은 본 제안의 근거가 아님",
+      "url": "https://s23.q4cdn.com/407969754/files/doc_presentations/2021/07/Uber-Transplace-Acquisition.pdf"
+    },
+    {
+      "id": "REF-DUARTE",
+      "title": "Duarte / When presenting data, get to the point fast — design reference",
+      "scope": "general",
+      "applicability": "디자인 원리만 참고. 해당 회사 수치·로고·실적은 본 제안의 근거가 아님",
+      "url": "https://www.duarte.com/blog/when-presenting-data-get-to-the-point-fast/"
+    },
+    {
+      "id": "REF-AIRBNB",
+      "title": "Airbnb / Q4 2024 Shareholder Letter — design reference",
+      "scope": "general",
+      "applicability": "디자인 원리만 참고. 해당 회사 수치·로고·실적은 본 제안의 근거가 아님",
+      "url": "https://s26.q4cdn.com/656283129/files/doc_financials/2024/q4/Airbnb_Q4-2024-Shareholder-Letter_Final.pdf"
+    }
+  ],
+  "claims": [
+    {
+      "id": "separation",
+      "text": "HSE 지침은 차량·보행 동선 분리와 출입구·교차점의 시야 확보를 강조한다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "H1"
+      ],
+      "verifiedAt": "2026-10-26T16:01:21.873110+00:00",
+      "approved": false
+    },
+    {
+      "id": "public-boundary",
+      "text": "HSE 시민 보호 지침은 출입 차량이 보행자를 위험하게 하지 않도록 동선을 관리하는 문제를 다룬다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "H2"
+      ],
+      "verifiedAt": "2026-10-26T16:01:21.873110+00:00",
+      "approved": false
+    },
+    {
+      "id": "blind-area",
+      "text": "NIOSH는 건설 차량·장비 주변에 제한된 시야 영역이 존재함을 설명한다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "N1"
+      ],
+      "verifiedAt": "2026-10-26T16:01:21.873110+00:00",
+      "approved": false
+    },
+    {
+      "id": "local-gap",
+      "text": "천안의 대상 현장·동선 교차 빈도·위험 접근·사고 통계는 이 제안에서 확인되지 않았다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "scope",
+      "text": "공공공사 출입구 1개소와 가설울타리 일부를 대상으로 실증을 제안한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "manual-authority",
+      "text": "유도원·안전관리자가 동선을 통제하고 AI는 운행 허가·교통신호 제어를 자동 수행하지 않는다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "readiness",
+      "text": "통합제품의 실외 성능과 설치·촬영·시민 안내장치의 적합성은 도입 전에 검토해야 한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "response-chain",
+      "text": "경고 발송만으로 현장 통제가 이루어졌다고 판단할 수 없으므로 조치 확인과 기록을 분리한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "inference",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "observation-proposal",
+      "text": "객체 접근과 위험구역 조건을 관측·판단해 담당자의 인지를 보조하는 구성을 시험한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "warning-proposal",
+      "text": "담당자 경고와 장치 응답, 유도원 조치 이력을 연결하는 운영방식을 시험한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "aiot-content",
+      "text": "컬러 LED AIoT 전광판은 센서 데이터·CCTV 연계, AI 콘텐츠 생성과 안전·공사정보·공공 목적 광고 표출 기능을 포함한다는 사용자 설명이다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-PLATFORM"
+      ],
+      "approved": false
+    },
+    {
+      "id": "axis-reference",
+      "text": "Axis 공식 문서는 카메라 엣지 AI 분석과 이벤트 기반 D4100-E 경광·사이렌 연계 예시를 공개한다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "V-AXIS"
+      ],
+      "verifiedAt": "2026-10-28T05:19:37Z",
+      "approved": false
+    },
+    {
+      "id": "budget-plan",
+      "text": "기존 축소안 참고: 원본 기획의 4,500만~1억800만원 범위에서 기준안 7,200만원(VAT 별도)을 가정했다. 실제 견적과 시 예산은 미확정이다. 대형 LED·회수·보관·재설치를 포함한 확장안의 금액이 아니다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "M1",
+        "P-ASSUME"
+      ],
+      "approved": false
+    },
+    {
+      "id": "candidate-fit",
+      "text": "와촌동·원성동 공공·복합개발 현장은 출입구 단위 보행안전 실증의 조사 후보이며 현재 설치 적합성·공정·동의는 미확인이다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "inference",
+      "sourceIds": [
+        "C-STATION",
+        "C-URC",
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "city-bongmyeong",
+      "text": "공개 현황에는 봉명지구 도시재생사업이 동남구 봉명동 39-1 일원으로 기재돼 있다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-URC"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "city-council",
+      "text": "2026년 9월 시의회 건설도시위원회는 다중이용시설 주변 해체 안전을 다루는 건축물관리 조례안을 심의했다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-COUNCIL"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "city-fence",
+      "text": "2025년 천안시가 천안8경 가설울타리 디자인에 대한 시민 만족도 조사를 실시했다는 지역 보도가 있다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-FENCE"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "city-oryong",
+      "text": "도시재생지원센터의 공개 현황은 오룡지구 리츠사업을 동남구 원성동 31-70 일원으로 소개한다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-URC"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "city-plan",
+      "text": "AURUM은 천안시 스마트도시계획의 수립기간을 2025~2029로 소개하고 시민체감형 서비스를 기본방향으로 설명한다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-PLAN"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "city-reuse-opportunity",
+      "text": "천안시 도시재생 공개 계획의 와촌·오룡·문성·성정 권역은 후속 현장 수요 조사 대상으로 검토할 수 있다. 실제 공사·발주·설치 수요는 확인 전이다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "inference",
+      "sourceIds": [
+        "C-PIPELINE"
+      ],
+      "approved": false
+    },
+    {
+      "id": "city-smart",
+      "text": "천안시는 2024년 거점형 스마트도시 조성사업에 선정됐다. 역세권·산단·캠퍼스를 묶는 실증 방향이 발표됐다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-MOLIT"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "city-station",
+      "text": "천안역세권 혁신지구는 서북구 와촌동 106-83 일원이며 환승·주거·업무·상업 복합시설을 계획한다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-STATION"
+      ],
+      "verifiedAt": "2026-10-27T03:13:39.014765+00:00",
+      "approved": false
+    },
+    {
+      "id": "display-priority",
+      "text": "평상시 공공안내·광고를 편성하되 위험 발생 시 안전 안내가 우선되도록 운영을 설계한다. AI 콘텐츠는 담당자 검토 후 게시하고, CCTV는 권한 있는 내부 화면으로 제한하며 화면 방향·대상별 편성을 구분한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "U-PLATFORM",
+        "U-PRODUCT"
+      ],
+      "approved": false
+    },
+    {
+      "id": "dual-warning",
+      "text": "차량 출차 시 보행자 음성·주의 알림, 현장 내부 운전자용 LED의 보행도로 영상/감지 상태, 공사정보 표출을 제안한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-PRODUCT"
+      ],
+      "approved": false
+    },
+    {
+      "id": "governance-plan",
+      "text": "에스엘티·강민코퍼레이션·비트리의 역할은 제공 기획상의 제안 구조이며 고객과의 계약·조달·권한을 확정한 상태가 아니다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "impact-hypothesis",
+      "text": "접근 알림·현장 통제·조치 이력을 결합하면 대응 확인과 관리 업무를 개선할 가능성이 있으나 효과는 현장 비교로 검증해야 한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "inference",
+      "sourceIds": [
+        "M1",
+        "P-ASSUME"
+      ],
+      "approved": false
+    },
+    {
+      "id": "integrated-control",
+      "text": "자체 NPU·AI 하드웨어와 컬러 LED·음성·관제를 연결해 출입구 위험 분석과 현장 대응·운영 지원을 묶는 통합 사업을 제안한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "U-CORE",
+        "U-PRODUCT"
+      ],
+      "approved": false
+    },
+    {
+      "id": "intelligent-cctv-baseline",
+      "text": "공식 Axis 자료의 지능형 영상 시스템은 객체/이벤트 분석, 음성 안내·운영자 알림·관제 연동을 지원하므로 AI·경보·관제 자체를 본 제안만의 독점 기능으로 표현할 수 없다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "AXIS-PUBLIC-20261030"
+      ],
+      "verifiedAt": "2026-10-30T00:00:00Z",
+      "approved": false
+    },
+    {
+      "id": "led-reference",
+      "text": "Samsung XHB-F 공식 문서는 옥외 컬러 LED의 밝기·명암비·시야각·디밍 사양을 공개한다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "V-SAMSUNG"
+      ],
+      "verifiedAt": "2026-10-28T05:19:37Z",
+      "approved": false
+    },
+    {
+      "id": "osm-geography",
+      "text": "OSM 도로·철도·수계 geometry와 Nominatim의 와촌동·봉명동 참고점 및 원성1동 행정복지센터 좌표를 참고 지도에 사용한다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "G-OSM"
+      ],
+      "verifiedAt": "2026-10-27T06:00:00+00:00",
+      "approved": false
+    },
+    {
+      "id": "own-color-led",
+      "text": "제안사는 컬러 LED 전광판의 높은 시인성을 제품 강점으로 제시했다. 최고 성능 순위나 우월성은 동일 조건 비교시험으로 확인되지 않았다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-CORE"
+      ],
+      "approved": false
+    },
+    {
+      "id": "own-npu",
+      "text": "강민코퍼레이션이 NPU·AI 인식 기능을 탑재한 보드를 제작한다는 제안사 설명이다. NPU 칩 자체 제조가 아니며 신규 보드의 시험·사양 자료는 추후 정식 제안에 첨부할 예정이다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-CORE"
+      ],
+      "approved": false
+    },
+    {
+      "id": "pilot-package",
+      "text": "출입구 1개소, 울타리 약 10~20m, 카메라 1~2대와 현장 분석·경고·조치 기록을 초도 실증 범위로 제안한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "privacy-boundary",
+      "text": "촬영 범위·안내·권한·보존기간·삭제·원본 영상의 사용목적과 공공 안내장치의 설치 적합성을 도입 전에 개별 검토한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ],
+      "approved": false
+    },
+    {
+      "id": "product-platform",
+      "text": "3사 협력 제품을 자체 제작 AI NPU 안전관리 장치와 컬러 LED AIoT 전광판으로 소개한다. 두 제품은 각각 자체 기능을 갖고, 비트리에서 이들을 통합관제하는 제품을 함께 제공한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-PLATFORM"
+      ],
+      "approved": false
+    },
+    {
+      "id": "public-safety-extension",
+      "text": "기존 영상 자산과 자체 제작 AI NPU 안전관리 장치·컬러 LED AIoT 전광판·AI 지능형 안전 관제를 결합해 공공시설 위험 지점의 현장 안내·담당자 조치·재배치 운영으로 확장하는 방안을 제안한다. 공간별 설정·연계·검수는 추가 확인 대상이다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "inference",
+      "sourceIds": [
+        "U-PUBLIC-SAFETY"
+      ],
+      "approved": false
+    },
+    {
+      "id": "reported-city-traffic",
+      "text": "대전일보의 연도별 보도는 천안시 전체 교통사고 사망자를 2024년 34명·2025년 27명, 보행자 사망자를 각각 17명·13명으로 제시한다. 언론에 보고된 시 전체 수치이며 현장 실증 결과가 아니다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "C-TRAFFIC-24",
+        "C-TRAFFIC-25"
+      ],
+      "verifiedAt": "2026-10-27T06:00:00+00:00",
+      "approved": false
+    },
+    {
+      "id": "reuse-strategy",
+      "text": "공사 종료 후 모듈형 설비를 회수·점검하고 다음 현장에 재배치하거나 협의된 보관 장소에서 대기시키는 반복 활용을 제안한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-PRODUCT"
+      ],
+      "approved": false
+    },
+    {
+      "id": "roadmap-plan",
+      "text": "현장 협의·통합시험·설치·운영·평가를 착수 후 약8개월로 구성한 일정은 제안 가정이며 공정과 승인에 따라 조정한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "M1",
+        "P-ASSUME"
+      ],
+      "approved": false
+    },
+    {
+      "id": "scope-requote",
+      "text": "기존 예산은 대형 LED·회수·보관·재설치를 포함하지 않은 축소안이다. 확장 구성의 신규 총액과 반복 활용 경제성은 별도 견적·운영자료로 판단한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "U-PRODUCT"
+      ],
+      "approved": false
+    },
+    {
+      "id": "slt-contact",
+      "text": "사용자 제공 에스엘티 제안서 13페이지에 실제 로고, 대표전화 (041) 571-2057/8, 이메일 slt888@hanmail.net과 본사 주소가 기재돼 있다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-SLT-CONTACT"
+      ],
+      "approved": false
+    },
+    {
+      "id": "slt-integrated-offering",
+      "text": "에스엘티를 제안 주관으로, AI 제품을 보유한 기술참여 기업들의 장치·AIoT 전광판·AI 지능형 안전 관제를 하나의 통합 제품·서비스로 제안한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "U-INTEGRATED"
+      ],
+      "approved": false
+    },
+    {
+      "id": "time-example",
+      "text": "하루 20건, 월20일, 건당 기록시간 5분에서2분이라는 계산용 가정은 월20시간의 작업시간 차이에 해당하며 실측·목표·예측이 아니다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "P-ASSUME"
+      ],
+      "approved": false
+    }
+  ],
+  "slides": [
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "orientation",
+        "rationale": "차량과 시민이 만나는 물리적 접점을 먼저 인지",
+        "readingPath": "왼쪽 큰 현장에서 차량·시민·유도원 관계를 보고 오른쪽 통제 원칙으로 이동",
+        "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+        "visual": "scene",
+        "title": {
+          "x": 8.836,
+          "y": 0.85,
+          "w": 3.858,
+          "h": 1.462
+        },
+        "message": {
+          "x": 8.836,
+          "y": 2.632,
+          "w": 3.858,
+          "h": 2.018
+        },
+        "visualBox": {
+          "x": 0.64,
+          "y": 0.82,
+          "w": 7.956,
+          "h": 4.86
+        },
+        "caption": {
+          "x": 0.64,
+          "y": 5.95,
+          "w": 12.053,
+          "h": 0.58
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {
+          "truck": {
+            "x": 0.82,
+            "y": 1.02,
+            "w": 2.25,
+            "h": 0.48
+          },
+          "walk": {
+            "x": 0.82,
+            "y": 5.02,
+            "w": 2.25,
+            "h": 0.48
+          },
+          "human": {
+            "x": 6.1,
+            "y": 5.02,
+            "w": 2.35,
+            "h": 0.48
+          }
+        },
+        "edgeLabelBoxes": {},
+        "typography": {
+          "titleSize": 36,
+          "messageSize": 22,
+          "captionSize": 14
+        },
+        "narrative": {
+          "beliefShift": "현장의 물리적 관계부터 이해",
+          "evidenceClaimIds": [
+            "separation",
+            "public-boundary",
+            "blind-area",
+            "response-chain"
+          ],
+          "nextQuestion": "도시 전체 수치로 공사장 수요를 확정할 수 있는가?"
+        },
+        "referenceApplications": [
+          {
+            "sourceId": "REF-UBER",
+            "locator": "PDF p.12",
+            "principle": "전환 시점의 핵심 판단을 큰 글자로 우선 인지",
+            "application": "장면 옆 제목을 키우고 현장 통제 원칙과 분리",
+            "notCopied": "원본 글자·브랜드·수치·스크린샷은 복사하지 않음",
+            "controls": [
+              "typography"
+            ]
+          }
+        ]
+      },
+      "reasoning": {
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "차량과 시민이 만나는 물리적 접점을 먼저 인지",
+            "howToRead": "왼쪽 큰 현장에서 차량·시민·유도원 관계를 보고 오른쪽 통제 원칙으로 이동",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "scene"
+            ]
+          },
+          "readingGuide": {
+            "message": "동선 분리와\n현장 통제가 우선",
+            "keyPhrase": "현장 통제",
+            "focusPhrases": [
+              "현장 통제"
+            ],
+            "tone": "amber"
+          },
+          "intent": "spatial",
+          "scene": {
+            "path": "examples/assets/site-spatial-model-v5.png",
+            "rights": "generated",
+            "caption": "출입구 공간 구성 예시",
+            "reuseReason": "기존 공간 개념 자산을 새 구도에서 설명용으로 활용하며 실제 설치 현장으로 표현하지 않음",
+            "annotations": [
+              {
+                "nodeId": "truck",
+                "x": 0.63,
+                "y": 0.25
+              },
+              {
+                "nodeId": "walk",
+                "x": 0.41,
+                "y": 0.72
+              },
+              {
+                "nodeId": "human",
+                "x": 0.79,
+                "y": 0.56
+              }
+            ]
+          },
+          "kind": "site",
+          "takeaway": "동선 분리와\n현장 통제가 우선",
+          "encoding": "보도·차량 경로의 교차와 울타리 사각지대를 공간적으로 표현",
+          "evidenceIds": [
+            "separation",
+            "public-boundary",
+            "blind-area",
+            "response-chain"
+          ],
+          "nodes": [
+            {
+              "id": "truck",
+              "label": "차량 출입",
+              "detail": "",
+              "icon": "gate"
+            },
+            {
+              "id": "walk",
+              "label": "보행 동선",
+              "detail": "",
+              "icon": "person"
+            },
+            {
+              "id": "human",
+              "label": "유도원 확인",
+              "detail": "",
+              "icon": "team"
+            }
+          ],
+          "edges": [],
+          "legend": "출입구 공간 개념 · 실제 천안 현장 사진·실측 도면 아님 · 동선 분리와 유도원 통제 우선"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "problem",
+        "question": "차량과 보행자가 어느 지점에서 충돌할 수 있는가?",
+        "answer": "동선 분리와\n현장 통제가 우선 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "separation",
+          "public-boundary",
+          "blind-area",
+          "response-chain"
+        ],
+        "planningRefs": [
+          "problem",
+          "mechanism:crossing",
+          "mechanism:visibility",
+          "mechanism:response"
+        ],
+        "visualPurpose": "차량과 시민이 만나는 물리적 접점을 먼저 인지",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "causal-diagnosis"
+      },
+      "id": "spatial",
+      "layout": "editorial",
+      "title": "출입구에서\n만나는 동선",
+      "message": "동선 분리와\n현장 통제가 우선 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+      "items": [],
+      "claimIds": [
+        "separation",
+        "public-boundary",
+        "blind-area",
+        "response-chain"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    },
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "evidence",
+        "rationale": "도시 전체의 보도 수치와 현장 수요의 차이를 이해",
+        "readingPath": "오른쪽 실제 수치 비교와 하단 집계 한계를 확인한 후 왼쪽 판단 문구로 이동",
+        "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+        "visual": "chart",
+        "title": {
+          "x": 0.64,
+          "y": 0.85,
+          "w": 3.858,
+          "h": 1.552
+        },
+        "message": {
+          "x": 0.64,
+          "y": 2.622,
+          "w": 3.858,
+          "h": 1.465
+        },
+        "visualBox": {
+          "x": 4.738,
+          "y": 0.92,
+          "w": 7.956,
+          "h": 4.62
+        },
+        "caption": {
+          "x": 0.64,
+          "y": 5.82,
+          "w": 12.053,
+          "h": 0.72
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {},
+        "edgeLabelBoxes": {},
+        "typography": {
+          "titleSize": 32,
+          "messageSize": 21,
+          "bodySize": 16,
+          "captionSize": 14
+        },
+        "chartFocus": {
+          "series": "보행자 사망자",
+          "reason": "전체 집계와 중첩되는 보행자 부분을 구별해 읽음",
+          "claimIds": [
+            "reported-city-traffic"
+          ],
+          "noteBox": {
+            "x": 0.64,
+            "y": 4.307,
+            "w": 3.858,
+            "h": 1.293
+          }
+        },
+        "narrative": {
+          "beliefShift": "도시 수치를 현장 성과와 구별",
+          "evidenceClaimIds": [
+            "city-smart",
+            "city-plan",
+            "city-council",
+            "city-fence",
+            "reported-city-traffic"
+          ],
+          "nextQuestion": "접근 알림 이후 누가 실제 행동을 하는가?"
+        },
+        "referenceApplications": [
+          {
+            "sourceId": "REF-DUARTE",
+            "locator": "article: before table / after bar",
+            "principle": "모든 값의 동등한 강조보다 질문에 맞는 계열을 식별",
+            "application": "원자료는 유지하며 보행자 계열과 직접 표기를 강조",
+            "notCopied": "원본 글자·브랜드·수치·스크린샷은 복사하지 않음",
+            "controls": [
+              "chartFocus"
+            ]
+          }
+        ]
+      },
+      "reasoning": {
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "도시 전체의 보도 수치와 현장 수요의 차이를 이해",
+            "howToRead": "오른쪽 실제 수치 비교와 하단 집계 한계를 확인한 후 왼쪽 판단 문구로 이동",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "chart"
+            ]
+          },
+          "readingGuide": {
+            "message": "도시 지표와\n현장 수요를 구분",
+            "keyPhrase": "현장 수요",
+            "focusPhrases": [
+              "현장 수요"
+            ],
+            "tone": "amber"
+          },
+          "intent": "quantitative",
+          "chart": {
+            "datasetId": "cheonan-traffic-fatalities",
+            "type": "bar",
+            "orientation": "column",
+            "stacked": false
+          },
+          "kind": "data-chart",
+          "takeaway": "도시 지표는\n현장 수요의 증거와 구분",
+          "encoding": "연간 사망자 수를 0에서 시작하는 같은 명 단위의 그룹 막대 그래프로 비교",
+          "evidenceIds": [
+            "city-smart",
+            "city-plan",
+            "city-council",
+            "city-fence",
+            "reported-city-traffic"
+          ],
+          "nodes": [
+            {
+              "id": "n0",
+              "label": "스마트도시계획",
+              "detail": "2025~2029 계획의 시민체감 방향",
+              "icon": "document"
+            },
+            {
+              "id": "n1",
+              "label": "거점형 스마트도시",
+              "detail": "2024년 천안 선정·실증 방향",
+              "icon": "city"
+            },
+            {
+              "id": "n2",
+              "label": "가설울타리·해체 안전",
+              "detail": "공공디자인과 시민 통행의 접점",
+              "icon": "shield"
+            }
+          ],
+          "edges": [],
+          "legend": "천안시 전체 · 2024/2025년 연간 · 대전일보 보도(TAAS 인용) · 전체와 보행자는 더하지 않음"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "problem",
+        "question": "도시 전체 수치로 공사장 수요를 확정할 수 있는가?",
+        "answer": "도시 지표는\n현장 수요의 증거와 구분 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "city-smart",
+          "city-plan",
+          "city-council",
+          "city-fence",
+          "reported-city-traffic"
+        ],
+        "planningRefs": [
+          "problem",
+          "mechanism:crossing",
+          "mechanism:visibility",
+          "mechanism:response"
+        ],
+        "visualPurpose": "도시 전체의 보도 수치와 현장 수요의 차이를 이해",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "causal-diagnosis"
+      },
+      "id": "evidence",
+      "layout": "editorial",
+      "title": "도시 지표와\n현장 근거의 차이",
+      "message": "도시 지표는\n현장 수요의 증거와 구분 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+      "items": [],
+      "claimIds": [
+        "city-smart",
+        "city-plan",
+        "city-council",
+        "city-fence",
+        "reported-city-traffic"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    },
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "explanation",
+        "rationale": "단순 흐름도 대신 원인→개입→현장반응→측정지표의 4단계 인과 사슬을 명시",
+        "readingPath": "상단 핵심 문구를 읽은 뒤 두 줄의 인과 사슬을 좌에서 우로 따라가며 검증 지표를 확인",
+        "continuity": "도시 데이터 한계에서 실제 현장 개입 메커니즘과 화면 작동으로 연결",
+        "visual": "causal-chain",
+        "title": {
+          "x": 0.64,
+          "y": 0.78,
+          "w": 6.828,
+          "h": 1.12
+        },
+        "message": {
+          "x": 7.748,
+          "y": 0.78,
+          "w": 4.945,
+          "h": 1.12
+        },
+        "visualBox": {
+          "x": 0.64,
+          "y": 2.04,
+          "w": 12.053,
+          "h": 3.74
+        },
+        "caption": {
+          "x": 0.64,
+          "y": 5.96,
+          "w": 12.053,
+          "h": 0.56
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {
+          "chain-sight:cause": {
+            "x": 0.76,
+            "y": 2.18,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-sight:intervention": {
+            "x": 3.783,
+            "y": 2.18,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-sight:response": {
+            "x": 6.807,
+            "y": 2.18,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-sight:result": {
+            "x": 9.83,
+            "y": 2.18,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-delay:cause": {
+            "x": 0.76,
+            "y": 4.04,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-delay:intervention": {
+            "x": 3.783,
+            "y": 4.04,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-delay:response": {
+            "x": 6.807,
+            "y": 4.04,
+            "w": 2.743,
+            "h": 1.6
+          },
+          "chain-delay:result": {
+            "x": 9.83,
+            "y": 4.04,
+            "w": 2.743,
+            "h": 1.6
+          }
+        },
+        "edgeLabelBoxes": {},
+        "typography": {
+          "titleSize": 32,
+          "messageSize": 20,
+          "nodeTitleSize": 17,
+          "bodySize": 16,
+          "captionSize": 14
+        },
+        "narrative": {
+          "beliefShift": "개별 장비 도입이 아니라 원인별 현장 대응 사슬과 측정 지표를 함께 설계함을 이해",
+          "evidenceClaimIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nextQuestion": "현장 내부 운전자와 유도원은 실제 화면에서 어떤 상태 정보를 보게 되는가?"
+        }
+      },
+      "reasoning": {
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "두 가지 현장 위험 원인이 각각 어떤 개입과 현장 행동을 거쳐 측정되는지 대조",
+            "howToRead": "왼쪽 원인부터 오른쪽 가설 결과·측정까지 화살표 순서대로 두 행을 비교",
+            "notProven": "사슬의 기대 결과는 실증 가설이며 사전 확정된 사고 감소 수치가 아님",
+            "requiredMarks": [
+              "connectors"
+            ]
+          },
+          "readingGuide": {
+            "message": "원인부터 현장 대응과\n검증 지표까지 연결",
+            "keyPhrase": "현장 대응",
+            "focusPhrases": [
+              "현장 대응",
+              "검증 지표"
+            ],
+            "tone": "amber"
+          },
+          "intent": "causal",
+          "chains": [
+            {
+              "id": "chain-sight",
+              "cause": "울타리·출입구 시야 가림으로\n보행자·차량 직전 조우",
+              "intervention": "물리 동선 분리 및\n자체 제작 AI NPU 안전장치",
+              "response": "유도원 출차 대기 신호 및\n보행자 음성 안내 작동",
+              "result": "교차 위험 노출 및\n필수 사례 미탐률 측정",
+              "mechanismIds": [
+                "crossing"
+              ],
+              "interventionIds": [
+                "observe"
+              ],
+              "alternativeIds": [],
+              "metricIds": [
+                "detection"
+              ],
+              "evidenceIds": [
+                "response-chain",
+                "manual-authority",
+                "warning-proposal"
+              ],
+              "resultStatus": "hypothesis"
+            },
+            {
+              "id": "chain-delay",
+              "cause": "작업 소음·야간 환경에서\n차량·보행자 상호 인지 지연",
+              "intervention": "컬러 LED AIoT 전광판 및\n현장 유도원 확인 절차",
+              "response": "운전자 정지·서행 확인 및\n담당자 조치 이력 기록",
+              "result": "경고 전달 지연(p95) 및\n현장 조치 완결률 검증",
+              "mechanismIds": [
+                "visibility"
+              ],
+              "interventionIds": [
+                "warn"
+              ],
+              "alternativeIds": [],
+              "metricIds": [
+                "delivery"
+              ],
+              "evidenceIds": [
+                "response-chain",
+                "manual-authority",
+                "warning-proposal"
+              ],
+              "resultStatus": "hypothesis"
+            }
+          ],
+          "kind": "causal-flow",
+          "takeaway": "원인·기본조치·현장대응·측정지표를 사슬로 연결",
+          "encoding": "2개 핵심 위험 원인별 개입·현장 반응·가설 검증 지표의 4단계 사슬",
+          "evidenceIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nodes": [
+            {
+              "id": "notify",
+              "label": "알림 전달",
+              "detail": "전달 여부 기록",
+              "icon": "bell"
+            },
+            {
+              "id": "control",
+              "label": "현장 통제",
+              "detail": "유도원 직접 확인",
+              "icon": "team"
+            },
+            {
+              "id": "verify",
+              "label": "조치 기록",
+              "detail": "실제 조치와 시각",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "notify",
+              "to": "control",
+              "label": "담당자 확인"
+            },
+            {
+              "from": "control",
+              "to": "verify",
+              "label": "조치 결과"
+            }
+          ],
+          "legend": "인과 가설 모델 · 실제 사고 감소 효과는 현장 실증 기간의 미탐률·지연·완결률 기록으로 검증"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "intervention",
+        "question": "설비와 현장 조치가 어떤 메커니즘으로 위험을 줄이고 어떻게 검증하는가?",
+        "answer": "시야 가림과 인지 지연이라는 두 가지 원인에 대해 물리 분리·AI 알림·유도원 통제·검증 지표를 사슬로 연결한다.",
+        "proofClaimIds": [
+          "response-chain",
+          "manual-authority",
+          "warning-proposal"
+        ],
+        "planningRefs": [
+          "intervention:observe",
+          "intervention:warn",
+          "intervention:confirm"
+        ],
+        "visualPurpose": "알림 전달에서 실제 통제와 기록으로 이어지는 책임 경로",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "intervention-overlay"
+      },
+      "id": "causal-mechanism",
+      "layout": "architecture",
+      "title": "위험 원인별 개입과 검증 사슬",
+      "message": "시야 가림과 인지 지연이라는 두 가지 원인에 대해 물리 분리·AI 알림·유도원 통제·검증 지표를 사슬로 연결한다.",
+      "items": [],
+      "claimIds": [
+        "response-chain",
+        "manual-authority",
+        "warning-proposal"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    },
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "explanation",
+        "rationale": "장비 화면의 객체 인식 표시와 유도원 현장 통제 우선 원칙을 한 화면에서 대조",
+        "readingPath": "왼쪽 전광판 프레임과 하단 통제 배너를 확인한 후 오른쪽 3가지 상태 기준을 읽음",
+        "continuity": "인과 메커니즘에서 실제 장비 화면과 주체별 책임 스윔레인으로 연결",
+        "visual": "annotated-screen",
+        "title": {
+          "x": 0.64,
+          "y": 0.78,
+          "w": 6.828,
+          "h": 1.12
+        },
+        "message": {
+          "x": 7.748,
+          "y": 0.78,
+          "w": 4.945,
+          "h": 1.12
+        },
+        "visualBox": {
+          "x": 0.64,
+          "y": 2.04,
+          "w": 12.053,
+          "h": 3.74
+        },
+        "caption": {
+          "x": 0.64,
+          "y": 5.96,
+          "w": 12.053,
+          "h": 0.56
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {},
+        "edgeLabelBoxes": {},
+        "screenLayout": {
+          "frameBox": {
+            "x": 0.74,
+            "y": 2.14,
+            "w": 6.028,
+            "h": 2.652
+          },
+          "statusBannerBox": {
+            "x": 0.74,
+            "y": 4.932,
+            "w": 6.028,
+            "h": 0.748
+          },
+          "sidePanelBoxes": {
+            "state-detect": {
+              "x": 7.028,
+              "y": 2.14,
+              "w": 5.565,
+              "h": 1.087
+            },
+            "state-clear": {
+              "x": 7.028,
+              "y": 3.367,
+              "w": 5.565,
+              "h": 1.087
+            },
+            "state-fault": {
+              "x": 7.028,
+              "y": 4.593,
+              "w": 5.565,
+              "h": 1.087
+            }
+          }
+        },
+        "typography": {
+          "titleSize": 32,
+          "messageSize": 20,
+          "nodeTitleSize": 17,
+          "bodySize": 16,
+          "captionSize": 14
+        },
+        "narrative": {
+          "beliefShift": "AI 화면 표시는 보조 수단이며 미검출 상태에서도 유도원 확인이 필수임을 이해",
+          "evidenceClaimIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nextQuestion": "감지 이후 시스템과 현장 담당자의 책임 경계는 어떻게 나뉘는가?"
+        }
+      },
+      "reasoning": {
+        "visualPlan": {
+          "interfaceExample": {
+            "kind": "alerts",
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "response-chain",
+              "manual-authority",
+              "warning-proposal"
+            ],
+            "scenario": "천안시 공사현장 내부 출차 대기 및 보행자 접근 경고 예시",
+            "at": "현장 출입구 내부 전광판",
+            "metrics": [
+              {
+                "label": "감지 상태",
+                "value": "보행자 접근",
+                "tone": "danger"
+              },
+              {
+                "label": "차량 지시",
+                "value": "출차 대기",
+                "tone": "caution"
+              },
+              {
+                "label": "통제 권한",
+                "value": "현장 유도원 우선",
+                "tone": "neutral"
+              }
+            ],
+            "records": [
+              {
+                "name": "전광판 경고 송출",
+                "status": "감지됨",
+                "detail": "운전자 정지·유도원 확인 대기",
+                "updated": "즉시"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "표시 원칙",
+                "value": "안전기호·공공안내 중심"
+              }
+            ],
+            "decision": {
+              "title": "유도원 통제 우선",
+              "reason": "미검출이 통행 허가를 의미하지 않음",
+              "action": "유도원 육안 확인 후 출차 지시 (미검출은 통행 허가 아님)"
+            },
+            "image": {
+              "path": "examples/assets/product-driver-led-v8.png",
+              "caption": "운전자 방향 컬러 LED AIoT 전광판 개념 예시",
+              "origin": "generated-concept"
+            }
+          },
+          "explanation": {
+            "readerTask": "화면 내 객체 인식 표시와 하단 통제 배너, 우측 3가지 상태별 행동 원칙을 대조",
+            "howToRead": "왼쪽 프레임의 객체 박스와 주황색 통제 배너를 본 뒤 오른쪽 3단계 상태 카드를 확인",
+            "notProven": "개념 화면 예시는 실제 현장 인식률이나 자동 통행 허가 성능을 증명하지 않음",
+            "requiredMarks": [
+              "scene",
+              "screen"
+            ]
+          },
+          "readingGuide": {
+            "message": "미검출은 통행 허가가 아니며\n유도원 직접 확인이 우선",
+            "keyPhrase": "유도원 직접 확인",
+            "focusPhrases": [
+              "유도원 직접 확인",
+              "통행 허가"
+            ],
+            "tone": "amber"
+          },
+          "intent": "structural",
+          "scene": {
+            "path": "examples/assets/product-driver-led-v8.png",
+            "rights": "generated",
+            "caption": "운전자 방향 컬러 LED AIoT 전광판 개념 예시",
+            "reuseReason": "내부 출차 대기 화면과 객체 표시 구성을 설명하기 위한 개념 자산",
+            "annotations": [
+              {
+                "nodeId": "state-detect",
+                "x": 0.78,
+                "y": 0.36
+              },
+              {
+                "nodeId": "state-clear",
+                "x": 0.56,
+                "y": 0.54
+              }
+            ]
+          },
+          "kind": "boundary",
+          "takeaway": "미검출은 통행 허가가 아니며 유도원 통제가 우선",
+          "encoding": "실제 전광판 프레임·객체 인식 박스·통제 배너와 우측 3단계 상태 해석 패널",
+          "evidenceIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nodes": [
+            {
+              "id": "state-detect",
+              "label": "감지됨 · 출차 대기",
+              "detail": "보행자 접근 표시 · 유도원 정지 신호 우선",
+              "icon": "bell"
+            },
+            {
+              "id": "state-clear",
+              "label": "미검출 · 서행 및 직접 확인",
+              "detail": "통행 허가 아님 · 사각지대 육안 확인 필수",
+              "icon": "shield"
+            },
+            {
+              "id": "state-fault",
+              "label": "점검 필요 · 수동 통제 전환",
+              "detail": "센서·통신 이상 시 즉시 현장 수동 통제",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [],
+          "legend": "화면 구성 예시 · 실제 CCTV 영상은 권한자 전용이며 전광판은 안전기호·공공안내 중심 표시"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "operation",
+        "question": "현장 내부 운전자와 유도원은 어떤 화면 표시와 통제 원칙에 따라 행동하는가?",
+        "answer": "객체 인식 박스와 출차 대기 경고를 표시하되, 미검출을 통행 허가로 간주하지 않고 유도원 통제를 우선한다.",
+        "proofClaimIds": [
+          "response-chain",
+          "manual-authority",
+          "warning-proposal"
+        ],
+        "planningRefs": [
+          "workflow:detect",
+          "workflow:judge",
+          "workflow:notify",
+          "workflow:control",
+          "workflow:record"
+        ],
+        "visualPurpose": "같은 대응 관계를 세로로 놓아 단계별 완료 확인에 집중",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "accountability-swimlane"
+      },
+      "id": "driver-screen-view",
+      "layout": "process",
+      "title": "운전자 전광판 화면과 3단계 통제 상태",
+      "message": "객체 인식 박스와 출차 대기 경고를 표시하되, 미검출을 통행 허가로 간주하지 않고 유도원 통제를 우선한다.",
+      "items": [],
+      "claimIds": [
+        "response-chain",
+        "manual-authority",
+        "warning-proposal"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    },
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "explanation",
+        "rationale": "시스템 자동 알림과 인간 담당자의 물리적 통제 책임을 행(Lane)으로 명확히 분리",
+        "readingPath": "상단 시스템 행의 감지에서 하단 유도원 확인·통제를 거쳐 상단 조치 기록으로 이동",
+        "continuity": "화면 상태 기준에서 현장 운영 책임과 후보지 조사로 연결",
+        "visual": "swimlane",
+        "title": {
+          "x": 0.64,
+          "y": 0.78,
+          "w": 6.828,
+          "h": 1.12
+        },
+        "message": {
+          "x": 7.748,
+          "y": 0.78,
+          "w": 4.945,
+          "h": 1.12
+        },
+        "visualBox": {
+          "x": 0.64,
+          "y": 2.04,
+          "w": 12.053,
+          "h": 3.74
+        },
+        "caption": {
+          "x": 0.64,
+          "y": 5.96,
+          "w": 12.053,
+          "h": 0.56
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {
+          "notify": {
+            "x": 2.37,
+            "y": 2.2800000000000002,
+            "w": 4.422,
+            "h": 1.3599999999999999
+          },
+          "control": {
+            "x": 2.37,
+            "y": 4.18,
+            "w": 4.422,
+            "h": 1.3599999999999999
+          },
+          "act": {
+            "x": 7.992,
+            "y": 4.18,
+            "w": 4.421,
+            "h": 1.3599999999999999
+          },
+          "verify": {
+            "x": 7.992,
+            "y": 2.2800000000000002,
+            "w": 4.421,
+            "h": 1.3599999999999999
+          }
+        },
+        "edgeLabelBoxes": {
+          "notify:control": {
+            "x": 4.701,
+            "y": 3.77,
+            "w": 0.95,
+            "h": 0.28
+          },
+          "control:act": {
+            "x": 6.912,
+            "y": 4.5,
+            "w": 0.95,
+            "h": 0.28
+          },
+          "act:verify": {
+            "x": 10.323,
+            "y": 3.77,
+            "w": 0.95,
+            "h": 0.28
+          }
+        },
+        "edgeRoutes": {
+          "notify:control": {
+            "waypoints": [
+              [
+                4.5809999999999995,
+                3.64
+              ],
+              [
+                4.5809999999999995,
+                4.18
+              ]
+            ]
+          },
+          "control:act": {
+            "waypoints": [
+              [
+                6.792,
+                4.859999999999999
+              ],
+              [
+                7.992,
+                4.859999999999999
+              ]
+            ]
+          },
+          "act:verify": {
+            "waypoints": [
+              [
+                10.2025,
+                4.18
+              ],
+              [
+                10.2025,
+                3.64
+              ]
+            ]
+          }
+        },
+        "swimlaneLayout": {
+          "laneHeaderWidth": 1.45,
+          "lanes": {
+            "시스템 영역": {
+              "x": 0.72,
+              "y": 2.12,
+              "w": 11.893,
+              "h": 1.68
+            },
+            "현장 담당자": {
+              "x": 0.72,
+              "y": 4.02,
+              "w": 11.893,
+              "h": 1.68
+            }
+          },
+          "nodeLanes": {
+            "notify": "시스템 영역",
+            "control": "현장 담당자",
+            "act": "현장 담당자",
+            "verify": "시스템 영역"
+          }
+        },
+        "typography": {
+          "titleSize": 32,
+          "messageSize": 20,
+          "nodeTitleSize": 18,
+          "bodySize": 16,
+          "captionSize": 14
+        },
+        "narrative": {
+          "beliefShift": "장치 응답(ACK)과 유도원의 실제 통제 완료가 구조적으로 분리·기록됨을 확인",
+          "evidenceClaimIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nextQuestion": "천안시 내 어떤 참고 위치에서 현장 조사를 시작할 것인가?"
+        }
+      },
+      "reasoning": {
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "상단 시스템 행과 하단 현장 담당자 행 사이의 인계 경로와 책임 분리를 확인",
+            "howToRead": "상단 감지·경고에서 하단 유도원 확인·통제로 내려간 뒤 다시 상단 이력 기록으로 올라가는 직교 화살표를 추적",
+            "notProven": "현장 인력 배치 기준과 세부 운영 수칙은 발주처·시공사 협의 필요",
+            "requiredMarks": [
+              "connectors"
+            ]
+          },
+          "readingGuide": {
+            "message": "시스템 경고와 현장 유도원의\n실제 통제 책임을 분리",
+            "keyPhrase": "실제 통제 책임",
+            "focusPhrases": [
+              "실제 통제 책임",
+              "시스템 경고"
+            ],
+            "tone": "blue"
+          },
+          "intent": "structural",
+          "kind": "flow",
+          "takeaway": "시스템 경고와 현장 유도원의 실제 통제 책임을 분리",
+          "encoding": "시스템 행과 현장 담당자 행을 분리한 2×2 스윔레인 및 직교 인계 경로",
+          "evidenceIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nodes": [
+            {
+              "id": "notify",
+              "label": "접근 감지·전광판 경고",
+              "detail": "보행자·차량 접근 시 즉시 알림 발송",
+              "icon": "bell"
+            },
+            {
+              "id": "control",
+              "label": "유도원 현장 육안 확인",
+              "detail": "사각지대 및 보행자 동선 직접 확인",
+              "icon": "person"
+            },
+            {
+              "id": "act",
+              "label": "출차 대기·보행 통제 수행",
+              "detail": "수신호·차단봉으로 물리적 통제 실행",
+              "icon": "team"
+            },
+            {
+              "id": "verify",
+              "label": "조치 결과·이력 기록",
+              "detail": "발송 시각과 실제 조치 결과를 구분 저장",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "notify",
+              "to": "control",
+              "label": "경고 발송"
+            },
+            {
+              "from": "control",
+              "to": "act",
+              "label": "육안 통제"
+            },
+            {
+              "from": "act",
+              "to": "verify",
+              "label": "결과 기록"
+            }
+          ],
+          "legend": "제안 운영 책임 경계 · 시스템 ACK는 물리적 통제 완료를 의미하지 않음"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "operation",
+        "question": "감지 알림 이후 누가 실제로 통제하고 어떻게 결과를 남기는가?",
+        "answer": "시스템은 감지와 경고·로그 저장을 맡고, 실제 출차·보행 통제와 현장 확인은 유도원과 안전관리자가 수행한다.",
+        "proofClaimIds": [
+          "response-chain",
+          "manual-authority",
+          "warning-proposal"
+        ],
+        "planningRefs": [
+          "workflow:detect",
+          "workflow:judge",
+          "workflow:notify",
+          "workflow:control",
+          "workflow:record"
+        ],
+        "visualPurpose": "같은 대응 관계를 세로로 놓아 단계별 완료 확인에 집중",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "accountability-swimlane"
+      },
+      "id": "responsibility-swimlane",
+      "layout": "process",
+      "title": "시스템 알림과 현장 통제의 책임 경계",
+      "message": "시스템은 감지와 경고·로그 저장을 맡고, 실제 출차·보행 통제와 현장 확인은 유도원과 안전관리자가 수행한다.",
+      "items": [],
+      "claimIds": [
+        "response-chain",
+        "manual-authority",
+        "warning-proposal"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    },
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "orientation",
+        "rationale": "지역 참고 위치를 먼저 읽고 현장 조사 조건을 확인",
+        "readingPath": "지도 A·B·C와 오른쪽 위치 이름을 대조하고 하단의 조사 한계를 확인",
+        "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+        "visual": "map",
+        "title": {
+          "x": 0.9,
+          "y": 0.8,
+          "w": 11.6,
+          "h": 0.7
+        },
+        "message": {
+          "x": 3.2,
+          "y": 5.35,
+          "w": 9.4,
+          "h": 0.7
+        },
+        "visualBox": {
+          "x": 0.64,
+          "y": 1.65,
+          "w": 12,
+          "h": 3.5
+        },
+        "caption": {
+          "x": 0.64,
+          "y": 6.15,
+          "w": 12,
+          "h": 0.45
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {},
+        "edgeLabelBoxes": {},
+        "mapLayout": {
+          "image": {
+            "x": 0.64,
+            "y": 1.65,
+            "w": 8.1,
+            "h": 3.5
+          },
+          "labels": {
+            "A": {
+              "x": 9.1,
+              "y": 1.92,
+              "w": 3.5,
+              "h": 0.7
+            },
+            "B": {
+              "x": 9.1,
+              "y": 3,
+              "w": 3.5,
+              "h": 0.7
+            },
+            "C": {
+              "x": 9.1,
+              "y": 4.05,
+              "w": 3.5,
+              "h": 0.7
+            }
+          }
+        },
+        "narrative": {
+          "beliefShift": "위치 참고와 현장 조사 권한을 구별",
+          "evidenceClaimIds": [
+            "city-station",
+            "city-oryong",
+            "city-bongmyeong",
+            "candidate-fit",
+            "osm-geography"
+          ],
+          "nextQuestion": "기존 안전조치에 AI가 더할 보완 범위는 무엇인가?"
+        },
+        "referenceApplications": [
+          {
+            "sourceId": "REF-AIRBNB",
+            "locator": "PDF p.7",
+            "principle": "주 시각물과 그 의미를 설명하는 문구의 대응을 명확히 함",
+            "application": "참고 지도와 각 위치 설명의 영역을 직접 지정",
+            "notCopied": "원본 글자·브랜드·수치·스크린샷은 복사하지 않음",
+            "controls": [
+              "mapLayout"
+            ]
+          }
+        ]
+      },
+      "reasoning": {
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "지역 참고 위치를 먼저 읽고 현장 조사 조건을 확인",
+            "howToRead": "지도 A·B·C와 오른쪽 위치 이름을 대조하고 하단의 조사 한계를 확인",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "map"
+            ]
+          },
+          "readingGuide": {
+            "message": "참고 좌표와 확정 출입구를 구분",
+            "keyPhrase": "확정 출입구",
+            "focusPhrases": [
+              "확정 출입구"
+            ],
+            "tone": "amber"
+          },
+          "intent": "geographic",
+          "map": {
+            "assetId": "cheonan-center",
+            "markers": [
+              {
+                "id": "A",
+                "label": "와촌동권 참고점",
+                "lon": 127.1443358,
+                "lat": 36.8092011,
+                "precision": "locality-reference",
+                "basis": "Nominatim relation/2515711 와촌동 대표 위치. 실제 사업 필지·출입구가 아님.",
+                "sourceClaimIds": [
+                  "osm-geography"
+                ]
+              },
+              {
+                "id": "B",
+                "label": "원성1동 행정복지센터",
+                "lon": 127.1630194,
+                "lat": 36.8118367,
+                "precision": "reference-poi",
+                "basis": "Nominatim way/815678957 시설 좌표. 오룡지구 주변 위치 설명용이며 사업 필지·출입구가 아님.",
+                "sourceClaimIds": [
+                  "osm-geography"
+                ]
+              },
+              {
+                "id": "C",
+                "label": "봉명동권 참고점",
+                "lon": 127.1373904,
+                "lat": 36.8065649,
+                "precision": "locality-reference",
+                "basis": "Nominatim relation/2508099 봉명동 대표 위치. 봉명동 39-1 필지·사업 경계가 아님.",
+                "sourceClaimIds": [
+                  "osm-geography"
+                ]
+              }
+            ]
+          },
+          "kind": "geographic-map",
+          "takeaway": "참고 좌표와 확정 출입구를 구분",
+          "encoding": "실제 OSM 도로·철도·수계 geometry를 EPSG:3857로 투영하고, 출처가 있는 참고 좌표를 고정해 표시",
+          "evidenceIds": [
+            "city-station",
+            "city-oryong",
+            "city-bongmyeong",
+            "candidate-fit",
+            "osm-geography"
+          ],
+          "nodes": [
+            {
+              "id": "n0",
+              "label": "천안역세권 혁신지구",
+              "detail": "우선 조사 · 복합 이용 접점 탐색\n출입구·잔여 공정 미확인",
+              "icon": "city"
+            },
+            {
+              "id": "n1",
+              "label": "오룡지구 리츠사업",
+              "detail": "예비 후보 · 생활권 접점 검토\n관리 권한·출입 계획 미확인",
+              "icon": "city"
+            },
+            {
+              "id": "n2",
+              "label": "봉명지구 도시재생",
+              "detail": "검토 유보 · 잔여 수요 재확인\n현재 공정·반출입 수요 미확인",
+              "icon": "city"
+            }
+          ],
+          "edges": [],
+          "legend": "우선순위는 조사 제안 · 위험도 순위 아님 · 동·시설 참고점이며 사업 경계·출입구 아님 · © OpenStreetMap contributors"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "scenario",
+        "question": "지도상의 참고 위치에서 무엇을 조사해야 하는가?",
+        "answer": "참고 좌표와 확정 출입구를 구분 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "city-station",
+          "city-oryong",
+          "city-bongmyeong",
+          "candidate-fit",
+          "osm-geography"
+        ],
+        "planningRefs": [
+          "site",
+          "problem"
+        ],
+        "visualPurpose": "지역 참고 위치를 먼저 읽고 현장 조사 조건을 확인",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "site-map"
+      },
+      "id": "geography",
+      "layout": "scenario",
+      "title": "참고 위치에서 현장 조사로",
+      "message": "참고 좌표와 확정 출입구를 구분 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+      "items": [],
+      "claimIds": [
+        "city-station",
+        "city-oryong",
+        "city-bongmyeong",
+        "candidate-fit",
+        "osm-geography"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    },
+    {
+      "compositionBrief": {
+        "engine": "authored-v1",
+        "role": "decision",
+        "rationale": "기간의 길이와 단계별 확인 내용을 함께 파악",
+        "readingPath": "기간 막대의 길이와 단계 산출물을 대조하고 실증 결과에 따라 다음 판단",
+        "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+        "visual": "timeline",
+        "title": {
+          "x": 0.8,
+          "y": 0.8,
+          "w": 11.8,
+          "h": 0.7
+        },
+        "message": {
+          "x": 0.8,
+          "y": 1.65,
+          "w": 9,
+          "h": 0.65
+        },
+        "visualBox": {
+          "x": 0.8,
+          "y": 2.6,
+          "w": 11.8,
+          "h": 3.5
+        },
+        "caption": {
+          "x": 0.8,
+          "y": 6.2,
+          "w": 11.8,
+          "h": 0.4
+        },
+        "titleAlign": "left",
+        "nodeBoxes": {},
+        "edgeLabelBoxes": {},
+        "narrative": {
+          "beliefShift": "실증 결과와 남은 조건으로 다음 단계 판단",
+          "evidenceClaimIds": [
+            "scope",
+            "readiness"
+          ],
+          "nextQuestion": "실제 현장 조사와 조건 협의에 착수할 수 있는가?"
+        }
+      },
+      "reasoning": {
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "기간의 길이와 단계별 확인 내용을 함께 파악",
+            "howToRead": "기간 막대의 길이와 단계 산출물을 대조하고 실증 결과에 따라 다음 판단",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "timeline"
+            ]
+          },
+          "readingGuide": {
+            "message": "실증 결과로 다음 단계를 판단",
+            "keyPhrase": "다음 단계",
+            "focusPhrases": [
+              "다음 단계"
+            ],
+            "tone": "amber"
+          },
+          "intent": "temporal",
+          "schedule": {
+            "slots": 8,
+            "unitLabel": "개월차",
+            "ranges": [
+              {
+                "nodeId": "a",
+                "start": 0,
+                "length": 1
+              },
+              {
+                "nodeId": "b",
+                "start": 1,
+                "length": 2
+              },
+              {
+                "nodeId": "c",
+                "start": 3,
+                "length": 4
+              },
+              {
+                "nodeId": "d",
+                "start": 7,
+                "length": 1
+              }
+            ]
+          },
+          "kind": "timeline",
+          "takeaway": "실증 결과로 다음 단계를 판단",
+          "encoding": "기간의 실제 길이와 단계 산출물을 연결하는 제안 일정",
+          "evidenceIds": [
+            "scope",
+            "readiness"
+          ],
+          "nodes": [
+            {
+              "id": "a",
+              "label": "조사·협의",
+              "detail": "위험·설치 조건 확인",
+              "icon": "document"
+            },
+            {
+              "id": "b",
+              "label": "설치·시험",
+              "detail": "전달·통제·장애 시험",
+              "icon": "camera"
+            },
+            {
+              "id": "c",
+              "label": "현장 운영",
+              "detail": "운영 부담·결측 함께 기록",
+              "icon": "clipboard"
+            },
+            {
+              "id": "d",
+              "label": "평가·판단",
+              "detail": "확대·수정·중단 근거 확인",
+              "icon": "team"
+            }
+          ],
+          "edges": [],
+          "legend": "제안 일정 예시 · 착수·현장 운영 조건과 수용기준은 별도 협의"
+        },
+        "planningFingerprint": "0a31dbbbcd017bccd4eb755d952cf182c142f18a47abfb2e6e441ea469214495",
+        "stage": "validation",
+        "question": "실증 이후 어떤 근거로 다음 단계를 결정할 것인가?",
+        "answer": "실증 결과로 다음 단계를 판단 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "scope",
+          "readiness"
+        ],
+        "planningRefs": [
+          "validation:detection",
+          "validation:delivery",
+          "validation:response-test"
+        ],
+        "visualPurpose": "기간의 길이와 단계별 확인 내용을 함께 파악",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님",
+        "visualKind": "validation-matrix"
+      },
+      "id": "acceptance",
+      "layout": "comparison",
+      "title": "실증 기간과 단계별 확인",
+      "message": "실증 결과로 다음 단계를 판단 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+      "items": [],
+      "claimIds": [
+        "scope",
+        "readiness"
+      ],
+      "footnote": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+    }
+  ],
+  "provider": "offline",
+  "qualityTarget": "proposal",
+  "planning": {
+    "visualPolicy": {
+      "requireExplanationContract": true,
+      "mode": "visual-first",
+      "requireEverySlide": true,
+      "minVisualAreaRatio": 0.24
+    },
+    "version": 1,
+    "depth": "concept",
+    "decision": {
+      "owner": "천안시 소관 발주부서와 현장 시공사·안전관리자",
+      "request": "공공공사 출입구 후보 1개소 선정과 위험 관찰·설치 가능성 공동 검토를 요청합니다.",
+      "success": "실제 위험 수요와 기존 대응의 잔여 과제가 확인될 때만 제한 실증에 진입한다.",
+      "scope": "공공공사 출입구 1개소에서 먼저 검증",
+      "outOfScope": [
+        "도시 전체 관제 구축",
+        "상업광고 매출 회수",
+        "유도원 대체·무인 통행 허가",
+        "사고 감소율 사전 보장"
+      ]
+    },
+    "problem": {
+      "actors": [
+        "보도를 이용하는 시민",
+        "진출입 차량 운전자",
+        "현장 유도원·안전관리자"
+      ],
+      "situation": "차량이 공사장 출입구에서 보도를 가로지르는 조건에서는 보행자와 같은 공간을 일시적으로 사용한다.",
+      "gap": "물리적 경계만으로 출입구 교차가 사라지지는 않으며, 접근 인지와 실제 동선 통제가 연결되어야 한다.",
+      "consequence": "접근을 늦게 인지하거나 통제 이행이 확인되지 않으면 위험 노출을 남길 수 있다. 천안 현장의 발생 빈도는 미확인이다.",
+      "baseline": "동선을 나누고 시야를 확보하는 조치가 우선입니다.\nAI는 현장 통제를 돕는 용도로 검토합니다.",
+      "claimIds": [
+        "separation",
+        "public-boundary",
+        "blind-area",
+        "response-chain"
+      ],
+      "localEvidence": {
+        "status": "not-yet-observed",
+        "claimIds": [],
+        "required": [
+          "차량 출입·보행량·시야 가림 현장 조사",
+          "현재 유도원 배치·CCTV·경고 및 조치 절차 확인",
+          "현장 운영자와 시민의 불편·위험 접근 수요 확인"
+        ]
+      },
+      "mechanisms": [
+        {
+          "id": "crossing",
+          "cause": "차량·보행 동선의 교차",
+          "effect": "차량이 보도를 지나는 동안\n보행자 이동 경로와 겹침",
+          "status": "general-evidence",
+          "claimIds": [
+            "separation",
+            "public-boundary"
+          ]
+        },
+        {
+          "id": "visibility",
+          "cause": "운전자·보행자의 사각지대",
+          "effect": "울타리·차체에 가려\n상대의 접근을 늦게 볼 가능성",
+          "status": "general-evidence",
+          "claimIds": [
+            "blind-area",
+            "separation"
+          ]
+        },
+        {
+          "id": "response",
+          "cause": "경고 후 조치 확인",
+          "effect": "경고가 전달됐는지,\n현장 통제가 이뤄졌는지 확인",
+          "status": "hypothesis",
+          "claimIds": [
+            "response-chain"
+          ]
+        }
+      ]
+    },
+    "alternatives": [
+      {
+        "id": "physical",
+        "name": "동선 분리·시야 확보",
+        "priority": "baseline",
+        "addresses": "차량·보행자의 접점을 줄이고 시야 확보",
+        "limits": "공간 확보와 차량 회전·출입 조건 검토",
+        "mechanismIds": [
+          "crossing",
+          "visibility"
+        ],
+        "claimIds": [
+          "separation",
+          "public-boundary"
+        ]
+      },
+      {
+        "id": "people",
+        "name": "유도원·CCTV 활용",
+        "priority": "option",
+        "addresses": "유도원이 통행을 관리하고 영상으로 상황 확인",
+        "limits": "현행 운영 방식과 사각지대 현장 확인",
+        "mechanismIds": [
+          "response"
+        ],
+        "claimIds": [
+          "manual-authority",
+          "local-gap"
+        ]
+      },
+      {
+        "id": "smartfence",
+        "name": "AI 접근 알림·대응 기록",
+        "priority": "proposed",
+        "addresses": "차량·보행자 접근을 알리고 조치 이력 관리",
+        "limits": "감지 성능·경고 전달·운영 부담 실증",
+        "mechanismIds": [
+          "visibility",
+          "response"
+        ],
+        "claimIds": [
+          "observation-proposal",
+          "warning-proposal"
+        ]
+      }
+    ],
+    "interventions": [
+      {
+        "id": "observe",
+        "name": "차량·보행자 감지",
+        "mechanismIds": [
+          "crossing",
+          "visibility"
+        ],
+        "action": "카메라 영상을 분석해\n차량·보행자 접근을 확인",
+        "deliverable": "접근 상황·위험 판단·장비 상태 기록",
+        "claimIds": [
+          "observation-proposal"
+        ],
+        "validationIds": [
+          "detection"
+        ]
+      },
+      {
+        "id": "warn",
+        "name": "담당자에게 위험 알림",
+        "mechanismIds": [
+          "response"
+        ],
+        "action": "담당자에게 위험을 알리고\n경고장치의 작동 여부 확인",
+        "deliverable": "경고 전송·장치 응답·작동 시각 기록",
+        "claimIds": [
+          "warning-proposal"
+        ],
+        "validationIds": [
+          "delivery"
+        ]
+      },
+      {
+        "id": "confirm",
+        "name": "현장 통제·대응 기록",
+        "mechanismIds": [
+          "response"
+        ],
+        "action": "유도원이 통행을 관리하고\n조치 내용과 시각을 기록",
+        "deliverable": "확인 담당자·조치 내용·조치 시각",
+        "claimIds": [
+          "manual-authority",
+          "response-chain"
+        ],
+        "validationIds": [
+          "response-test"
+        ]
+      }
+    ],
+    "validation": [
+      {
+        "id": "detection",
+        "question": "차량과 보행자를 정확히 감지하는가",
+        "method": "주야간 영상에 사람이 표시한 정답과 비교",
+        "measure": "정확한 감지·오탐·미탐·영상 상태",
+        "decisionRule": "현장 운영 전 오탐·미탐 허용기준 합의",
+        "claimIds": [
+          "readiness",
+          "observation-proposal"
+        ]
+      },
+      {
+        "id": "delivery",
+        "question": "경고가 제때 전달되고 작동하는가",
+        "method": "전송·응답·실제 작동 시각을 각각 측정",
+        "measure": "감지부터 경고까지 걸린 시간·누락·장애 대응",
+        "decisionRule": "반복 누락·과도한 지연 발생 시 중단",
+        "claimIds": [
+          "readiness",
+          "warning-proposal"
+        ]
+      },
+      {
+        "id": "response-test",
+        "question": "현장 관리에 도움이 되는가",
+        "method": "도입 전후의 대응 기록과 운영자 의견 비교",
+        "measure": "조치 확인·업무 부담·장애 시 수동 대응",
+        "decisionRule": "효과가 없거나 운영 부담이 크면\n확대 보류",
+        "claimIds": [
+          "local-gap",
+          "response-chain",
+          "manual-authority"
+        ]
+      }
+    ],
+    "operatingBoundary": "AI·통신 장애 시 기존 수동 절차로 전환 | 경고장치 응답과 현장 조치 완료는 별도 확인",
+    "workflow": [
+      {
+        "id": "detect",
+        "label": "감지",
+        "owner": "system",
+        "input": "카메라 영상·장비 상태",
+        "action": "차량·보행자 감지",
+        "output": "검출 이벤트",
+        "successSignal": "감지 시각·영상 상태",
+        "failureAction": "영상 장애 알림·수동 운영",
+        "claimIds": [
+          "observation-proposal"
+        ]
+      },
+      {
+        "id": "judge",
+        "label": "위험 판단",
+        "owner": "system",
+        "input": "이벤트·승인 위험구역",
+        "action": "설정한 위험 조건과 비교",
+        "output": "위험조건·불확실 상태",
+        "successSignal": "적용 조건·판단 결과",
+        "failureAction": "안전확보로 표시하지 않음",
+        "claimIds": [
+          "observation-proposal",
+          "readiness"
+        ]
+      },
+      {
+        "id": "notify",
+        "label": "현장 경고",
+        "owner": "system",
+        "input": "위험조건·설비 상태",
+        "action": "담당자에게 경고 전송",
+        "output": "명령·장치 응답",
+        "successSignal": "장치 응답·작동 시각",
+        "failureAction": "수동 경고·장애 통보",
+        "claimIds": [
+          "warning-proposal"
+        ]
+      },
+      {
+        "id": "control",
+        "label": "통행 관리",
+        "owner": "human",
+        "input": "현장 위험·담당자 알림",
+        "action": "유도원이 통행 관리",
+        "output": "조치 확인·시각",
+        "successSignal": "담당자 확인·조치 시각",
+        "failureAction": "기존 현장 안전절차 유지",
+        "claimIds": [
+          "manual-authority"
+        ]
+      },
+      {
+        "id": "record",
+        "label": "조치 기록",
+        "owner": "system",
+        "input": "이벤트·장치·현장 확인",
+        "action": "위험·대응 이력 저장",
+        "output": "위험 발생·현장 대응 기록",
+        "successSignal": "이벤트·조치 이력",
+        "failureAction": "기록 누락 표시·원인 점검",
+        "claimIds": [
+          "response-chain",
+          "readiness"
+        ]
+      }
+    ],
+    "site": {
+      "title": "출입구와 보행동선의 관계",
+      "disclaimer": "가정한 배치도 · 실제 천안 현장 도면·거리·감지범위가 아님",
+      "zones": [
+        {
+          "id": "site",
+          "label": "공사장 내부",
+          "kind": "site",
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 0.52
+        },
+        {
+          "id": "sidewalk",
+          "label": "시민 보행로",
+          "kind": "walkway",
+          "x": 0,
+          "y": 0.52,
+          "w": 1,
+          "h": 0.28
+        },
+        {
+          "id": "road",
+          "label": "차도",
+          "kind": "road",
+          "x": 0,
+          "y": 0.8,
+          "w": 1,
+          "h": 0.2
+        },
+        {
+          "id": "blocked-view",
+          "label": "가림 가능 구간",
+          "kind": "occlusion",
+          "x": 0.21,
+          "y": 0.34,
+          "w": 0.21,
+          "h": 0.18
+        },
+        {
+          "id": "intersection",
+          "label": "동선 교차",
+          "kind": "conflict",
+          "x": 0.46,
+          "y": 0.54,
+          "w": 0.18,
+          "h": 0.24
+        }
+      ],
+      "paths": [
+        {
+          "id": "truck-path",
+          "label": "차량 진출입",
+          "kind": "vehicle",
+          "points": [
+            [
+              0.55,
+              0.34
+            ],
+            [
+              0.55,
+              0.91
+            ]
+          ]
+        },
+        {
+          "id": "ped-path",
+          "label": "보행 흐름",
+          "kind": "pedestrian",
+          "points": [
+            [
+              0.15,
+              0.69
+            ],
+            [
+              0.86,
+              0.69
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "id": "truck",
+          "label": "공사차량",
+          "kind": "vehicle",
+          "x": 0.55,
+          "y": 0.2
+        },
+        {
+          "id": "pedestrian",
+          "label": "보행자",
+          "kind": "person",
+          "x": 0.24,
+          "y": 0.66
+        },
+        {
+          "id": "marshal",
+          "label": "유도원",
+          "kind": "operator",
+          "x": 0.76,
+          "y": 0.44
+        },
+        {
+          "id": "fence-left",
+          "label": "울타리",
+          "kind": "barrier",
+          "w": 0.44,
+          "x": 0,
+          "y": 0.49
+        },
+        {
+          "id": "fence-right",
+          "label": "울타리",
+          "kind": "barrier",
+          "w": 0.32,
+          "x": 0.68,
+          "y": 0.49
+        }
+      ],
+      "callouts": [
+        {
+          "id": "crossing-callout",
+          "label": "동선이 겹치는 구간",
+          "detail": "차량이 보도를 지나는 구간에서 보행자 통행 관리 필요",
+          "x": 0.55,
+          "y": 0.65,
+          "claimIds": [
+            "separation",
+            "public-boundary"
+          ]
+        },
+        {
+          "id": "view-callout",
+          "label": "서로 잘 안 보이는 곳",
+          "detail": "차체와 울타리로 시야가 가리는 구간을 현장에서 확인",
+          "x": 0.34,
+          "y": 0.4,
+          "claimIds": [
+            "blind-area",
+            "local-gap"
+          ]
+        },
+        {
+          "id": "control-callout",
+          "label": "유도원의 통제 위치",
+          "detail": "보행자와 차량을 함께 보고 필요할 때 통행을 유도",
+          "x": 0.8,
+          "y": 0.44,
+          "claimIds": [
+            "manual-authority"
+          ]
+        }
+      ]
+    },
+    "story": [
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "orientation",
+          "rationale": "차량과 시민이 만나는 물리적 접점을 먼저 인지",
+          "readingPath": "왼쪽 큰 현장에서 차량·시민·유도원 관계를 보고 오른쪽 통제 원칙으로 이동",
+          "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+          "visual": "scene",
+          "title": {
+            "x": 8.836,
+            "y": 0.85,
+            "w": 3.858,
+            "h": 1.462
+          },
+          "message": {
+            "x": 8.836,
+            "y": 2.632,
+            "w": 3.858,
+            "h": 2.018
+          },
+          "visualBox": {
+            "x": 0.64,
+            "y": 0.82,
+            "w": 7.956,
+            "h": 4.86
+          },
+          "caption": {
+            "x": 0.64,
+            "y": 5.95,
+            "w": 12.053,
+            "h": 0.58
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {
+            "truck": {
+              "x": 0.82,
+              "y": 1.02,
+              "w": 2.25,
+              "h": 0.48
+            },
+            "walk": {
+              "x": 0.82,
+              "y": 5.02,
+              "w": 2.25,
+              "h": 0.48
+            },
+            "human": {
+              "x": 6.1,
+              "y": 5.02,
+              "w": 2.35,
+              "h": 0.48
+            }
+          },
+          "edgeLabelBoxes": {},
+          "typography": {
+            "titleSize": 36,
+            "messageSize": 22,
+            "captionSize": 14
+          },
+          "narrative": {
+            "beliefShift": "현장의 물리적 관계부터 이해",
+            "evidenceClaimIds": [
+              "separation",
+              "public-boundary",
+              "blind-area",
+              "response-chain"
+            ],
+            "nextQuestion": "도시 전체 수치로 공사장 수요를 확정할 수 있는가?"
+          },
+          "referenceApplications": [
+            {
+              "sourceId": "REF-UBER",
+              "locator": "PDF p.12",
+              "principle": "전환 시점의 핵심 판단을 큰 글자로 우선 인지",
+              "application": "장면 옆 제목을 키우고 현장 통제 원칙과 분리",
+              "notCopied": "원본 글자·브랜드·수치·스크린샷은 복사하지 않음",
+              "controls": [
+                "typography"
+              ]
+            }
+          ]
+        },
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "차량과 시민이 만나는 물리적 접점을 먼저 인지",
+            "howToRead": "왼쪽 큰 현장에서 차량·시민·유도원 관계를 보고 오른쪽 통제 원칙으로 이동",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "scene"
+            ]
+          },
+          "readingGuide": {
+            "message": "동선 분리와\n현장 통제가 우선",
+            "keyPhrase": "현장 통제",
+            "focusPhrases": [
+              "현장 통제"
+            ],
+            "tone": "amber"
+          },
+          "intent": "spatial",
+          "scene": {
+            "path": "examples/assets/site-spatial-model-v5.png",
+            "rights": "generated",
+            "caption": "출입구 공간 구성 예시",
+            "reuseReason": "기존 공간 개념 자산을 새 구도에서 설명용으로 활용하며 실제 설치 현장으로 표현하지 않음",
+            "annotations": [
+              {
+                "nodeId": "truck",
+                "x": 0.63,
+                "y": 0.25
+              },
+              {
+                "nodeId": "walk",
+                "x": 0.41,
+                "y": 0.72
+              },
+              {
+                "nodeId": "human",
+                "x": 0.79,
+                "y": 0.56
+              }
+            ]
+          },
+          "kind": "site",
+          "takeaway": "동선 분리와\n현장 통제가 우선",
+          "encoding": "보도·차량 경로의 교차와 울타리 사각지대를 공간적으로 표현",
+          "evidenceIds": [
+            "separation",
+            "public-boundary",
+            "blind-area",
+            "response-chain"
+          ],
+          "nodes": [
+            {
+              "id": "truck",
+              "label": "차량 출입",
+              "detail": "",
+              "icon": "gate"
+            },
+            {
+              "id": "walk",
+              "label": "보행 동선",
+              "detail": "",
+              "icon": "person"
+            },
+            {
+              "id": "human",
+              "label": "유도원 확인",
+              "detail": "",
+              "icon": "team"
+            }
+          ],
+          "edges": [],
+          "legend": "출입구 공간 개념 · 실제 천안 현장 사진·실측 도면 아님 · 동선 분리와 유도원 통제 우선"
+        },
+        "id": "spatial",
+        "stage": "problem",
+        "title": "출입구에서\n만나는 동선",
+        "question": "차량과 보행자가 어느 지점에서 충돌할 수 있는가?",
+        "answer": "동선 분리와\n현장 통제가 우선 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "separation",
+          "public-boundary",
+          "blind-area",
+          "response-chain"
+        ],
+        "visualPurpose": "차량과 시민이 만나는 물리적 접점을 먼저 인지",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      },
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "evidence",
+          "rationale": "도시 전체의 보도 수치와 현장 수요의 차이를 이해",
+          "readingPath": "오른쪽 실제 수치 비교와 하단 집계 한계를 확인한 후 왼쪽 판단 문구로 이동",
+          "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+          "visual": "chart",
+          "title": {
+            "x": 0.64,
+            "y": 0.85,
+            "w": 3.858,
+            "h": 1.552
+          },
+          "message": {
+            "x": 0.64,
+            "y": 2.622,
+            "w": 3.858,
+            "h": 1.465
+          },
+          "visualBox": {
+            "x": 4.738,
+            "y": 0.92,
+            "w": 7.956,
+            "h": 4.62
+          },
+          "caption": {
+            "x": 0.64,
+            "y": 5.82,
+            "w": 12.053,
+            "h": 0.72
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {},
+          "edgeLabelBoxes": {},
+          "typography": {
+            "titleSize": 32,
+            "messageSize": 21,
+            "bodySize": 16,
+            "captionSize": 14
+          },
+          "chartFocus": {
+            "series": "보행자 사망자",
+            "reason": "전체 집계와 중첩되는 보행자 부분을 구별해 읽음",
+            "claimIds": [
+              "reported-city-traffic"
+            ],
+            "noteBox": {
+              "x": 0.64,
+              "y": 4.307,
+              "w": 3.858,
+              "h": 1.293
+            }
+          },
+          "narrative": {
+            "beliefShift": "도시 수치를 현장 성과와 구별",
+            "evidenceClaimIds": [
+              "city-smart",
+              "city-plan",
+              "city-council",
+              "city-fence",
+              "reported-city-traffic"
+            ],
+            "nextQuestion": "접근 알림 이후 누가 실제 행동을 하는가?"
+          },
+          "referenceApplications": [
+            {
+              "sourceId": "REF-DUARTE",
+              "locator": "article: before table / after bar",
+              "principle": "모든 값의 동등한 강조보다 질문에 맞는 계열을 식별",
+              "application": "원자료는 유지하며 보행자 계열과 직접 표기를 강조",
+              "notCopied": "원본 글자·브랜드·수치·스크린샷은 복사하지 않음",
+              "controls": [
+                "chartFocus"
+              ]
+            }
+          ]
+        },
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "도시 전체의 보도 수치와 현장 수요의 차이를 이해",
+            "howToRead": "오른쪽 실제 수치 비교와 하단 집계 한계를 확인한 후 왼쪽 판단 문구로 이동",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "chart"
+            ]
+          },
+          "readingGuide": {
+            "message": "도시 지표와\n현장 수요를 구분",
+            "keyPhrase": "현장 수요",
+            "focusPhrases": [
+              "현장 수요"
+            ],
+            "tone": "amber"
+          },
+          "intent": "quantitative",
+          "chart": {
+            "datasetId": "cheonan-traffic-fatalities",
+            "type": "bar",
+            "orientation": "column",
+            "stacked": false
+          },
+          "kind": "data-chart",
+          "takeaway": "도시 지표는\n현장 수요의 증거와 구분",
+          "encoding": "연간 사망자 수를 0에서 시작하는 같은 명 단위의 그룹 막대 그래프로 비교",
+          "evidenceIds": [
+            "city-smart",
+            "city-plan",
+            "city-council",
+            "city-fence",
+            "reported-city-traffic"
+          ],
+          "nodes": [
+            {
+              "id": "n0",
+              "label": "스마트도시계획",
+              "detail": "2025~2029 계획의 시민체감 방향",
+              "icon": "document"
+            },
+            {
+              "id": "n1",
+              "label": "거점형 스마트도시",
+              "detail": "2024년 천안 선정·실증 방향",
+              "icon": "city"
+            },
+            {
+              "id": "n2",
+              "label": "가설울타리·해체 안전",
+              "detail": "공공디자인과 시민 통행의 접점",
+              "icon": "shield"
+            }
+          ],
+          "edges": [],
+          "legend": "천안시 전체 · 2024/2025년 연간 · 대전일보 보도(TAAS 인용) · 전체와 보행자는 더하지 않음"
+        },
+        "id": "evidence",
+        "stage": "problem",
+        "title": "도시 지표와\n현장 근거의 차이",
+        "question": "도시 전체 수치로 공사장 수요를 확정할 수 있는가?",
+        "answer": "도시 지표는\n현장 수요의 증거와 구분 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "city-smart",
+          "city-plan",
+          "city-council",
+          "city-fence",
+          "reported-city-traffic"
+        ],
+        "visualPurpose": "도시 전체의 보도 수치와 현장 수요의 차이를 이해",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      },
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "explanation",
+          "rationale": "단순 흐름도 대신 원인→개입→현장반응→측정지표의 4단계 인과 사슬을 명시",
+          "readingPath": "상단 핵심 문구를 읽은 뒤 두 줄의 인과 사슬을 좌에서 우로 따라가며 검증 지표를 확인",
+          "continuity": "도시 데이터 한계에서 실제 현장 개입 메커니즘과 화면 작동으로 연결",
+          "visual": "causal-chain",
+          "title": {
+            "x": 0.64,
+            "y": 0.78,
+            "w": 6.828,
+            "h": 1.12
+          },
+          "message": {
+            "x": 7.748,
+            "y": 0.78,
+            "w": 4.945,
+            "h": 1.12
+          },
+          "visualBox": {
+            "x": 0.64,
+            "y": 2.04,
+            "w": 12.053,
+            "h": 3.74
+          },
+          "caption": {
+            "x": 0.64,
+            "y": 5.96,
+            "w": 12.053,
+            "h": 0.56
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {
+            "chain-sight:cause": {
+              "x": 0.76,
+              "y": 2.18,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-sight:intervention": {
+              "x": 3.783,
+              "y": 2.18,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-sight:response": {
+              "x": 6.807,
+              "y": 2.18,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-sight:result": {
+              "x": 9.83,
+              "y": 2.18,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-delay:cause": {
+              "x": 0.76,
+              "y": 4.04,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-delay:intervention": {
+              "x": 3.783,
+              "y": 4.04,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-delay:response": {
+              "x": 6.807,
+              "y": 4.04,
+              "w": 2.743,
+              "h": 1.6
+            },
+            "chain-delay:result": {
+              "x": 9.83,
+              "y": 4.04,
+              "w": 2.743,
+              "h": 1.6
+            }
+          },
+          "edgeLabelBoxes": {},
+          "typography": {
+            "titleSize": 32,
+            "messageSize": 20,
+            "nodeTitleSize": 17,
+            "bodySize": 16,
+            "captionSize": 14
+          },
+          "narrative": {
+            "beliefShift": "개별 장비 도입이 아니라 원인별 현장 대응 사슬과 측정 지표를 함께 설계함을 이해",
+            "evidenceClaimIds": [
+              "response-chain",
+              "manual-authority",
+              "warning-proposal"
+            ],
+            "nextQuestion": "현장 내부 운전자와 유도원은 실제 화면에서 어떤 상태 정보를 보게 되는가?"
+          }
+        },
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "두 가지 현장 위험 원인이 각각 어떤 개입과 현장 행동을 거쳐 측정되는지 대조",
+            "howToRead": "왼쪽 원인부터 오른쪽 가설 결과·측정까지 화살표 순서대로 두 행을 비교",
+            "notProven": "사슬의 기대 결과는 실증 가설이며 사전 확정된 사고 감소 수치가 아님",
+            "requiredMarks": [
+              "connectors"
+            ]
+          },
+          "readingGuide": {
+            "message": "원인부터 현장 대응과\n검증 지표까지 연결",
+            "keyPhrase": "현장 대응",
+            "focusPhrases": [
+              "현장 대응",
+              "검증 지표"
+            ],
+            "tone": "amber"
+          },
+          "intent": "causal",
+          "chains": [
+            {
+              "id": "chain-sight",
+              "cause": "울타리·출입구 시야 가림으로\n보행자·차량 직전 조우",
+              "intervention": "물리 동선 분리 및\n자체 제작 AI NPU 안전장치",
+              "response": "유도원 출차 대기 신호 및\n보행자 음성 안내 작동",
+              "result": "교차 위험 노출 및\n필수 사례 미탐률 측정",
+              "mechanismIds": [
+                "crossing"
+              ],
+              "interventionIds": [
+                "observe"
+              ],
+              "alternativeIds": [],
+              "metricIds": [
+                "detection"
+              ],
+              "evidenceIds": [
+                "response-chain",
+                "manual-authority",
+                "warning-proposal"
+              ],
+              "resultStatus": "hypothesis"
+            },
+            {
+              "id": "chain-delay",
+              "cause": "작업 소음·야간 환경에서\n차량·보행자 상호 인지 지연",
+              "intervention": "컬러 LED AIoT 전광판 및\n현장 유도원 확인 절차",
+              "response": "운전자 정지·서행 확인 및\n담당자 조치 이력 기록",
+              "result": "경고 전달 지연(p95) 및\n현장 조치 완결률 검증",
+              "mechanismIds": [
+                "visibility"
+              ],
+              "interventionIds": [
+                "warn"
+              ],
+              "alternativeIds": [],
+              "metricIds": [
+                "delivery"
+              ],
+              "evidenceIds": [
+                "response-chain",
+                "manual-authority",
+                "warning-proposal"
+              ],
+              "resultStatus": "hypothesis"
+            }
+          ],
+          "kind": "causal-flow",
+          "takeaway": "원인·기본조치·현장대응·측정지표를 사슬로 연결",
+          "encoding": "2개 핵심 위험 원인별 개입·현장 반응·가설 검증 지표의 4단계 사슬",
+          "evidenceIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nodes": [
+            {
+              "id": "notify",
+              "label": "알림 전달",
+              "detail": "전달 여부 기록",
+              "icon": "bell"
+            },
+            {
+              "id": "control",
+              "label": "현장 통제",
+              "detail": "유도원 직접 확인",
+              "icon": "team"
+            },
+            {
+              "id": "verify",
+              "label": "조치 기록",
+              "detail": "실제 조치와 시각",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "notify",
+              "to": "control",
+              "label": "담당자 확인"
+            },
+            {
+              "from": "control",
+              "to": "verify",
+              "label": "조치 결과"
+            }
+          ],
+          "legend": "인과 가설 모델 · 실제 사고 감소 효과는 현장 실증 기간의 미탐률·지연·완결률 기록으로 검증"
+        },
+        "id": "causal-mechanism",
+        "stage": "intervention",
+        "title": "위험 원인별 개입과 검증 사슬",
+        "question": "설비와 현장 조치가 어떤 메커니즘으로 위험을 줄이고 어떻게 검증하는가?",
+        "answer": "시야 가림과 인지 지연이라는 두 가지 원인에 대해 물리 분리·AI 알림·유도원 통제·검증 지표를 사슬로 연결한다.",
+        "proofClaimIds": [
+          "response-chain",
+          "manual-authority",
+          "warning-proposal"
+        ],
+        "visualPurpose": "알림 전달에서 실제 통제와 기록으로 이어지는 책임 경로",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      },
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "explanation",
+          "rationale": "장비 화면의 객체 인식 표시와 유도원 현장 통제 우선 원칙을 한 화면에서 대조",
+          "readingPath": "왼쪽 전광판 프레임과 하단 통제 배너를 확인한 후 오른쪽 3가지 상태 기준을 읽음",
+          "continuity": "인과 메커니즘에서 실제 장비 화면과 주체별 책임 스윔레인으로 연결",
+          "visual": "annotated-screen",
+          "title": {
+            "x": 0.64,
+            "y": 0.78,
+            "w": 6.828,
+            "h": 1.12
+          },
+          "message": {
+            "x": 7.748,
+            "y": 0.78,
+            "w": 4.945,
+            "h": 1.12
+          },
+          "visualBox": {
+            "x": 0.64,
+            "y": 2.04,
+            "w": 12.053,
+            "h": 3.74
+          },
+          "caption": {
+            "x": 0.64,
+            "y": 5.96,
+            "w": 12.053,
+            "h": 0.56
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {},
+          "edgeLabelBoxes": {},
+          "screenLayout": {
+            "frameBox": {
+              "x": 0.74,
+              "y": 2.14,
+              "w": 6.028,
+              "h": 2.652
+            },
+            "statusBannerBox": {
+              "x": 0.74,
+              "y": 4.932,
+              "w": 6.028,
+              "h": 0.748
+            },
+            "sidePanelBoxes": {
+              "state-detect": {
+                "x": 7.028,
+                "y": 2.14,
+                "w": 5.565,
+                "h": 1.087
+              },
+              "state-clear": {
+                "x": 7.028,
+                "y": 3.367,
+                "w": 5.565,
+                "h": 1.087
+              },
+              "state-fault": {
+                "x": 7.028,
+                "y": 4.593,
+                "w": 5.565,
+                "h": 1.087
+              }
+            }
+          },
+          "typography": {
+            "titleSize": 32,
+            "messageSize": 20,
+            "nodeTitleSize": 17,
+            "bodySize": 16,
+            "captionSize": 14
+          },
+          "narrative": {
+            "beliefShift": "AI 화면 표시는 보조 수단이며 미검출 상태에서도 유도원 확인이 필수임을 이해",
+            "evidenceClaimIds": [
+              "response-chain",
+              "manual-authority",
+              "warning-proposal"
+            ],
+            "nextQuestion": "감지 이후 시스템과 현장 담당자의 책임 경계는 어떻게 나뉘는가?"
+          }
+        },
+        "visualPlan": {
+          "interfaceExample": {
+            "kind": "alerts",
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "response-chain",
+              "manual-authority",
+              "warning-proposal"
+            ],
+            "scenario": "천안시 공사현장 내부 출차 대기 및 보행자 접근 경고 예시",
+            "at": "현장 출입구 내부 전광판",
+            "metrics": [
+              {
+                "label": "감지 상태",
+                "value": "보행자 접근",
+                "tone": "danger"
+              },
+              {
+                "label": "차량 지시",
+                "value": "출차 대기",
+                "tone": "caution"
+              },
+              {
+                "label": "통제 권한",
+                "value": "현장 유도원 우선",
+                "tone": "neutral"
+              }
+            ],
+            "records": [
+              {
+                "name": "전광판 경고 송출",
+                "status": "감지됨",
+                "detail": "운전자 정지·유도원 확인 대기",
+                "updated": "즉시"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "표시 원칙",
+                "value": "안전기호·공공안내 중심"
+              }
+            ],
+            "decision": {
+              "title": "유도원 통제 우선",
+              "reason": "미검출이 통행 허가를 의미하지 않음",
+              "action": "유도원 육안 확인 후 출차 지시 (미검출은 통행 허가 아님)"
+            },
+            "image": {
+              "path": "examples/assets/product-driver-led-v8.png",
+              "caption": "운전자 방향 컬러 LED AIoT 전광판 개념 예시",
+              "origin": "generated-concept"
+            }
+          },
+          "explanation": {
+            "readerTask": "화면 내 객체 인식 표시와 하단 통제 배너, 우측 3가지 상태별 행동 원칙을 대조",
+            "howToRead": "왼쪽 프레임의 객체 박스와 주황색 통제 배너를 본 뒤 오른쪽 3단계 상태 카드를 확인",
+            "notProven": "개념 화면 예시는 실제 현장 인식률이나 자동 통행 허가 성능을 증명하지 않음",
+            "requiredMarks": [
+              "scene",
+              "screen"
+            ]
+          },
+          "readingGuide": {
+            "message": "미검출은 통행 허가가 아니며\n유도원 직접 확인이 우선",
+            "keyPhrase": "유도원 직접 확인",
+            "focusPhrases": [
+              "유도원 직접 확인",
+              "통행 허가"
+            ],
+            "tone": "amber"
+          },
+          "intent": "structural",
+          "scene": {
+            "path": "examples/assets/product-driver-led-v8.png",
+            "rights": "generated",
+            "caption": "운전자 방향 컬러 LED AIoT 전광판 개념 예시",
+            "reuseReason": "내부 출차 대기 화면과 객체 표시 구성을 설명하기 위한 개념 자산",
+            "annotations": [
+              {
+                "nodeId": "state-detect",
+                "x": 0.78,
+                "y": 0.36
+              },
+              {
+                "nodeId": "state-clear",
+                "x": 0.56,
+                "y": 0.54
+              }
+            ]
+          },
+          "kind": "boundary",
+          "takeaway": "미검출은 통행 허가가 아니며 유도원 통제가 우선",
+          "encoding": "실제 전광판 프레임·객체 인식 박스·통제 배너와 우측 3단계 상태 해석 패널",
+          "evidenceIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nodes": [
+            {
+              "id": "state-detect",
+              "label": "감지됨 · 출차 대기",
+              "detail": "보행자 접근 표시 · 유도원 정지 신호 우선",
+              "icon": "bell"
+            },
+            {
+              "id": "state-clear",
+              "label": "미검출 · 서행 및 직접 확인",
+              "detail": "통행 허가 아님 · 사각지대 육안 확인 필수",
+              "icon": "shield"
+            },
+            {
+              "id": "state-fault",
+              "label": "점검 필요 · 수동 통제 전환",
+              "detail": "센서·통신 이상 시 즉시 현장 수동 통제",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [],
+          "legend": "화면 구성 예시 · 실제 CCTV 영상은 권한자 전용이며 전광판은 안전기호·공공안내 중심 표시"
+        },
+        "id": "driver-screen-view",
+        "stage": "operation",
+        "title": "운전자 전광판 화면과 3단계 통제 상태",
+        "question": "현장 내부 운전자와 유도원은 어떤 화면 표시와 통제 원칙에 따라 행동하는가?",
+        "answer": "객체 인식 박스와 출차 대기 경고를 표시하되, 미검출을 통행 허가로 간주하지 않고 유도원 통제를 우선한다.",
+        "proofClaimIds": [
+          "response-chain",
+          "manual-authority",
+          "warning-proposal"
+        ],
+        "visualPurpose": "같은 대응 관계를 세로로 놓아 단계별 완료 확인에 집중",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      },
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "explanation",
+          "rationale": "시스템 자동 알림과 인간 담당자의 물리적 통제 책임을 행(Lane)으로 명확히 분리",
+          "readingPath": "상단 시스템 행의 감지에서 하단 유도원 확인·통제를 거쳐 상단 조치 기록으로 이동",
+          "continuity": "화면 상태 기준에서 현장 운영 책임과 후보지 조사로 연결",
+          "visual": "swimlane",
+          "title": {
+            "x": 0.64,
+            "y": 0.78,
+            "w": 6.828,
+            "h": 1.12
+          },
+          "message": {
+            "x": 7.748,
+            "y": 0.78,
+            "w": 4.945,
+            "h": 1.12
+          },
+          "visualBox": {
+            "x": 0.64,
+            "y": 2.04,
+            "w": 12.053,
+            "h": 3.74
+          },
+          "caption": {
+            "x": 0.64,
+            "y": 5.96,
+            "w": 12.053,
+            "h": 0.56
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {
+            "notify": {
+              "x": 2.37,
+              "y": 2.2800000000000002,
+              "w": 4.422,
+              "h": 1.3599999999999999
+            },
+            "control": {
+              "x": 2.37,
+              "y": 4.18,
+              "w": 4.422,
+              "h": 1.3599999999999999
+            },
+            "act": {
+              "x": 7.992,
+              "y": 4.18,
+              "w": 4.421,
+              "h": 1.3599999999999999
+            },
+            "verify": {
+              "x": 7.992,
+              "y": 2.2800000000000002,
+              "w": 4.421,
+              "h": 1.3599999999999999
+            }
+          },
+          "edgeLabelBoxes": {
+            "notify:control": {
+              "x": 4.701,
+              "y": 3.77,
+              "w": 0.95,
+              "h": 0.28
+            },
+            "control:act": {
+              "x": 6.912,
+              "y": 4.5,
+              "w": 0.95,
+              "h": 0.28
+            },
+            "act:verify": {
+              "x": 10.323,
+              "y": 3.77,
+              "w": 0.95,
+              "h": 0.28
+            }
+          },
+          "edgeRoutes": {
+            "notify:control": {
+              "waypoints": [
+                [
+                  4.5809999999999995,
+                  3.64
+                ],
+                [
+                  4.5809999999999995,
+                  4.18
+                ]
+              ]
+            },
+            "control:act": {
+              "waypoints": [
+                [
+                  6.792,
+                  4.859999999999999
+                ],
+                [
+                  7.992,
+                  4.859999999999999
+                ]
+              ]
+            },
+            "act:verify": {
+              "waypoints": [
+                [
+                  10.2025,
+                  4.18
+                ],
+                [
+                  10.2025,
+                  3.64
+                ]
+              ]
+            }
+          },
+          "swimlaneLayout": {
+            "laneHeaderWidth": 1.45,
+            "lanes": {
+              "시스템 영역": {
+                "x": 0.72,
+                "y": 2.12,
+                "w": 11.893,
+                "h": 1.68
+              },
+              "현장 담당자": {
+                "x": 0.72,
+                "y": 4.02,
+                "w": 11.893,
+                "h": 1.68
+              }
+            },
+            "nodeLanes": {
+              "notify": "시스템 영역",
+              "control": "현장 담당자",
+              "act": "현장 담당자",
+              "verify": "시스템 영역"
+            }
+          },
+          "typography": {
+            "titleSize": 32,
+            "messageSize": 20,
+            "nodeTitleSize": 18,
+            "bodySize": 16,
+            "captionSize": 14
+          },
+          "narrative": {
+            "beliefShift": "장치 응답(ACK)과 유도원의 실제 통제 완료가 구조적으로 분리·기록됨을 확인",
+            "evidenceClaimIds": [
+              "response-chain",
+              "manual-authority",
+              "warning-proposal"
+            ],
+            "nextQuestion": "천안시 내 어떤 참고 위치에서 현장 조사를 시작할 것인가?"
+          }
+        },
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "상단 시스템 행과 하단 현장 담당자 행 사이의 인계 경로와 책임 분리를 확인",
+            "howToRead": "상단 감지·경고에서 하단 유도원 확인·통제로 내려간 뒤 다시 상단 이력 기록으로 올라가는 직교 화살표를 추적",
+            "notProven": "현장 인력 배치 기준과 세부 운영 수칙은 발주처·시공사 협의 필요",
+            "requiredMarks": [
+              "connectors"
+            ]
+          },
+          "readingGuide": {
+            "message": "시스템 경고와 현장 유도원의\n실제 통제 책임을 분리",
+            "keyPhrase": "실제 통제 책임",
+            "focusPhrases": [
+              "실제 통제 책임",
+              "시스템 경고"
+            ],
+            "tone": "blue"
+          },
+          "intent": "structural",
+          "kind": "flow",
+          "takeaway": "시스템 경고와 현장 유도원의 실제 통제 책임을 분리",
+          "encoding": "시스템 행과 현장 담당자 행을 분리한 2×2 스윔레인 및 직교 인계 경로",
+          "evidenceIds": [
+            "response-chain",
+            "manual-authority",
+            "warning-proposal"
+          ],
+          "nodes": [
+            {
+              "id": "notify",
+              "label": "접근 감지·전광판 경고",
+              "detail": "보행자·차량 접근 시 즉시 알림 발송",
+              "icon": "bell"
+            },
+            {
+              "id": "control",
+              "label": "유도원 현장 육안 확인",
+              "detail": "사각지대 및 보행자 동선 직접 확인",
+              "icon": "person"
+            },
+            {
+              "id": "act",
+              "label": "출차 대기·보행 통제 수행",
+              "detail": "수신호·차단봉으로 물리적 통제 실행",
+              "icon": "team"
+            },
+            {
+              "id": "verify",
+              "label": "조치 결과·이력 기록",
+              "detail": "발송 시각과 실제 조치 결과를 구분 저장",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "notify",
+              "to": "control",
+              "label": "경고 발송"
+            },
+            {
+              "from": "control",
+              "to": "act",
+              "label": "육안 통제"
+            },
+            {
+              "from": "act",
+              "to": "verify",
+              "label": "결과 기록"
+            }
+          ],
+          "legend": "제안 운영 책임 경계 · 시스템 ACK는 물리적 통제 완료를 의미하지 않음"
+        },
+        "id": "responsibility-swimlane",
+        "stage": "operation",
+        "title": "시스템 알림과 현장 통제의 책임 경계",
+        "question": "감지 알림 이후 누가 실제로 통제하고 어떻게 결과를 남기는가?",
+        "answer": "시스템은 감지와 경고·로그 저장을 맡고, 실제 출차·보행 통제와 현장 확인은 유도원과 안전관리자가 수행한다.",
+        "proofClaimIds": [
+          "response-chain",
+          "manual-authority",
+          "warning-proposal"
+        ],
+        "visualPurpose": "같은 대응 관계를 세로로 놓아 단계별 완료 확인에 집중",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      },
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "orientation",
+          "rationale": "지역 참고 위치를 먼저 읽고 현장 조사 조건을 확인",
+          "readingPath": "지도 A·B·C와 오른쪽 위치 이름을 대조하고 하단의 조사 한계를 확인",
+          "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+          "visual": "map",
+          "title": {
+            "x": 0.9,
+            "y": 0.8,
+            "w": 11.6,
+            "h": 0.7
+          },
+          "message": {
+            "x": 3.2,
+            "y": 5.35,
+            "w": 9.4,
+            "h": 0.7
+          },
+          "visualBox": {
+            "x": 0.64,
+            "y": 1.65,
+            "w": 12,
+            "h": 3.5
+          },
+          "caption": {
+            "x": 0.64,
+            "y": 6.15,
+            "w": 12,
+            "h": 0.45
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {},
+          "edgeLabelBoxes": {},
+          "mapLayout": {
+            "image": {
+              "x": 0.64,
+              "y": 1.65,
+              "w": 8.1,
+              "h": 3.5
+            },
+            "labels": {
+              "A": {
+                "x": 9.1,
+                "y": 1.92,
+                "w": 3.5,
+                "h": 0.7
+              },
+              "B": {
+                "x": 9.1,
+                "y": 3,
+                "w": 3.5,
+                "h": 0.7
+              },
+              "C": {
+                "x": 9.1,
+                "y": 4.05,
+                "w": 3.5,
+                "h": 0.7
+              }
+            }
+          },
+          "narrative": {
+            "beliefShift": "위치 참고와 현장 조사 권한을 구별",
+            "evidenceClaimIds": [
+              "city-station",
+              "city-oryong",
+              "city-bongmyeong",
+              "candidate-fit",
+              "osm-geography"
+            ],
+            "nextQuestion": "기존 안전조치에 AI가 더할 보완 범위는 무엇인가?"
+          },
+          "referenceApplications": [
+            {
+              "sourceId": "REF-AIRBNB",
+              "locator": "PDF p.7",
+              "principle": "주 시각물과 그 의미를 설명하는 문구의 대응을 명확히 함",
+              "application": "참고 지도와 각 위치 설명의 영역을 직접 지정",
+              "notCopied": "원본 글자·브랜드·수치·스크린샷은 복사하지 않음",
+              "controls": [
+                "mapLayout"
+              ]
+            }
+          ]
+        },
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "지역 참고 위치를 먼저 읽고 현장 조사 조건을 확인",
+            "howToRead": "지도 A·B·C와 오른쪽 위치 이름을 대조하고 하단의 조사 한계를 확인",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "map"
+            ]
+          },
+          "readingGuide": {
+            "message": "참고 좌표와 확정 출입구를 구분",
+            "keyPhrase": "확정 출입구",
+            "focusPhrases": [
+              "확정 출입구"
+            ],
+            "tone": "amber"
+          },
+          "intent": "geographic",
+          "map": {
+            "assetId": "cheonan-center",
+            "markers": [
+              {
+                "id": "A",
+                "label": "와촌동권 참고점",
+                "lon": 127.1443358,
+                "lat": 36.8092011,
+                "precision": "locality-reference",
+                "basis": "Nominatim relation/2515711 와촌동 대표 위치. 실제 사업 필지·출입구가 아님.",
+                "sourceClaimIds": [
+                  "osm-geography"
+                ]
+              },
+              {
+                "id": "B",
+                "label": "원성1동 행정복지센터",
+                "lon": 127.1630194,
+                "lat": 36.8118367,
+                "precision": "reference-poi",
+                "basis": "Nominatim way/815678957 시설 좌표. 오룡지구 주변 위치 설명용이며 사업 필지·출입구가 아님.",
+                "sourceClaimIds": [
+                  "osm-geography"
+                ]
+              },
+              {
+                "id": "C",
+                "label": "봉명동권 참고점",
+                "lon": 127.1373904,
+                "lat": 36.8065649,
+                "precision": "locality-reference",
+                "basis": "Nominatim relation/2508099 봉명동 대표 위치. 봉명동 39-1 필지·사업 경계가 아님.",
+                "sourceClaimIds": [
+                  "osm-geography"
+                ]
+              }
+            ]
+          },
+          "kind": "geographic-map",
+          "takeaway": "참고 좌표와 확정 출입구를 구분",
+          "encoding": "실제 OSM 도로·철도·수계 geometry를 EPSG:3857로 투영하고, 출처가 있는 참고 좌표를 고정해 표시",
+          "evidenceIds": [
+            "city-station",
+            "city-oryong",
+            "city-bongmyeong",
+            "candidate-fit",
+            "osm-geography"
+          ],
+          "nodes": [
+            {
+              "id": "n0",
+              "label": "천안역세권 혁신지구",
+              "detail": "우선 조사 · 복합 이용 접점 탐색\n출입구·잔여 공정 미확인",
+              "icon": "city"
+            },
+            {
+              "id": "n1",
+              "label": "오룡지구 리츠사업",
+              "detail": "예비 후보 · 생활권 접점 검토\n관리 권한·출입 계획 미확인",
+              "icon": "city"
+            },
+            {
+              "id": "n2",
+              "label": "봉명지구 도시재생",
+              "detail": "검토 유보 · 잔여 수요 재확인\n현재 공정·반출입 수요 미확인",
+              "icon": "city"
+            }
+          ],
+          "edges": [],
+          "legend": "우선순위는 조사 제안 · 위험도 순위 아님 · 동·시설 참고점이며 사업 경계·출입구 아님 · © OpenStreetMap contributors"
+        },
+        "id": "geography",
+        "stage": "scenario",
+        "title": "참고 위치에서 현장 조사로",
+        "question": "지도상의 참고 위치에서 무엇을 조사해야 하는가?",
+        "answer": "참고 좌표와 확정 출입구를 구분 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "city-station",
+          "city-oryong",
+          "city-bongmyeong",
+          "candidate-fit",
+          "osm-geography"
+        ],
+        "visualPurpose": "지역 참고 위치를 먼저 읽고 현장 조사 조건을 확인",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      },
+      {
+        "compositionBrief": {
+          "engine": "authored-v1",
+          "role": "decision",
+          "rationale": "기간의 길이와 단계별 확인 내용을 함께 파악",
+          "readingPath": "기간 막대의 길이와 단계 산출물을 대조하고 실증 결과에 따라 다음 판단",
+          "continuity": "문제의 인지에서 근거와 현장 대응의 검증으로 연결",
+          "visual": "timeline",
+          "title": {
+            "x": 0.8,
+            "y": 0.8,
+            "w": 11.8,
+            "h": 0.7
+          },
+          "message": {
+            "x": 0.8,
+            "y": 1.65,
+            "w": 9,
+            "h": 0.65
+          },
+          "visualBox": {
+            "x": 0.8,
+            "y": 2.6,
+            "w": 11.8,
+            "h": 3.5
+          },
+          "caption": {
+            "x": 0.8,
+            "y": 6.2,
+            "w": 11.8,
+            "h": 0.4
+          },
+          "titleAlign": "left",
+          "nodeBoxes": {},
+          "edgeLabelBoxes": {},
+          "narrative": {
+            "beliefShift": "실증 결과와 남은 조건으로 다음 단계 판단",
+            "evidenceClaimIds": [
+              "scope",
+              "readiness"
+            ],
+            "nextQuestion": "실제 현장 조사와 조건 협의에 착수할 수 있는가?"
+          }
+        },
+        "visualPlan": {
+          "explanation": {
+            "readerTask": "기간의 길이와 단계별 확인 내용을 함께 파악",
+            "howToRead": "기간 막대의 길이와 단계 산출물을 대조하고 실증 결과에 따라 다음 판단",
+            "notProven": "현장 수요·장치 성능·조치 이행의 실측 결과를 입증하지 않음",
+            "requiredMarks": [
+              "timeline"
+            ]
+          },
+          "readingGuide": {
+            "message": "실증 결과로 다음 단계를 판단",
+            "keyPhrase": "다음 단계",
+            "focusPhrases": [
+              "다음 단계"
+            ],
+            "tone": "amber"
+          },
+          "intent": "temporal",
+          "schedule": {
+            "slots": 8,
+            "unitLabel": "개월차",
+            "ranges": [
+              {
+                "nodeId": "a",
+                "start": 0,
+                "length": 1
+              },
+              {
+                "nodeId": "b",
+                "start": 1,
+                "length": 2
+              },
+              {
+                "nodeId": "c",
+                "start": 3,
+                "length": 4
+              },
+              {
+                "nodeId": "d",
+                "start": 7,
+                "length": 1
+              }
+            ]
+          },
+          "kind": "timeline",
+          "takeaway": "실증 결과로 다음 단계를 판단",
+          "encoding": "기간의 실제 길이와 단계 산출물을 연결하는 제안 일정",
+          "evidenceIds": [
+            "scope",
+            "readiness"
+          ],
+          "nodes": [
+            {
+              "id": "a",
+              "label": "조사·협의",
+              "detail": "위험·설치 조건 확인",
+              "icon": "document"
+            },
+            {
+              "id": "b",
+              "label": "설치·시험",
+              "detail": "전달·통제·장애 시험",
+              "icon": "camera"
+            },
+            {
+              "id": "c",
+              "label": "현장 운영",
+              "detail": "운영 부담·결측 함께 기록",
+              "icon": "clipboard"
+            },
+            {
+              "id": "d",
+              "label": "평가·판단",
+              "detail": "확대·수정·중단 근거 확인",
+              "icon": "team"
+            }
+          ],
+          "edges": [],
+          "legend": "제안 일정 예시 · 착수·현장 운영 조건과 수용기준은 별도 협의"
+        },
+        "id": "acceptance",
+        "stage": "validation",
+        "title": "실증 기간과 단계별 확인",
+        "question": "실증 이후 어떤 근거로 다음 단계를 결정할 것인가?",
+        "answer": "실증 결과로 다음 단계를 판단 현장 조건과 책임자의 직접 확인을 바탕으로 검토한다.",
+        "proofClaimIds": [
+          "scope",
+          "readiness"
+        ],
+        "visualPurpose": "기간의 길이와 단계별 확인 내용을 함께 파악",
+        "limitation": "제안 설명용 구성 · 실제 현장 설치·성능·운영 합의가 아님"
+      }
+    ]
+  },
+  "geographicAssets": [
+    {
+      "id": "cheonan-center",
+      "path": "examples/assets/maps/cheonan-center.png",
+      "projection": "EPSG:3857",
+      "bounds": {
+        "west": 127.12,
+        "south": 36.79999127545404,
+        "east": 127.18,
+        "north": 36.82280872194702
+      },
+      "width": 1600,
+      "height": 760,
+      "attribution": "© OpenStreetMap contributors · ODbL",
+      "sourceClaimIds": [
+        "osm-geography"
+      ],
+      "dataSha256": "3d3081f80328e0b3685c8c2ed1eb82193482c2de0f61030be502bfdb164a2bf1",
+      "disclosure": "도로·철도·수계 참고도. 사업 경계·공사 출입구·보행 동선 실사가 아님."
+    },
+    {
+      "id": "station-context",
+      "path": "examples/assets/maps/station-context.png",
+      "projection": "EPSG:3857",
+      "bounds": {
+        "west": 127.12872288780761,
+        "south": 36.803999999999995,
+        "east": 127.1602771121924,
+        "north": 36.81600000000001
+      },
+      "width": 1600,
+      "height": 760,
+      "attribution": "© OpenStreetMap contributors · ODbL",
+      "sourceClaimIds": [
+        "osm-geography"
+      ],
+      "dataSha256": "3d3081f80328e0b3685c8c2ed1eb82193482c2de0f61030be502bfdb164a2bf1",
+      "disclosure": "도로·철도·수계 참고도. 사업 경계·공사 출입구·보행 동선 실사가 아님."
+    },
+    {
+      "id": "oryong-context",
+      "path": "examples/assets/maps/oryong-context.png",
+      "projection": "EPSG:3857",
+      "bounds": {
+        "west": 127.14722247564232,
+        "south": 36.80600000000001,
+        "east": 127.1787775243577,
+        "north": 36.818000000000005
+      },
+      "width": 1600,
+      "height": 760,
+      "attribution": "© OpenStreetMap contributors · ODbL",
+      "sourceClaimIds": [
+        "osm-geography"
+      ],
+      "dataSha256": "3d3081f80328e0b3685c8c2ed1eb82193482c2de0f61030be502bfdb164a2bf1",
+      "disclosure": "도로·철도·수계 참고도. 사업 경계·공사 출입구·보행 동선 실사가 아님."
+    }
+  ],
+  "quantitativeDatasets": [
+    {
+      "id": "cheonan-traffic-fatalities",
+      "title": "천안시 전체 교통사고 사망자 · 보도 수치",
+      "population": "천안시 전체 도로 교통사고 사망자; 후보 공사장·출입구로 한정하지 않음",
+      "unit": "명",
+      "status": "reported-observation",
+      "period": "2024·2025년 각각 연간",
+      "sourceClaimIds": [
+        "reported-city-traffic"
+      ],
+      "limitation": "TAAS를 인용한 대전일보 2차자료. 전체·보행자는 중첩 집계. 공사장 사고·후보지 위험도·SmartFence 효과를 뜻하지 않음.",
+      "rows": [
+        {
+          "category": "2024년",
+          "series": "전체 사망자",
+          "value": 34
+        },
+        {
+          "category": "2025년",
+          "series": "전체 사망자",
+          "value": 27
+        },
+        {
+          "category": "2024년",
+          "series": "보행자 사망자",
+          "value": 17
+        },
+        {
+          "category": "2025년",
+          "series": "보행자 사망자",
+          "value": 13
+        }
+      ],
+      "disjointSeries": false
+    }
+  ]
+}

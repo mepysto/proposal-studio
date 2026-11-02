@@ -1,0 +1,21 @@
+{
+  "origin": "Codex built-in imagegen",
+  "createdOn": "2026-10-27 Asia/Seoul",
+  "runtimeImageAPIConnected": false,
+  "externalModelAPIUsed": false,
+  "evidenceStatus": "generated generic spatial concepts, not actual or surveyed Cheonan sites",
+  "assets": [
+    {
+      "path": "transit-site-concept-v4.png",
+      "rights": "generated",
+      "prompt": "Use case: stylized-concept. Asset type: landscape 3:2 architectural concept illustration for a Korean municipal construction-safety proposal. Primary request: illustrate a GENERIC transit-adjacent mixed-use construction entrance, not a real named location. High-end restrained architectural axonometric illustration, off-white F5F3EB background, teal 007C78 accents, muted sandstone and dark blue ink. Composition: an elevated oblique view showing a fenced construction site on right, a single construction truck inside the gate, continuous public sidewalk across foreground, a pedestrian and wheelchair user remaining outside the gate, transit bus stop on the far left outside vehicle turning area, safety marshal near gate, small camera on fence post and small amber warning light. Walkway and gate meeting zone must be legible. Buildings are abstract unbranded low-detail masses, no identifiable skyline, no exact coordinates or plan geometry. Natural modest scale, clear separation of spaces, airy composition, no dense decoration. No sensor rays or guaranteed safe zones. NO text, numbers, labels, logos, watermarks, no dashboard, no map pins. This is only an imagined spatial illustration; editable explanatory labels will be added outside the raster later.",
+      "usedOn": 9
+    },
+    {
+      "path": "neighborhood-site-concept-v4.png",
+      "rights": "generated",
+      "prompt": "Use case: stylized-concept. Asset type: landscape 3:2 architectural concept illustration for Korean municipal construction-safety proposal, same sophisticated restrained architectural axonometric language, cream F5F3EB, muted sandstone, dark ink and teal 007C78 accents. Show a GENERIC neighborhood-adjacent mixed public/private construction site, not the actual Oryong site or any real surveyed location. Oblique elevated view, fenced work compound occupying right half with small construction truck INSIDE gate, abstract future mixed-use low-rise masses, modest residential street and pedestrian sidewalk foreground, small neighborhood sports/community building on the left. A resident walking and an older person using a cane on continuous sidewalk, one safety marshal at gate, static information panel on fence with blank simple pictograms. Prioritize understandable everyday walking routes past worksite and the distinction between community facility entrance and construction vehicle gate. No exact site geography, no real architecture or landmarks, no detection rays or safe green halos. Airy editorial composition with simple architectural detail and daylight. NO text, numbers, labels, logos, watermark, NO map pins. Concept only, explanatory labels will be added as editable slide text.",
+      "usedOn": 10
+    }
+  ]
+}

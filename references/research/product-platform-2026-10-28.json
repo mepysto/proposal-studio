@@ -1,0 +1,68 @@
+{
+  "source": "user conversation clarification, 2026-10-28",
+  "evidenceStatus": "user-provided; operating priority is proposed design",
+  "sourceRecord": {
+    "id": "U-PLATFORM",
+    "title": "사용자 제품 명칭·독립 기능·통합관제 추가 설명",
+    "scope": "project",
+    "applicability": "사용자 제공 제품 설명. 칩 자체 제조나 실측 사양을 뜻하지 않음. 화면 배치·표출 권한·경보 우선순위는 제안 운영 설계.",
+    "materialId": "conversation-product-platform-2026-10-28",
+    "excerpt": "3사 협력 제품의 대외 명칭은 자체 제작 AI NPU 안전관리 장치, 컬러 LED AIoT 전광판. 전광판은 센서 데이터·CCTV·AI 콘텐츠 생성 기능과 공공 목적 광고 표출을 포함. 두 제품 자체 기능과 비트리 통합관제 제품을 함께 제공."
+  },
+  "platform": {
+    "products": [
+      {
+        "id": "safety-device",
+        "name": "자체 제작 AI NPU 안전관리 장치",
+        "shortName": "AI NPU 안전관리 장치",
+        "functions": [
+          "사람·차량 인식과 위험 조건 분석",
+          "현장 음성·주의 알림"
+        ],
+        "claimIds": [
+          "own-npu",
+          "product-platform"
+        ]
+      },
+      {
+        "id": "aiot-display",
+        "name": "컬러 LED AIoT 전광판",
+        "shortName": "컬러 LED AIoT 전광판",
+        "functions": [
+          "센서 데이터·CCTV 연계",
+          "AI 콘텐츠 생성",
+          "안전·공사정보·공공광고 표출"
+        ],
+        "claimIds": [
+          "aiot-content",
+          "product-platform"
+        ]
+      }
+    ],
+    "control": {
+      "name": "비트리 통합관제",
+      "provider": "비트리",
+      "functions": [
+        "두 제품의 상태·장애·이벤트 확인",
+        "표출 편성·운영 설정과 조치 이력",
+        "운영 보고·회수 후 재투입 관리"
+      ],
+      "claimIds": [
+        "product-platform",
+        "integrated-control"
+      ]
+    },
+    "displayPolicy": {
+      "normalContent": [
+        "공사 진행·현장 안내",
+        "공공정책·행사 등 공공광고"
+      ],
+      "priority": "safety-over-public-content",
+      "hazardAction": "공공광고보다 보행·차량 위험 안내를 우선 표출",
+      "aiContentReview": "operator-review-before-publish",
+      "cctvAudience": "authorized-internal-only"
+    }
+  },
+  "noNewPerformanceMeasurements": true,
+  "noPaidAdvertisingRevenueAssumption": true
+}

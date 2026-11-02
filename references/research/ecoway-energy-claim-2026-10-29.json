@@ -1,0 +1,27 @@
+{
+  "source": "https://www.nanoelectronics.biz/ECOWAY",
+  "checkedAt": "2026-10-29",
+  "manufacturerClaim": "기존 도로열선 대비 소비에너지 최대 90% 절감",
+  "derivedPresentation": "최대 절감 조건에서 기존=100 대비 약10; 정격 소비전력 10%의 의미 아님",
+  "publicComparisonTable": {
+    "basicPower": {
+      "conventional": "420W (1m²/h)",
+      "ecoway": "120W (1m²/h)"
+    },
+    "coldToAmbient": {
+      "conventional": "8시간(3.4kw)",
+      "ecoway": "1시간(0.1kw)"
+    },
+    "snow24h": {
+      "conventional": "24시간(10.1kw)",
+      "ecoway": "12시간(1.2kw)"
+    }
+  },
+  "limitations": [
+    "표의 W·kw·1m²/h 표기는 원문 그대로이며 단위 정합성·측정 조건이 미확인되어 정격비율·정확한 kWh 측정치로 전용하지 않음",
+    "최대 절감 주장을 상대지수로 환산한 비교이며 독립 검증·천안 실측 아님",
+    "현장 포장·면적·기상·운전 조건에 따라 별도 검증"
+  ],
+  "usedPage": 11,
+  "finalApproval": false
+}

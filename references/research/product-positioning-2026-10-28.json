@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-28T05:19:37Z",
+  "sellerEvidence": {
+    "source": "User clarification in current conversation",
+    "manufacturer": "강민코퍼레이션",
+    "scope": "Manufactures the board incorporating an NPU and AI recognition; does not manufacture the NPU chip",
+    "readiness": "Newly made board; detailed specifications and test reports are not yet settled. User will attach them at formal submission and requests a persuasive concept proposal now.",
+    "led": "Supplier describes high-visibility color LED; model, brightness and comparison tests not supplied",
+    "allowedPositioning": "Supplier-described product capabilities plus proposed integrated safety analysis, guidance, monitoring, service and reuse",
+    "notClaimed": ["chip fabrication", "quantified NPU throughput", "measured LED brightness or viewing distance", "industry-leading rank", "proven Cheonan field performance", "certifications borrowed from another military/industrial proposal"]
+  },
+  "competitorEvidence": [
+    {"name":"Axis Object Analytics / D4100-E", "urls":["https://www.axis.com/products/axis-object-analytics","https://help.axis.com/en-us/axis-object-analytics","https://www.axis.com/dam/public/f1/a3/7e/datasheet-axis-d4100-e-network-strobe-siren-en-US-411997.pdf"],"facts":"Official pages describe camera edge analysis of people/vehicles, event scenarios and MQTT-linked strobe/siren actions.","limits":"Component/function reference. No evidence of active Cheonan bidding or a like-for-like package, price or scope. Do not claim missing features from absence in these documents."},
+    {"name":"Samsung XHB-F", "url":"https://image-us.samsung.com/SamsungUS/samsungbusiness/displays/direct-view-led/xhb-series/xhb-f-outdoor/XHB-F-Outdoor-Leaflet.pdf","facts":"Manufacturer publishes outdoor LED brightness, contrast, viewing-angle and dimming specifications.","limits":"Display-category reference; published numbers are not SmartFence specifications or a superiority comparison."}
+  ],
+  "localOpportunity": {"urls":["https://www.cheonanurc.or.kr/75","https://www.cheonanurc.or.kr/68"],"readScope":"Official city regeneration plans and named program areas. Confirmed page content includes Wachon innovation district, Oryong REIT and future Munseong/Seongjeong plans.","limits":"Program plans do not establish active construction, surveyed gates, buyer budget, procurement pipeline or sales forecasts."},
+  "otherSuppliedDocuments":"Read relevant Cheonan/industrial/military source text. Those broader development proposal claims and certifications are not imported as proof of this board or LED."
+}

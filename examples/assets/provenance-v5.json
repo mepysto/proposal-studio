@@ -1,0 +1,13 @@
+{
+  "origin": "Codex built-in imagegen",
+  "externalModelAPIUsed": false,
+  "assets": [
+    {
+      "path": "examples/assets/site-spatial-model-v5.png",
+      "rights": "generated",
+      "prompt": "Use case: productivity-visual. Asset type: premium architectural engineering diagram base for a municipal public-safety proposal. Generate a precise, sophisticated 3D orthographic axonometric cutaway view from near top-down, very wide landscape 2:1. A generic Korean construction gate meeting a public sidewalk: upper half is an orderly concrete construction yard with stacked materials, one yellow construction dump truck pointing toward the gate but still INSIDE the fenced yard. A light gray solid temporary fence runs horizontally across the scene with one open gate at about 65 percent of the width. Outside it a continuous wide public sidewalk runs horizontally across foreground, with two realistically scaled pedestrians walking parallel to the fence, and then a narrow strip of asphalt street at the bottom. Include a professional safety marshal at one side of the gate, small CCTV on gate post, compact amber beacon next to it. Use architectural competition-quality visualization, crisp but realistic material shading, subtle ambient occlusion, refined off-white/gray concrete, slate-blue fence accents, controlled yellow truck. Object scale must be believable. Very clean presentation, minimal outside context, no diagram arrows, no colored detection halos, no dimension numbers, no lettering, no labels, no titles, no watermark, no logos. No stick figures, no crude icons, no cartoon style. NOT a real location, not a real installation, an imagined spatial explanatory model. Show all gate, sidewalk and truck fully within the frame with generous margins.",
+      "evidenceStatus": "generic spatial concept; not surveyed Cheonan site or actual installed equipment",
+      "reuseReason": "Explain the same physical interface as a risk, alternative comparison and installation scope"
+    }
+  ]
+}

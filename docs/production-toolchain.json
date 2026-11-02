@@ -1,0 +1,46 @@
+{
+  "reviewedAt": "2026-10-27",
+  "installedSkill": {
+    "name": "drawio",
+    "installation": "/Users/baekseongeun/.codex/skills/professional-drawio",
+    "version": "2.8.0",
+    "source": "https://github.com/bahayonghang/drawio-skills/tree/main/skills/drawio",
+    "declaredLicense": "MIT",
+    "skillSha256": "8f81c64e5bfe96166c8923984713b0e3ccc19d10e3e503d02bc0836d798a5976",
+    "use": "offline diagram source and routing/design review guidance; available to later turns"
+  },
+  "productionDependencies": [
+    {
+      "name": "lucide-static",
+      "version": "1.61.0",
+      "license": "ISC",
+      "purpose": "licensed SVG symbols"
+    },
+    {
+      "name": "elkjs",
+      "version": "0.12.0",
+      "license": "EPL-2.0 OR GPL-3.0-or-later",
+      "purpose": "orthogonal layout of declared graph relationships"
+    }
+  ],
+  "existingSkills": [
+    "bundled Presentations",
+    "built-in imagegen",
+    "skill-creator",
+    "skill-installer"
+  ],
+  "excludedCandidate": {
+    "name": "anthropics/skills pptx",
+    "reason": "Installed candidate was removed after its restrictive usage terms were reviewed; not retained as a project skill or copied into the project."
+  },
+  "externalModelAPIUsed": false,
+  "drawioDesktopInstalled": false,
+  "cartography": {
+    "source": "OpenStreetMap contributors / Overpass + Nominatim",
+    "license": "ODbL 1.0",
+    "projection": "EPSG:3857",
+    "offlineGeometry": "references/research/maps/cheonan-osm.json",
+    "builder": "scripts/build-geographic-assets.ts",
+    "scope": "Cheonan central city context; reference points, not surveyed project sites"
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "purpose": "제안 본문에서 제외한 기술 검토 참고자료",
+  "pages": [
+    {
+      "story": {
+        "id": "edge-deployment-technical",
+        "stage": "business",
+        "sectionId": "edge-deployment-technical",
+        "title": "학습 모델을 엣지 장비에 적용하는 과정",
+        "question": "학습 모델을 엣지 장비에 적용하는 과정에서 구매자가 확인할 내용은 무엇인가?",
+        "answer": "모델 파일을 넣는 것만으로 끝나지 않으며, 대상 NPU의 호환성과 변환 후 정확도를 확인합니다",
+        "proofClaimIds": [
+          "hardware",
+          "edge-tech"
+        ],
+        "visualPurpose": "학습 모델을 엣지 장비에 적용하는 과정의 적용 범위와 판단 조건 이해",
+        "limitation": "공식 SDK·ONNX Runtime 문서 기반 적용안 · ONNX 형식만으로 모든 NPU 호환 보장 불가 · 양자화 후 정확도 재검증",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "모델 파일을 넣는 것만으로 끝나지 않으며, 대상 NPU의 호환성과 변환 후 정확도를 확인합니다",
+          "encoding": "slt-ai:techflow: 현장 입력·행동·결과의 의미 관계를 표시",
+          "evidenceIds": [
+            "hardware",
+            "edge-tech"
+          ],
+          "nodes": [
+            {
+              "id": "n7-203268",
+              "label": "① 모델 준비",
+              "detail": "권한 있는 영상·라벨\n학습·검증 데이터 분리",
+              "icon": "document"
+            },
+            {
+              "id": "n8-263243",
+              "label": "② 장비용 변환",
+              "detail": "ONNX 또는 제조사 형식\n지원 연산·INT8 보정",
+              "icon": "server"
+            },
+            {
+              "id": "n9-309234",
+              "label": "③ 실물 벤치마크",
+              "detail": "정확도·처리 지연·열\n영상 해상도·부하별 시험",
+              "icon": "camera"
+            },
+            {
+              "id": "n7-204727",
+              "label": "④ 배포·복구",
+              "detail": "모델·구역 버전 기록\n사전 시험·이전 버전 복귀",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n7-203268",
+              "to": "n8-263243",
+              "label": ""
+            },
+            {
+              "from": "n8-263243",
+              "to": "n9-309234",
+              "label": ""
+            },
+            {
+              "from": "n9-309234",
+              "to": "n7-204727",
+              "label": ""
+            }
+          ],
+          "legend": "공식 SDK·ONNX Runtime 문서 기반 적용안 · ONNX 형식만으로 모든 NPU 호환 보장 불가 · 양자화 후 정확도 재검증",
+          "readingGuide": {
+            "message": "모델 파일을 넣는 것만으로 끝나지 않으며, 대상 NPU의 호환성과 변환 후 정확도를 확인합니다",
+            "keyPhrase": "모델 파",
+            "focusPhrases": [
+              "① 모델 준비"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "학습 모델을 엣지 장비에 적용하는 과정의 적용 범위와 판단 조건 이해",
+            "howToRead": "영상·장비·행동 주체와 연결 방향을 따라 입력부터 확인까지 읽기",
+            "notProven": "공식 SDK·ONNX Runtime 문서 기반 적용안 · ONNX 형식만으로 모든 NPU 호환 보장 불가 · 양자화 후 정확도 재검증",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      "section": {
+        "id": "edge-deployment-technical",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "SLT AI SOLUTION · 24",
+        "items": [
+          {
+            "label": "① 모델 준비",
+            "detail": "권한 있는 영상·라벨\n학습·검증 데이터 분리"
+          },
+          {
+            "label": "② 장비용 변환",
+            "detail": "ONNX 또는 제조사 형식\n지원 연산·INT8 보정"
+          },
+          {
+            "label": "③ 실물 벤치마크",
+            "detail": "정확도·처리 지연·열\n영상 해상도·부하별 시험"
+          },
+          {
+            "label": "④ 배포·복구",
+            "detail": "모델·구역 버전 기록\n사전 시험·이전 버전 복귀"
+          }
+        ],
+        "caption": "CPU: 영상 해독·전후처리·추적 / NPU: 지원하는 모델 연산 / 실제 분담은 SDK·보드별 확정"
+      },
+      "seed": {
+        "id": "edge-deployment-technical",
+        "layout": "editorial",
+        "title": "학습 모델을 엣지 장비에 적용하는 과정",
+        "message": "모델 파일을 넣는 것만으로 끝나지 않으며, 대상 NPU의 호환성과 변환 후 정확도를 확인합니다",
+        "claimIds": [
+          "hardware",
+          "edge-tech"
+        ]
+      }
+    },
+    {
+      "story": {
+        "id": "event-interface-technical",
+        "stage": "business",
+        "sectionId": "event-interface-technical",
+        "title": "영상·AI 사건·제어 신호의 분리",
+        "question": "영상·AI 사건·제어 신호의 분리에서 구매자가 확인할 내용은 무엇인가?",
+        "answer": "영상 전송과 사건 정보를 분리하고, 수신·표출·사람의 조치 완료를 각각 기록합니다",
+        "proofClaimIds": [
+          "scope",
+          "interface-tech"
+        ],
+        "visualPurpose": "영상·AI 사건·제어 신호의 분리의 적용 범위와 판단 조건 이해",
+        "limitation": "인터페이스 설계안 · ONVIF Profile M·MQTT 등 지원은 제품별 확인 · 실제 접속·인증·망 분리는 기관·장비사 협의",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "영상 전송과 사건 정보를 분리하고, 수신·표출·사람의 조치 완료를 각각 기록합니다",
+          "encoding": "slt-ai:techmatrix: 표의 같은 기준을 행별로 대조",
+          "evidenceIds": [
+            "scope",
+            "interface-tech"
+          ],
+          "nodes": [
+            {
+              "id": "n7-212805",
+              "label": "엣지 → 제어",
+              "detail": "사건 메타데이터",
+              "icon": "document"
+            },
+            {
+              "id": "n7-206014",
+              "label": "제어 → 관제",
+              "detail": "전달·운영 상태",
+              "icon": "document"
+            },
+            {
+              "id": "n8-246891",
+              "label": "담당자 → 관제",
+              "detail": "조치 증거",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "인터페이스 설계안 · ONVIF Profile M·MQTT 등 지원은 제품별 확인 · 실제 접속·인증·망 분리는 기관·장비사 협의",
+          "readingGuide": {
+            "message": "영상 전송과 사건 정보를 분리하고, 수신·표출·사람의 조치 완료를 각각 기록합니다",
+            "keyPhrase": "영상 전",
+            "focusPhrases": [
+              "엣지 → 제어"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "영상·AI 사건·제어 신호의 분리의 적용 범위와 판단 조건 이해",
+            "howToRead": "같은 기준의 행을 가로로 읽고 공개 사실과 이번 제안의 조건을 구분",
+            "notProven": "인터페이스 설계안 · ONVIF Profile M·MQTT 등 지원은 제품별 확인 · 실제 접속·인증·망 분리는 기관·장비사 협의",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      "section": {
+        "id": "event-interface-technical",
+        "chapter": "solution",
+        "visual": "matrix",
+        "kicker": "SLT AI SOLUTION · 25",
+        "items": [
+          {
+            "label": "엣지 → 제어",
+            "detail": "사건 메타데이터"
+          },
+          {
+            "label": "제어 → 관제",
+            "detail": "전달·운영 상태"
+          },
+          {
+            "label": "담당자 → 관제",
+            "detail": "조치 증거"
+          }
+        ],
+        "caption": "",
+        "headers": [
+          "연결 경로",
+          "전달 정보·인터페이스 후보",
+          "확인할 기술 조건"
+        ],
+        "rows": [
+          [
+            "CCTV → 분석·열람",
+            "영상: RTSP 등 장비 지원 방식\n실시간 원본 영상과 사건 데이터 분리",
+            "촬영·열람 권한·망 대역·보관 정책"
+          ],
+          [
+            "엣지 → 제어·관제",
+            "cameraId·eventId·시각·종류·구역\n모델 버전·분석 상태·증거 참조",
+            "ONVIF Profile M 또는 제조사 API\nMQTT/HTTPS는 지원·보안 확인 후 선택"
+          ],
+          [
+            "제어 → LED·음성",
+            "승인 문구 ID·안전 우선순위·만료시각\n사건 시작/갱신/해제·중복 억제",
+            "장비 ACK·실제 표출 상태 따로 기록\n끊긴 안내·만료 사건 재생 금지"
+          ],
+          [
+            "담당자 → 관제",
+            "인지시각·현장 조치·확인자·증거\n사건 ID로 연결해 종결",
+            "통신 수신 ≠ 실제 출력 ≠ 조치 완료\n시간 동기화·접근 통제·접속 기록"
+          ]
+        ]
+      },
+      "seed": {
+        "id": "event-interface-technical",
+        "layout": "editorial",
+        "title": "영상·AI 사건·제어 신호의 분리",
+        "message": "영상 전송과 사건 정보를 분리하고, 수신·표출·사람의 조치 완료를 각각 기록합니다",
+        "claimIds": [
+          "scope",
+          "interface-tech"
+        ]
+      }
+    },
+    {
+      "story": {
+        "id": "measurement",
+        "stage": "business",
+        "sectionId": "measurement",
+        "title": "실증에서 확인할 세 가지",
+        "question": "실증에서 확인할 세 가지에서 구매자가 확인할 내용은 무엇인가?",
+        "answer": "감지 성능·현장 전달·조치 결과를 나눠 측정하고 추가 운영 부담도 함께 평가합니다",
+        "proofClaimIds": [
+          "scope",
+          "safety"
+        ],
+        "visualPurpose": "실증에서 확인할 세 가지의 적용 범위와 판단 조건 이해",
+        "limitation": "합격선은 운영 평가 전 합의·고정 · 기준선·목표 미측정 · 적격 사건 0건은 산출 불가 · 사고 감소율 입증 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "감지 성능·현장 전달·조치 결과를 나눠 측정하고 추가 운영 부담도 함께 평가합니다",
+          "encoding": "slt-ai:kpi: 표의 같은 기준을 행별로 대조",
+          "evidenceIds": [
+            "scope",
+            "safety"
+          ],
+          "nodes": [
+            {
+              "id": "n5-201792",
+              "label": "감지 품질",
+              "detail": "오탐과 미탐",
+              "icon": "document"
+            },
+            {
+              "id": "n5-203104",
+              "label": "전달 품질",
+              "detail": "실물 출력·인지",
+              "icon": "document"
+            },
+            {
+              "id": "n5-204777",
+              "label": "운영 변화",
+              "detail": "조치·추가 업무",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "합격선은 운영 평가 전 합의·고정 · 기준선·목표 미측정 · 적격 사건 0건은 산출 불가 · 사고 감소율 입증 아님",
+          "readingGuide": {
+            "message": "감지 성능·현장 전달·조치 결과를 나눠 측정하고 추가 운영 부담도 함께 평가합니다",
+            "keyPhrase": "현장",
+            "focusPhrases": [
+              "감지 품질"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "실증에서 확인할 세 가지의 적용 범위와 판단 조건 이해",
+            "howToRead": "같은 기준의 행을 가로로 읽고 공개 사실과 이번 제안의 조건을 구분",
+            "notProven": "합격선은 운영 평가 전 합의·고정 · 기준선·목표 미측정 · 적격 사건 0건은 산출 불가 · 사고 감소율 입증 아님",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      "section": {
+        "id": "measurement",
+        "chapter": "impact",
+        "visual": "matrix",
+        "kicker": "SLT AI SOLUTION · 26",
+        "items": [
+          {
+            "label": "감지 품질",
+            "detail": "오탐과 미탐"
+          },
+          {
+            "label": "전달 품질",
+            "detail": "실물 출력·인지"
+          },
+          {
+            "label": "운영 변화",
+            "detail": "조치·추가 업무"
+          }
+        ],
+        "caption": "TP=실제 사건을 올바르게 경보 · FP=오경보 · FN=놓친 사건",
+        "headers": [
+          "검증 대상",
+          "관찰·계산 방법",
+          "판단 조건"
+        ],
+        "rows": [
+          [
+            "정밀도·재현율",
+            "TP/(TP+FP), TP/(TP+FN)\n알림·비알림 구간 모두 라벨 검토",
+            "중복 사건 매칭 기준 사전 고정\n주야간·가림별 오차 분리"
+          ],
+          [
+            "처리·출력 지연",
+            "영상 취득 → 추론 → 사건 → 실물 출력\n단계별 지연과 전체 지연 기록",
+            "시각 동기화·지연 분포 확인\n서버 ACK는 전달 완료 아님"
+          ],
+          [
+            "현장 조치·업무",
+            "담당자 인지 → 조치·종결 시간\n오탐·점검·입력 시간 포함",
+            "미처리 별도 집계\n순업무 변화·불가 시간 확인"
+          ]
+        ]
+      },
+      "seed": {
+        "id": "measurement",
+        "layout": "editorial",
+        "title": "실증에서 확인할 세 가지",
+        "message": "감지 성능·현장 전달·조치 결과를 나눠 측정하고 추가 운영 부담도 함께 평가합니다",
+        "claimIds": [
+          "scope",
+          "safety"
+        ]
+      }
+    },
+    {
+      "story": {
+        "id": "model-validation",
+        "stage": "business",
+        "sectionId": "model-validation",
+        "title": "현장 데이터로 모델 성능을 검증하는 방법",
+        "question": "현장 데이터로 모델 성능을 검증하는 방법에서 구매자가 확인할 내용은 무엇인가?",
+        "answer": "같은 영상을 학습과 평가에 중복 사용하지 않고, 실제 운용 조건별 오차와 불가 상태를 평가합니다",
+        "proofClaimIds": [
+          "scope",
+          "safety",
+          "edge-tech"
+        ],
+        "visualPurpose": "현장 데이터로 모델 성능을 검증하는 방법의 적용 범위와 판단 조건 이해",
+        "limitation": "제안 검증 절차 · 현장 영상·라벨·표본 수 미확보 · 성능 수치·FPS·정확도·사고 감소율 보장 없음",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "같은 영상을 학습과 평가에 중복 사용하지 않고, 실제 운용 조건별 오차와 불가 상태를 평가합니다",
+          "encoding": "slt-ai:techflow: 현장 입력·행동·결과의 의미 관계를 표시",
+          "evidenceIds": [
+            "scope",
+            "safety",
+            "edge-tech"
+          ],
+          "nodes": [
+            {
+              "id": "n7-206148",
+              "label": "① 수집·라벨",
+              "detail": "주야간·역광·우천·가림\n객체·사건·불가 구간 표기",
+              "icon": "camera"
+            },
+            {
+              "id": "n8-255973",
+              "label": "② 데이터 분리",
+              "detail": "현장·날짜·촬영 세션 분리\n시험 영상 학습 유입 금지",
+              "icon": "document"
+            },
+            {
+              "id": "n10-297879",
+              "label": "③ 사건 단위 평가",
+              "detail": "알림·비알림 모두 대조\n오탐·미탐·지연·불가",
+              "icon": "clipboard"
+            },
+            {
+              "id": "n8-260620",
+              "label": "④ 운용·재평가",
+              "detail": "민감도·구역·버전 고정\n시야·계절 변화 시 재검증",
+              "icon": "shield"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n7-206148",
+              "to": "n8-255973",
+              "label": ""
+            },
+            {
+              "from": "n8-255973",
+              "to": "n10-297879",
+              "label": ""
+            },
+            {
+              "from": "n10-297879",
+              "to": "n8-260620",
+              "label": ""
+            }
+          ],
+          "legend": "제안 검증 절차 · 현장 영상·라벨·표본 수 미확보 · 성능 수치·FPS·정확도·사고 감소율 보장 없음",
+          "readingGuide": {
+            "message": "같은 영상을 학습과 평가에 중복 사용하지 않고, 실제 운용 조건별 오차와 불가 상태를 평가합니다",
+            "keyPhrase": "같은 영",
+            "focusPhrases": [
+              "① 수집·라벨"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "현장 데이터로 모델 성능을 검증하는 방법의 적용 범위와 판단 조건 이해",
+            "howToRead": "영상·장비·행동 주체와 연결 방향을 따라 입력부터 확인까지 읽기",
+            "notProven": "제안 검증 절차 · 현장 영상·라벨·표본 수 미확보 · 성능 수치·FPS·정확도·사고 감소율 보장 없음",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      "section": {
+        "id": "model-validation",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "SLT AI SOLUTION · 27",
+        "items": [
+          {
+            "label": "① 수집·라벨",
+            "detail": "주야간·역광·우천·가림\n객체·사건·불가 구간 표기"
+          },
+          {
+            "label": "② 데이터 분리",
+            "detail": "현장·날짜·촬영 세션 분리\n시험 영상 학습 유입 금지"
+          },
+          {
+            "label": "③ 사건 단위 평가",
+            "detail": "알림·비알림 모두 대조\n오탐·미탐·지연·불가"
+          },
+          {
+            "label": "④ 운용·재평가",
+            "detail": "민감도·구역·버전 고정\n시야·계절 변화 시 재검증"
+          }
+        ],
+        "caption": "추가 학습은 오류 분석 후 필요 시 수행 / 합격선·표본 규모·사건 매칭 규칙은 평가 전에 합의"
+      },
+      "seed": {
+        "id": "model-validation",
+        "layout": "editorial",
+        "title": "현장 데이터로 모델 성능을 검증하는 방법",
+        "message": "같은 영상을 학습과 평가에 중복 사용하지 않고, 실제 운용 조건별 오차와 불가 상태를 평가합니다",
+        "claimIds": [
+          "scope",
+          "safety",
+          "edge-tech"
+        ]
+      }
+    }
+  ]
+}

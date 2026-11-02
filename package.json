@@ -1,0 +1,41 @@
+{
+  "name": "proposal-studio",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-aware, editable proposal production pipeline",
+  "bin": {
+    "proposal-studio": "apps/cli/proposal-studio.mjs"
+  },
+  "scripts": {
+    "studio": "node --import tsx apps/cli/index.ts",
+    "build": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "demo": "node --import tsx scripts/demo.ts",
+    "test:integration": "PROPOSAL_INTEGRATION=1 node --import tsx --test tests/integration.test.ts",
+    "demo:direction": "PROPOSAL_DEMO_PROJECT=concept-direction node --import tsx scripts/demo.ts",
+    "demo:reference": "PROPOSAL_DEMO_PROJECT=reference-direction node --import tsx scripts/demo.ts",
+    "demo:legacy": "node --import tsx apps/cli/index.ts run --project smartfence",
+    "demo:concept": "PROPOSAL_DEMO_PROJECT=smartfence-v2 node --import tsx scripts/demo.ts",
+    "diagrams:source": "node --import tsx scripts/build-diagram-source.ts"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "elkjs": "0.12.0",
+    "fast-xml-parser": "^5.0.0",
+    "jszip": "^3.10.1",
+    "lucide-static": "1.61.0",
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

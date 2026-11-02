@@ -1,0 +1,4851 @@
+{
+  "schemaVersion": 1,
+  "id": "safesurface-cheonan",
+  "title": "천안시 겨울철 보행접근로 안전 실증사업",
+  "proposer": {
+    "legalName": "(주)에스엘티",
+    "role": "제안·시스템 통합 주관",
+    "collaborators": [
+      "(주)나노일렉트로닉스",
+      "EcowayVision SW 권리자 확인 예정"
+    ],
+    "sourceClaimIds": [
+      "identity"
+    ],
+    "contact": {
+      "logoPath": "examples/assets/slt-logo-source.png",
+      "phone": "(041) 571-2057/8",
+      "email": "slt888@hanmail.net",
+      "address": "충남 천안시 동남구 청당산업길 143(구룡동)",
+      "sourceClaimIds": [
+        "contact"
+      ]
+    }
+  },
+  "audience": "천안시 시설관리 담당자의 첫 사업 검토·후보지 협의",
+  "proposalType": "government-pilot",
+  "mode": "deep",
+  "materials": [
+    {
+      "path": "examples/Cheonan_SafeSurface_AI.md",
+      "role": "content"
+    },
+    {
+      "path": "references/research/ecowayvision-FEATURES-2026-10-26.md",
+      "role": "content"
+    },
+    {
+      "path": "references/나노히팅필름_적용_에너지절감_스노우멜팅_및_AI_원격관제_시스템_개발_의뢰서.pdf",
+      "role": "content"
+    },
+    {
+      "path": "references/research/ecowayvision-user-manual-2026-10-26.md",
+      "role": "content"
+    }
+  ],
+  "design": {
+    "name": "SafeSurface municipal buyer introduction v3",
+    "layoutStandard": "technical-editorial-v2",
+    "font": "Apple SD Gothic Neo",
+    "colors": {
+      "ink": "142C40",
+      "paper": "F7F9FB",
+      "accent": "087F8C",
+      "muted": "5D7181",
+      "dark": "142C40"
+    },
+    "titleSize": 32,
+    "bodySize": 19,
+    "margin": 0.62,
+    "grid": 12,
+    "imageRule": "preserve-aspect; concept images must be labelled",
+    "chartStyle": "native editable chart; no unverified data",
+    "diagramStyle": "native PowerPoint shapes",
+    "iconStyle": "minimal line",
+    "tableRule": "editable rows, units and source required"
+  },
+  "sources": [
+    {
+      "id": "brief",
+      "title": "사용자 제공 SafeSurface 제안 원문",
+      "scope": "project",
+      "applicability": "원문 내 기술기능은 직접 코드·HIL 확인 전",
+      "materialId": "examples/Cheonan_SafeSurface_AI.md"
+    },
+    {
+      "id": "R1",
+      "title": "뉴시스, 천안시 강설·결빙 비상 기동태세 (2025.12.04)",
+      "scope": "local",
+      "applicability": "시 발표의 2차 보도. 특정 보행접근로 수요와 효과는 입증하지 않음",
+      "url": "https://www.newsis.com/view/NISX20251204_0003428229",
+      "checkedAt": "2026-10-28T18:36:00+09:00",
+      "excerpt": "제설제 1만t, 제설 장비 45대, 인력 104명. 고지대 급커브 및 경사도로 등 중점 제설 구간 집중관리."
+    },
+    {
+      "id": "R2",
+      "title": "국토교통부 정책브리핑 (2026.02.12)",
+      "scope": "general",
+      "applicability": "국토부 소관 도로 대상. 천안시 보행접근로 선정·지원 약속 아님",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148959486",
+      "checkedAt": "2026-10-28T18:36:00+09:00",
+      "excerpt": "국토부 소관 도로 329개소 조사, 121개 취약지점 선정. 위험 수준에 따른 열선·염수분사시설과 안내."
+    },
+    {
+      "id": "contact-src",
+      "title": "제공 SLT 제안서 연락처 원본 13페이지",
+      "scope": "project",
+      "applicability": "제공 원본 육안 전사 기록, 최신성 외부 확인 아님",
+      "materialId": "references/AI스마트도시정보시스템제안서(에스엘티)_천안.pdf"
+    },
+    {
+      "id": "authoring-design",
+      "title": "SafeSurface 현 대화의 구조화·운영 설계 제안",
+      "scope": "project",
+      "applicability": "사용자 원문을 구체화한 작성자 제안, 외부 합의·시험 결과 아님",
+      "materialId": "scripts/create-safesurface-cheonan.py"
+    },
+    {
+      "id": "vision-manual",
+      "title": "사용자 첨부 EcowayVision 사용자 매뉴얼",
+      "scope": "project",
+      "materialId": "references/research/ecowayvision-user-manual-2026-10-26.md",
+      "excerpt": "2026-10-26, 소스 f023f1d. 관제 운영자·현장 담당자의 업무 순서, 화면에서 확인할 정보, 5단계 자동제어와 권한을 설명.",
+      "applicability": "사용자 매뉴얼 직접 확인. screenshots/ 파일은 첨부되지 않아 실제 UI 캡처 대신 기능·업무 설명도 작성"
+    },
+    {
+      "id": "vision-features",
+      "title": "사용자 첨부 EcowayVision 구현 기능 및 솔루션 명세",
+      "scope": "project",
+      "materialId": "references/research/ecowayvision-FEATURES-2026-10-26.md",
+      "excerpt": "2026-10-26, 소스 f023f1d. 실제 라우트·기능 및 완료로 표시하지 않는 범위를 구분.",
+      "applicability": "첨부 기능명세 직접 확인. 저장소 코드·현재 실행 화면·현장 성능시험 직접 확인 아님"
+    },
+    {
+      "id": "nano-rfp",
+      "title": "사용자 제공 나노히팅필름·AI 원격관제 개발 의뢰서",
+      "scope": "project",
+      "materialId": "references/나노히팅필름_적용_에너지절감_스노우멜팅_및_AI_원격관제_시스템_개발_의뢰서.pdf",
+      "applicability": "10페이지 이미지 PDF 직접 열람. 개발 요구·목표이며 구현·시험 완료 근거 아님"
+    },
+    {
+      "id": "nano-product",
+      "title": "나노일렉트로닉스 ECO WAY 제품 소개",
+      "scope": "general",
+      "url": "https://www.nanoelectronics.biz/ECOWAY",
+      "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+      "excerpt": "ECO WAY를 스노우멜팅 시스템으로 소개. 제조사의 실험실 비교·설치 사례를 제시.",
+      "applicability": "제조사 공개 설명. 비교시험의 현장·단위·조건 확인 전 절감률을 천안 성과로 전용하지 않음"
+    },
+    {
+      "id": "nano-film",
+      "title": "나노일렉트로닉스 3D나노히터 소재 설명",
+      "scope": "general",
+      "url": "https://www.nanoelectronics.biz/3DNANOHEATER",
+      "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+      "excerpt": "구리나노섬유 기반 필름, 섬유의 고른 분포와 면상 발열을 설명.",
+      "applicability": "제조사 소재 설명. 보행로 단면·시공 두께·전력밀도는 현장 설계에서 별도 확정"
+    },
+    {
+      "id": "nano-applications",
+      "title": "나노일렉트로닉스 생산·납품 사례",
+      "scope": "general",
+      "url": "https://www.nanoelectronics.biz/applications",
+      "checkedAt": "2026-10-29T09:07:25.157208+09:00",
+      "excerpt": "에코웨이가 나노히팅필름을 기반으로 하는 도로히팅 시스템이며 도로·주차장 테스트와 교내 설치를 소개.",
+      "applicability": "제조사 공개 적용 유형. 천안시 설치 실적이나 해당 보행시설 적합성 증거 아님"
+    },
+    {
+      "id": "nano-cooperation-user",
+      "title": "사용자 지정 기술협력 및 제품사 표기",
+      "scope": "project",
+      "excerpt": "주관은 SLT, ECO WAY는 (주)나노일렉트로닉스 제품이며 표지에 기술협력으로 명시하도록 요청",
+      "applicability": "현재 사용자 요청에 따른 역할·제품 귀속 표기. 계약 체결·독점권·인증을 의미하지 않음"
+    }
+  ],
+  "claims": [
+    {
+      "id": "local-material",
+      "text": "2025년 천안시는 제설제 1만t 확보·투입 계획을 발표했다고 보도됐다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "R1"
+      ],
+      "verifiedAt": "2026-10-28T18:36:00+09:00",
+      "approved": false
+    },
+    {
+      "id": "local-equipment",
+      "text": "2025년 천안시 제설 대응 장비 45대·인력 104명이 보도됐다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "R1"
+      ],
+      "verifiedAt": "2026-10-28T18:36:00+09:00",
+      "approved": false
+    },
+    {
+      "id": "local-priority",
+      "text": "천안시는 고지대 급커브·경사도로 등 취약구간 집중관리 계획을 발표했다고 보도됐다.",
+      "scope": "local",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "R1"
+      ],
+      "verifiedAt": "2026-10-28T18:36:00+09:00",
+      "approved": false
+    },
+    {
+      "id": "policy",
+      "text": "국토부 소관 도로 조사에서 결빙 취약지점 121곳을 선정했다.",
+      "scope": "general",
+      "evidenceKind": "document",
+      "status": "externally-verified",
+      "sourceIds": [
+        "R2"
+      ],
+      "verifiedAt": "2026-10-28T18:36:00+09:00",
+      "approved": false
+    },
+    {
+      "id": "scope",
+      "text": "필수 보행접근로 1개소, 20~60㎡ 가정. 조사 전 후보지·설치 범위 미확정.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "identity",
+      "text": "제안 주관은 (주)에스엘티, 기술 협력은 나노일렉트로닉스와 확인 예정인 EcowayVision SW 권리자.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "bridge",
+      "text": "SLT Safety Display Bridge는 상태·최신성 수신, 승인문구 변환, LED 전송·장치응답·이력을 구현할 신규 범위.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "safety",
+      "text": "ACK, 물리 가열, 노면 위험 완화, 실제 표출은 각각 별도 확인. 통신장애에는 로컬 인터록·수동 대응 우선.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "sites",
+      "text": "관리권한, 결빙기록, 필수통행, 우회접근, 전력·포장, 안전 비교계측 조건으로 선정. 특정 시설은 미정.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "schedule",
+      "text": "2026.11~12 G0, 2026.12~2027.02 G1, 2027 상반기 G2, 2027 하반기 G3, 2027.11~2028.03 G4 제안.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "metrics",
+      "text": "위험지속시간·실출력 지연·표출 피드백·기상별 kWh·수동개입·접근로 이용성을 실측. 기준선·수치 목표 미확정.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "budget",
+      "text": "초기 기획비 VAT 별도 8,600만~1억 9,800만 원. 확정견적·시 승인예산 아님. 연간 유지관리·전기료 별도.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "rights",
+      "text": "ECO WAY 자료·공법·인증 적용, EcowayVision IP/API 권한, 공종별 적격 시공과 보증 책임은 계약 전 확인.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "decision",
+      "text": "후보 접근로 1~2곳과 담당자 협의, HIL·현장 실증 데이터 수집 허가를 요청. 즉시 납품·확대 계약 요청 아님.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "brief"
+      ],
+      "approved": false
+    },
+    {
+      "id": "design",
+      "text": "입력 내용을 구체화한 운영·검증 설계 제안이며 관계기관과 공급사가 합의한 요건이 아님.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "authoring-design"
+      ],
+      "approved": false
+    },
+    {
+      "id": "contact",
+      "text": "제공 원본의 SLT 로고·전화·이메일·본사 주소.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "contact-src"
+      ],
+      "approved": false
+    },
+    {
+      "id": "vision-ui",
+      "text": "FEATURES.md를 직접 확인: 대시보드·현장 상세·AI관제·GIS·NOC·운영일지 화면과 기능이 명시되어 있다. 테스트 경로는 이번 실행 통과를 의미하지 않는다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "vision-features"
+      ],
+      "approved": false
+    },
+    {
+      "id": "vision-ai",
+      "text": "현장·구역 위험도, KMA 기상, 센서·Vision 융합, 물리기반 예열, 결정 이유·이력, 명령원장·수동 개입이 기능명세에 기재되어 있다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "vision-features"
+      ],
+      "approved": false
+    },
+    {
+      "id": "vision-workflow",
+      "text": "사용자 매뉴얼의 관제 업무는 현장 검색·NOC 경보 확인과 할당·CCTV/센서 대조·현장조치·해결 메모와 운영일지 저장 순서다. 가열운전은 off/preheat/active/hold/safe_shutdown이며 물리출력은 ON/OFF다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "vision-manual",
+        "vision-features"
+      ],
+      "approved": false
+    },
+    {
+      "id": "vision-ops",
+      "text": "NOC 경보 확인·담당 배정·해결 메모, 에너지·전력 예측·정비·이벤트 보고 기능이 명세에 있다. 추정값·합성자료·고정 건강점수는 실측성과가 아니다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "vision-features"
+      ],
+      "approved": false
+    },
+    {
+      "id": "ecoway-product",
+      "text": "제조사는 나노히팅필름을 기반으로 하는 ECO WAY 스노우멜팅 시스템과 교내 도로·주차장 등의 적용 유형을 공개한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "nano-product",
+        "nano-applications"
+      ],
+      "approved": false
+    },
+    {
+      "id": "ecoway-energy",
+      "text": "제조사는 ECO WAY를 기존 도로열선 대비 소비에너지 최대 90% 절감으로 소개한다. 최대 절감 조건의 상대 사용량은 기존 100 대비 약 10으로 환산된다. 정격 소비전력이 항상 10%라는 뜻이 아니며 천안 현장 성과는 미측정이다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "nano-product"
+      ],
+      "approved": false
+    },
+    {
+      "id": "ecoway-film",
+      "text": "제조사는 구리나노섬유가 고르게 분포하는 필름형 발열체와 면상 발열 방식을 설명한다. 현장 성능·제품 단면은 별도 확인이 필요하다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "nano-film"
+      ],
+      "approved": false
+    },
+    {
+      "id": "winter-mechanism",
+      "text": "잔설·융설수·그늘과 야간 냉각이 겹치는 짧은 접근로에서 재결빙과 반복점검이 발생할 수 있다는 실증 문제 가설. 천안 특정 시설의 관찰 결과 아님.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "brief",
+        "authoring-design"
+      ],
+      "approved": false
+    },
+    {
+      "id": "access-value",
+      "text": "필수 진입로의 결빙은 우회·동행 지원과 개관 전 점검을 유발할 수 있다. 이용자·시설별 기록으로 확인할 제안 가설.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "brief",
+        "authoring-design"
+      ],
+      "approved": false
+    },
+    {
+      "id": "tech",
+      "text": "사용자 첨부 FEATURES.md 원문을 확인했다. 구현 기능의 기재는 코드·시험 통과·실물 연동 완료를 뜻하지 않는다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "vision-features"
+      ],
+      "approved": false
+    },
+    {
+      "id": "limits",
+      "text": "명세상 물리출력은 Modbus ON/OFF이며 비례출력 구현 증거는 없다. 중앙 두절 후 Edge 신규 완전자율 판단·실물 HIL·장기운전 최종 증적은 완료 범위가 아니다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "vision-features"
+      ],
+      "approved": false
+    },
+    {
+      "id": "nano-cooperation",
+      "text": "주관은 (주)에스엘티, 기술협력 및 ECO WAY 제품사는 (주)나노일렉트로닉스로 표기한다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "user-provided",
+      "sourceIds": [
+        "nano-cooperation-user"
+      ],
+      "approved": false
+    },
+    {
+      "id": "vision-example",
+      "text": "제안서의 관제 화면은 첨부 매뉴얼·기능명세 기반 재구성이며 시설 A/B/C, 시각·센서값·경보·조치는 설명용 가상 사례다. 실제 UI 캡처·천안 실측·완료 실증이 아니다.",
+      "scope": "project",
+      "evidenceKind": "document",
+      "status": "assumption",
+      "sourceIds": [
+        "vision-manual",
+        "vision-features"
+      ],
+      "approved": false
+    }
+  ],
+  "slides": [],
+  "provider": "offline",
+  "qualityTarget": "proposal",
+  "planning": {
+    "visualPolicy": {
+      "requireExplanationContract": true,
+      "mode": "visual-first",
+      "requireEverySlide": true,
+      "minVisualAreaRatio": 0.24
+    },
+    "version": 1,
+    "depth": "full",
+    "decision": {
+      "owner": "천안시 해당 시설 관리부서 제안",
+      "request": "후보 접근로 1~2곳과 시설 담당 창구를 공유하고 현장 방문 후 실증 검토 가능성을 협의",
+      "success": "결빙·이용 불편·관리 업무·제품 적용 조건을 공동 확인하고 다음 검토 범위를 정함",
+      "scope": "접근로 1개소 20~60㎡ 가정의 국소 가열·위험안내 실증",
+      "outOfScope": [
+        "도로표지·신호·자동차단",
+        "시 전체 플랫폼 통합",
+        "검증되지 않은 사고감소·전력절감 보장"
+      ]
+    },
+    "problem": {
+      "actors": [
+        "시설 이용 시민",
+        "시설 운영자",
+        "현장 전기 담당자"
+      ],
+      "situation": "필수 보행접근로에 남은 수분과 그늘·냉각이 겹치면 제설 뒤에도 재결빙이 반복될 수 있다.",
+      "gap": "시민에게는 우회·도움 대기라는 이용 장벽이 생기고 담당자는 제설·순찰·재확인을 반복할 수 있다.",
+      "consequence": "짧은 입구 구간의 상태 변화가 공공시설 이용과 개관 전 대응의 부담으로 이어질 수 있다.",
+      "baseline": "기존 제설·배수·현장점검·우회 안내를 유지한 상태를 비교 기준으로 둔다.",
+      "claimIds": [
+        "winter-mechanism",
+        "access-value",
+        "scope"
+      ],
+      "localEvidence": {
+        "status": "not-yet-observed",
+        "claimIds": [],
+        "required": [
+          "시설별 결빙·제설·민원 기록",
+          "필수 통행·우회·포장·전력 조사",
+          "독립 노면 계측과 기존 운영 기준선"
+        ]
+      },
+      "mechanisms": [
+        {
+          "id": "m1",
+          "cause": "수분·그늘·야간 냉각의 중첩",
+          "effect": "제설 후에도 재결빙 위험이 남을 가능성",
+          "status": "hypothesis",
+          "claimIds": [
+            "winter-mechanism"
+          ]
+        },
+        {
+          "id": "m2",
+          "cause": "필수 동선과 점검 사이의 상태 변화",
+          "effect": "접근 불편과 반복 확인·조치 부담 가능성",
+          "status": "hypothesis",
+          "claimIds": [
+            "access-value"
+          ]
+        }
+      ]
+    },
+    "alternatives": [
+      {
+        "id": "baseline",
+        "name": "기존 제설·점검",
+        "priority": "baseline",
+        "addresses": "잔설·결빙·통행 위험 대응",
+        "limits": "현장 출동·제설·위험시간 실측 필요",
+        "mechanismIds": [
+          "m1",
+          "m2"
+        ],
+        "claimIds": [
+          "design"
+        ]
+      },
+      {
+        "id": "integrated",
+        "name": "국소 가열+위험 안내",
+        "priority": "proposed",
+        "addresses": "사전 가열과 시민 주의 안내",
+        "limits": "권리·실물 연동·실증 성과 확인 전",
+        "mechanismIds": [
+          "m1",
+          "m2"
+        ],
+        "claimIds": [
+          "scope",
+          "bridge"
+        ]
+      }
+    ],
+    "interventions": [
+      {
+        "id": "heat",
+        "name": "국소 발열·계측",
+        "mechanismIds": [
+          "m1"
+        ],
+        "action": "보호 인터록을 유지한 가열과 실제 노면 변화를 기록한다.",
+        "deliverable": "실출력·노면·전력 원장",
+        "claimIds": [
+          "scope",
+          "safety"
+        ],
+        "validationIds": [
+          "v1"
+        ]
+      },
+      {
+        "id": "display",
+        "name": "상태 기반 안전 안내",
+        "mechanismIds": [
+          "m2"
+        ],
+        "action": "불확실 상태를 포함한 승인 안내문과 실제 표출을 확인한다.",
+        "deliverable": "표출·장치응답·운영조치 원장",
+        "claimIds": [
+          "bridge",
+          "safety"
+        ],
+        "validationIds": [
+          "v2"
+        ]
+      }
+    ],
+    "validation": [
+      {
+        "id": "v1",
+        "question": "위험 지속시간과 전력·운영 부담이 어떻게 달라지는가?",
+        "method": "안전한 비교구역과 기상조건을 대조해 독립 노면·전력·조치 기록을 분석",
+        "measure": "위험 분·kWh·수동 개입",
+        "decisionRule": "유효 기상 사건과 기준선 부족 시 성과 미산출·연장 협의",
+        "claimIds": [
+          "metrics"
+        ]
+      },
+      {
+        "id": "v2",
+        "question": "출력·노면·표출을 정확히 분리해 전달하는가?",
+        "method": "실물 HIL로 ACK·출력·LED 상태 및 실패 복구를 대조 시험",
+        "measure": "실출력 지연·경고 전달률·장애 조치",
+        "decisionRule": "불확실 상태의 안전 오표출 또는 인터록 우회 발생 시 보완 후 재시험",
+        "claimIds": [
+          "safety",
+          "bridge"
+        ]
+      }
+    ],
+    "operatingBoundary": "ECO WAY는 현장 노면 가열, EcowayVision은 판단·관측·운영 지원, SLT는 안내 연계를 제안한다. 제설·보호·현장 책임을 유지한다.",
+    "workflow": [
+      {
+        "id": "w1",
+        "label": "관측·위험 분석",
+        "owner": "system",
+        "input": "유효 센서·기상 자료",
+        "action": "출처·최신성 검사와 위험 분석",
+        "output": "위험 이벤트",
+        "successSignal": "동기화된 유효 관측",
+        "failureAction": "불확실 표시와 주의 유지",
+        "claimIds": [
+          "tech",
+          "safety"
+        ]
+      },
+      {
+        "id": "w2",
+        "label": "가열·안내",
+        "owner": "system",
+        "input": "유효 이벤트와 승인 규칙",
+        "action": "제어 요청·실출력·표출 확인",
+        "output": "물리 동작·장치 상태 원장",
+        "successSignal": "별도 피드백 기록",
+        "failureAction": "인터록·고정 안내·운영자 통보",
+        "claimIds": [
+          "bridge",
+          "safety"
+        ]
+      },
+      {
+        "id": "w3",
+        "label": "현장 확인·재개",
+        "owner": "human",
+        "input": "위험·장애·현장관측",
+        "action": "수동 제설·우회·노면 확인",
+        "output": "조치·재개 근거",
+        "successSignal": "현장 기준 충족과 책임자 확인",
+        "failureAction": "경고·우회 유지",
+        "claimIds": [
+          "safety",
+          "design"
+        ]
+      }
+    ],
+    "story": [
+      {
+        "id": "cover",
+        "sectionId": "cover",
+        "stage": "business",
+        "title": "천안시 겨울철\n보행접근로 안전 제안",
+        "question": "천안시 겨울철\n보행접근로 안전 제안에서 담당자는 무엇을 판단하는가?",
+        "answer": "필수 접근로의 결빙 예방과\n시민 안내를 함께 검증",
+        "proofClaimIds": [
+          "scope",
+          "identity",
+          "nano-cooperation"
+        ],
+        "visualPurpose": "천안시 겨울철\n보행접근로 안전 제안을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "2026.10.29 천안시 협의용 · 가상 설치 개념 · 대상지와 설치 조건 확인 전",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "spatial",
+          "takeaway": "필수 접근로의 결빙 예방과\n시민 안내를 함께 검증",
+          "encoding": "safesurface:cover; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "scope",
+            "identity",
+            "nano-cooperation"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "천안시 겨울철\n보행접근로 안전 제안",
+              "detail": "필수 접근로의 결빙 예방과\n시민 안내를 함께 검증",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "2026.10.29 천안시 협의용 · 가상 설치 개념 · 대상지와 설치 조건 확인 전",
+          "readingGuide": {
+            "message": "필수 접근로의 결빙 예방과\n시민 안내를 함께 검증",
+            "keyPhrase": "필수 접근로의",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "천안시 겨울철\n보행접근로 안전 제안의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "2026.10.28 천안시 협의용 · 가상 설치 개념 · 대상지와 설치 조건 확인 전",
+            "requiredMarks": [
+              "scene",
+              "brand"
+            ]
+          },
+          "scene": {
+            "path": "projects/safesurface-cheonan/assets/access-spatial-concept-v2.png",
+            "rights": "generated",
+            "caption": "설명용 개념 장면",
+            "reuseReason": "각 페이지의 설명 대상에 맞춘 개별 장면이며 다른 페이지에 재사용하지 않음",
+            "annotations": []
+          }
+        }
+      },
+      {
+        "id": "essential-access",
+        "sectionId": "essential-access",
+        "stage": "problem",
+        "title": "겨울에도 이어져야 할 필수 접근로",
+        "question": "짧은 보행접근로의 결빙을 왜 시설 관리 문제로 봐야 하는가?",
+        "answer": "짧은 경사로 한 곳이 막히면 공공시설 이용도 어려워질 수 있음",
+        "proofClaimIds": [
+          "scope",
+          "winter-mechanism",
+          "access-value"
+        ],
+        "visualPurpose": "겨울에도 이어져야 할 필수 접근로을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "결빙 상황을 설명한 가상 장면 · 천안 특정 시설의 사고·현장 관측 자료 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "spatial",
+          "takeaway": "짧은 경사로 한 곳이 막히면 공공시설 이용도 어려워질 수 있음",
+          "encoding": "safesurface:annotated-scene; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "scope",
+            "winter-mechanism",
+            "access-value"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "반드시 지나는 입구",
+              "detail": "시설 앞 마지막 접근 구간",
+              "icon": "person"
+            },
+            {
+              "id": "n2",
+              "label": "남아 있는 수분",
+              "detail": "잔설·융설수가 다시 유입",
+              "icon": "route"
+            },
+            {
+              "id": "n3",
+              "label": "개관 전 현장 확인",
+              "detail": "제설 뒤에도 상태 확인 필요",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "결빙 상황을 설명한 가상 장면 · 천안 특정 시설의 사고·현장 관측 자료 아님",
+          "readingGuide": {
+            "message": "짧은 경사로 한 곳이 막히면 공공시설 이용도 어려워질 수 있음",
+            "keyPhrase": "짧은 경사로",
+            "focusPhrases": [
+              "반드시 지나는 입구",
+              "남아 있는 수분",
+              "개관 전 현장 확인"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "짧은 보행접근로의 결빙을 왜 시설 관리 문제로 봐야 하는가?",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "결빙 상황을 설명한 가상 장면 · 천안 특정 시설의 사고·현장 관측 자료 아님",
+            "requiredMarks": [
+              "scene"
+            ]
+          },
+          "scene": {
+            "path": "projects/safesurface-cheonan/assets/winter-access-problem-v2.png",
+            "rights": "generated",
+            "caption": "설명용 개념 장면",
+            "reuseReason": "각 페이지의 설명 대상에 맞춘 개별 장면이며 다른 페이지에 재사용하지 않음",
+            "annotations": [
+              {
+                "nodeId": "n1",
+                "x": 0.5,
+                "y": 0.62
+              },
+              {
+                "nodeId": "n2",
+                "x": 0.78,
+                "y": 0.67
+              },
+              {
+                "nodeId": "n3",
+                "x": 0.93,
+                "y": 0.47
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "refreeze",
+        "sectionId": "refreeze",
+        "stage": "problem",
+        "title": "눈이 그친 뒤 다시 생기는 결빙",
+        "question": "눈이 오지 않는 시간에도 왜 결빙 위험을 계속 확인해야 하는가?",
+        "answer": "제설 완료와 다음 이용시간의 노면 상태는 다를 수 있음",
+        "proofClaimIds": [
+          "winter-mechanism",
+          "design"
+        ],
+        "visualPurpose": "눈이 그친 뒤 다시 생기는 결빙을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "재결빙 가능성 설명 · 실제 발생 시간·지속시간·시설별 조건은 현장조사로 확인",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "제설 완료와 다음 이용시간의 노면 상태는 다를 수 있음",
+          "encoding": "safesurface:risk-cycle; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "winter-mechanism",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "눈·비가 지난 뒤",
+              "detail": "잔설과 물기가 남음",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "밤·새벽의 냉각",
+              "detail": "그늘·낮은 노면온도",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "개관 전 확인",
+              "detail": "제설·미끄럼 상태 점검",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "이용시간 재확인",
+              "detail": "융설수 유입·재결빙 가능",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": ""
+            }
+          ],
+          "legend": "재결빙 가능성 설명 · 실제 발생 시간·지속시간·시설별 조건은 현장조사로 확인",
+          "readingGuide": {
+            "message": "제설 완료와 다음 이용시간의 노면 상태는 다를 수 있음",
+            "keyPhrase": "제설 완료와",
+            "focusPhrases": [
+              "눈·비가 지난 뒤",
+              "밤·새벽의 냉각",
+              "개관 전 확인",
+              "이용시간 재확인"
+            ],
+            "tone": "amber"
+          },
+          "explanation": {
+            "readerTask": "눈이 오지 않는 시간에도 왜 결빙 위험을 계속 확인해야 하는가?",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "재결빙 가능성 설명 · 실제 발생 시간·지속시간·시설별 조건은 현장조사로 확인",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "local-conditions",
+        "sectionId": "local-conditions",
+        "stage": "business",
+        "title": "같은 시설 안에서도 다른 노면 조건",
+        "question": "같은 시설 안에서도 다른 노면 조건에서 담당자는 무엇을 판단하는가?",
+        "answer": "그늘·배수·경사와 통행이 겹치는 구간을 먼저 살펴볼 필요",
+        "proofClaimIds": [
+          "winter-mechanism",
+          "sites",
+          "design"
+        ],
+        "visualPurpose": "같은 시설 안에서도 다른 노면 조건을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "그늘·융설수·배수·경사의 개념 장면 · 실제 대상지 조건은 현장 조사로 확인",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "spatial",
+          "takeaway": "그늘·배수·경사와 통행이 겹치는 구간을 먼저 살펴볼 필요",
+          "encoding": "safesurface:annotated-scene; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "winter-mechanism",
+            "sites",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "그늘과 노면온도",
+              "detail": "건물 그림자 구간의 냉각",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "물의 유입과 배수",
+              "detail": "눈이 녹은 물·고인 물 확인",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "경사와 필수 통행",
+              "detail": "회피하기 어려운 동선 확인",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "그늘·융설수·배수·경사의 개념 장면 · 실제 대상지 조건은 현장 조사로 확인",
+          "readingGuide": {
+            "message": "그늘·배수·경사와 통행이 겹치는 구간을 먼저 살펴볼 필요",
+            "keyPhrase": "그늘·배수·경사와 통행이",
+            "focusPhrases": [
+              "그늘과 노면온도",
+              "물의 유입과 배수",
+              "경사와 필수 통행"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "같은 시설 안에서도 다른 노면 조건의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "그늘·융설수·배수·경사의 개념 장면 · 실제 대상지 조건은 현장 조사로 확인",
+            "requiredMarks": [
+              "scene"
+            ]
+          },
+          "scene": {
+            "path": "projects/safesurface-cheonan/assets/local-refreeze-conditions-v8.png",
+            "rights": "generated",
+            "caption": "설명용 개념 장면",
+            "reuseReason": "각 페이지의 설명 대상에 맞춘 개별 장면이며 다른 페이지에 재사용하지 않음",
+            "annotations": [
+              {
+                "nodeId": "n1",
+                "x": 0.72,
+                "y": 0.39
+              },
+              {
+                "nodeId": "n2",
+                "x": 0.81,
+                "y": 0.83
+              },
+              {
+                "nodeId": "n3",
+                "x": 0.44,
+                "y": 0.47
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "citizen-impact",
+        "sectionId": "citizen-impact",
+        "stage": "business",
+        "title": "결빙이 시민의 이동에 미치는 영향",
+        "question": "시민에게 보행로의 결빙은 어떤 이용상의 문제를 만드는가?",
+        "answer": "우회하거나 도움을 기다려야 한다면 짧은 구간도 이용 장벽",
+        "proofClaimIds": [
+          "access-value",
+          "design"
+        ],
+        "visualPurpose": "결빙이 시민의 이동에 미치는 영향을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "시민 이용 시나리오 · 실제 불편·민원·동행 지원 빈도는 후보 시설에서 확인",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "우회하거나 도움을 기다려야 한다면 짧은 구간도 이용 장벽",
+          "encoding": "safesurface:access-journey; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "access-value",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "시설로 이동",
+              "detail": "예약·민원·복지서비스 이용",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "입구 접근",
+              "detail": "경사로·그늘 구간 통과",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "시설 이용",
+              "detail": "안정적인 접근 동선 필요",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "시민 이용 시나리오 · 실제 불편·민원·동행 지원 빈도는 후보 시설에서 확인",
+          "readingGuide": {
+            "message": "우회하거나 도움을 기다려야 한다면 짧은 구간도 이용 장벽",
+            "keyPhrase": "우회하거나 도움을",
+            "focusPhrases": [
+              "시설로 이동",
+              "입구 접근",
+              "시설 이용"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "시민에게 보행로의 결빙은 어떤 이용상의 문제를 만드는가?",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "시민 이용 시나리오 · 실제 불편·민원·동행 지원 빈도는 후보 시설에서 확인",
+            "requiredMarks": [
+              "comparison",
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "manager-burden",
+        "sectionId": "manager-burden",
+        "stage": "business",
+        "title": "제설 이후에도 이어지는 관리 업무",
+        "question": "현재 제설 업무를 보완할 수 있는 지점은 무엇인가?",
+        "answer": "제설·순찰·재확인을 반복해도 확인 사이의 상태는 바뀔 수 있음",
+        "proofClaimIds": [
+          "access-value",
+          "winter-mechanism",
+          "design"
+        ],
+        "visualPurpose": "제설 이후에도 이어지는 관리 업무을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "관리 업무 가설 · 기존 현장 대응을 유지하며 반복 부담과 관찰 공백을 실측",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "제설·순찰·재확인을 반복해도 확인 사이의 상태는 바뀔 수 있음",
+          "encoding": "safesurface:manager-cycle; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "access-value",
+            "winter-mechanism",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "현장 상태 확인",
+              "detail": "개관 전·민원·기상 변화",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "제설·통행 안내",
+              "detail": "작업 배치·주의·우회 안내",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "통행 상태 재확인",
+              "detail": "다시 얼었는지 현장 점검",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "다음 변화 대응",
+              "detail": "수분 유입·한파·새로운 강설",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": ""
+            }
+          ],
+          "legend": "관리 업무 가설 · 기존 현장 대응을 유지하며 반복 부담과 관찰 공백을 실측",
+          "readingGuide": {
+            "message": "제설·순찰·재확인을 반복해도 확인 사이의 상태는 바뀔 수 있음",
+            "keyPhrase": "제설·순찰·재확인을 반복해도",
+            "focusPhrases": [
+              "현장 상태 확인",
+              "제설·통행 안내",
+              "통행 상태 재확인",
+              "다음 변화 대응"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "현재 제설 업무를 보완할 수 있는 지점은 무엇인가?",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "관리 업무 가설 · 기존 현장 대응을 유지하며 반복 부담과 관찰 공백을 실측",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "context",
+        "sectionId": "context",
+        "stage": "business",
+        "title": "천안의 제설 대응과 이번 제안",
+        "question": "천안의 제설 대응과 이번 제안에서 담당자는 무엇을 판단하는가?",
+        "answer": "시 전체 제설 대응에 더해 시설 입구의 짧은 취약구간을 검토",
+        "proofClaimIds": [
+          "local-material",
+          "local-equipment",
+          "local-priority",
+          "scope"
+        ],
+        "visualPurpose": "천안의 제설 대응과 이번 제안을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "R1 뉴시스 2025.12.04 · 시 제설자원이 특정 보행시설의 수요를 입증하는 것은 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "시 전체 제설 대응에 더해 시설 입구의 짧은 취약구간을 검토",
+          "encoding": "safesurface:table; 같은 행의 상황·대응·가치를 좌우로 비교",
+          "evidenceIds": [
+            "local-material",
+            "local-equipment",
+            "local-priority",
+            "scope"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "천안의 제설 대응과 이번 제안",
+              "detail": "시 전체 제설 대응에 더해 시설 입구의 짧은 취약구간을 검토",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "R1 뉴시스 2025.12.04 · 시 제설자원이 특정 보행시설의 수요를 입증하는 것은 아님",
+          "readingGuide": {
+            "message": "시 전체 제설 대응에 더해 시설 입구의 짧은 취약구간을 검토",
+            "keyPhrase": "시 전체",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "천안의 제설 대응과 이번 제안의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 같은 행의 상황과 바뀌는 대응을 비교한다",
+            "notProven": "R1 뉴시스 2025.12.04 · 시 제설자원이 특정 보행시설의 수요를 입증하는 것은 아님",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      {
+        "id": "priority",
+        "sectionId": "priority",
+        "stage": "business",
+        "title": "첫 적용은 필수 보행접근로 한 곳",
+        "question": "첫 적용은 필수 보행접근로 한 곳에서 담당자는 무엇을 판단하는가?",
+        "answer": "필요성과 관리 주체가 분명한 작은 구간부터 현장 효과를 확인",
+        "proofClaimIds": [
+          "sites",
+          "scope",
+          "access-value"
+        ],
+        "visualPurpose": "첫 적용은 필수 보행접근로 한 곳을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "시설명·위치는 미정 · 후보 1~2곳을 조사한 뒤 적합한 1개소 선정",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "필요성과 관리 주체가 분명한 작은 구간부터 현장 효과를 확인",
+          "encoding": "safesurface:table; 같은 행의 상황·대응·가치를 좌우로 비교",
+          "evidenceIds": [
+            "sites",
+            "scope",
+            "access-value"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "첫 적용은 필수 보행접근로 한 곳",
+              "detail": "필요성과 관리 주체가 분명한 작은 구간부터 현장 효과를 확인",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "시설명·위치는 미정 · 후보 1~2곳을 조사한 뒤 적합한 1개소 선정",
+          "readingGuide": {
+            "message": "필요성과 관리 주체가 분명한 작은 구간부터 현장 효과를 확인",
+            "keyPhrase": "필요성과 관리",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "첫 적용은 필수 보행접근로 한 곳의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 같은 행의 상황과 바뀌는 대응을 비교한다",
+            "notProven": "시설명·위치는 미정 · 후보 1~2곳을 조사한 뒤 적합한 1개소 선정",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      {
+        "id": "proposal",
+        "sectionId": "proposal",
+        "stage": "business",
+        "title": "예방 가열·운영 판단·시민 안내의 결합",
+        "question": "관제의 판단이 어떤 설비와 사람의 행동으로 이어지는가?",
+        "answer": "관제 판단을 가열 요청·현장 안내와 연결하는 통합 제안",
+        "proofClaimIds": [
+          "ecoway-product",
+          "vision-ai",
+          "bridge",
+          "scope",
+          "safety",
+          "design"
+        ],
+        "visualPurpose": "예방 가열·운영 판단·시민 안내의 결합을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "1개소·20~60㎡ 가정 / LED 안내는 신규 연계 제안 · 실제 출력·노면 및 현장 대응 확인",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "관제 판단을 가열 요청·현장 안내와 연결하는 통합 제안",
+          "encoding": "safesurface:offer-system; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "ecoway-product",
+            "vision-ai",
+            "bridge",
+            "scope",
+            "safety",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "현장 관측",
+              "detail": "CCTV·노면 센서·기상",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "EcowayVision",
+              "detail": "위험 추정·예열 판단",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "ECO WAY",
+              "detail": "나노필름 가열·출력 확인",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "SLT 현장 안내",
+              "detail": "운영자 승인 문구·주의 표출",
+              "icon": "document"
+            },
+            {
+              "id": "n5",
+              "label": "시민·시설 담당",
+              "detail": "주의 확인·현장 대응",
+              "icon": "document"
+            },
+            {
+              "id": "n6",
+              "label": "현장 조치",
+              "detail": "제설·배수·우회·점검",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "관측"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "가열 요청"
+            },
+            {
+              "from": "n3",
+              "to": "n2",
+              "label": "출력 피드백"
+            },
+            {
+              "from": "n2",
+              "to": "n4",
+              "label": "상태·승인 문구"
+            },
+            {
+              "from": "n4",
+              "to": "n5",
+              "label": "주의 안내"
+            },
+            {
+              "from": "n5",
+              "to": "n6",
+              "label": "담당자 현장 대응"
+            },
+            {
+              "from": "n6",
+              "to": "n1",
+              "label": "점검·재관측"
+            }
+          ],
+          "legend": "1개소·20~60㎡ 가정 / LED 안내는 신규 연계 제안 · 실제 출력·노면 및 현장 대응 확인",
+          "readingGuide": {
+            "message": "관제 판단을 가열 요청·현장 안내와 연결하는 통합 제안",
+            "keyPhrase": "관제 판단을",
+            "focusPhrases": [
+              "현장 관측",
+              "EcowayVision",
+              "ECO WAY",
+              "SLT 현장 안내"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "관제의 판단이 어떤 설비와 사람의 행동으로 이어지는가?",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "1개소·20~60㎡ 가정 / LED 안내는 신규 연계 제안 · 실제 출력·노면 및 현장 대응 확인",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "ecoway-origin",
+        "sectionId": "ecoway-origin",
+        "stage": "business",
+        "title": "도로면 융설에서 시작한 ECO WAY",
+        "question": "기존 도로용 융설 기술이 왜 이번 보행접근로 제안의 출발점인가?",
+        "answer": "도로 노면을 데우는 융설 기술을 공공시설 보행접근로에 적용 검토",
+        "proofClaimIds": [
+          "ecoway-product",
+          "ecoway-film",
+          "sites"
+        ],
+        "visualPurpose": "도로면 융설에서 시작한 ECO WAY을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "제조사 공개 도로히팅·적용 사례 기반 / 천안 보행시설 설치 실적·적합성 보증 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "도로 노면을 데우는 융설 기술을 공공시설 보행접근로에 적용 검토",
+          "encoding": "safesurface:flow; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "ecoway-product",
+            "ecoway-film",
+            "sites"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "기존 도로면 융설",
+              "detail": "필름으로 도로 노면 가열\n도로·주차장·교내 적용",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "같은 열 전달 원리",
+              "detail": "발열층에서 포장 표면으로\n열을 전달해 융설을 보조",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "보행접근로 적용 검토",
+              "detail": "경사·배수·포장 조건 확인\n필수 동선의 가열 구역 설계",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "제조사 공개 도로히팅·적용 사례 기반 / 천안 보행시설 설치 실적·적합성 보증 아님",
+          "readingGuide": {
+            "message": "도로 노면을 데우는 융설 기술을 공공시설 보행접근로에 적용 검토",
+            "keyPhrase": "도로 노면을",
+            "focusPhrases": [
+              "기존 도로면 융설",
+              "같은 열 전달 원리",
+              "보행접근로 적용 검토"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "기존 도로용 융설 기술이 왜 이번 보행접근로 제안의 출발점인가?",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "제조사 공개 도로히팅·적용 사례 기반 / 천안 보행시설 설치 실적·적합성 보증 아님",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "ecoway-product",
+        "sectionId": "ecoway-product",
+        "stage": "intervention",
+        "title": "나노기술로 소비에너지를 줄이는 ECO WAY",
+        "question": "나노기술로 소비에너지를 줄이는 ECO WAY에서 담당자는 무엇을 판단하는가?",
+        "answer": "나노히팅필름으로 노면에 열을 공급하는 저전력 스노우멜팅 설비",
+        "proofClaimIds": [
+          "ecoway-product",
+          "ecoway-film",
+          "ecoway-energy",
+          "scope",
+          "design"
+        ],
+        "visualPurpose": "나노기술로 소비에너지를 줄이는 ECO WAY을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "제조사 제시: 도로열선 대비 소비에너지 최대 90% 절감 / 정격전력 10% 의미 아님 · 천안 현장 효과 별도 검증",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "나노히팅필름으로 노면에 열을 공급하는 저전력 스노우멜팅 설비",
+          "encoding": "safesurface:product-difference; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "ecoway-product",
+            "ecoway-film",
+            "ecoway-energy",
+            "scope",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "노면 포장",
+              "detail": "이용자가 걷는 표면에 열 전달",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "나노히팅필름",
+              "detail": "구리나노섬유 기반 면상 발열체",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "전용 제어와 센서",
+              "detail": "전력 공급·구역 제어·상태 확인",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "제조사 제시: 도로열선 대비 소비에너지 최대 90% 절감 / 정격전력 10% 의미 아님 · 천안 현장 효과 별도 검증",
+          "readingGuide": {
+            "message": "나노히팅필름으로 노면에 열을 공급하는 저전력 스노우멜팅 설비",
+            "keyPhrase": "나노히팅필름으로 노면에",
+            "focusPhrases": [
+              "노면 포장",
+              "나노히팅필름",
+              "전용 제어와 센서"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "기존 도로열선과 비교한 나노필름 융설 설비의 차별성과 수치의 적용 한계를 이해",
+            "howToRead": "왼쪽 필름 발열 개념을 본 뒤 오른쪽 기존 100 대비 약 10의 최대 절감 조건 환산과 제조사 주장을 읽는다",
+            "notProven": "제조사 제시: 도로열선 대비 소비에너지 최대 90% 절감 / 정격전력 10% 의미 아님 · 천안 현장 효과 별도 검증",
+            "requiredMarks": [
+              "scene",
+              "chart"
+            ]
+          },
+          "scene": {
+            "path": "projects/safesurface-cheonan/assets/film-mechanism-v2.png",
+            "rights": "generated",
+            "caption": "설명용 개념 장면",
+            "reuseReason": "각 페이지의 설명 대상에 맞춘 개별 장면이며 다른 페이지에 재사용하지 않음",
+            "annotations": []
+          },
+          "chart": {
+            "datasetId": "ecoway-relative-energy",
+            "type": "bar",
+            "orientation": "horizontal",
+            "stacked": false
+          }
+        }
+      },
+      {
+        "id": "ecoway-operation",
+        "sectionId": "ecoway-operation",
+        "stage": "business",
+        "title": "ECO WAY의 열이 노면에 닿는 과정",
+        "question": "ECO WAY의 열이 노면에 닿는 과정에서 담당자는 무엇을 판단하는가?",
+        "answer": "발열체의 가동과 노면의 변화는 순서대로 확인",
+        "proofClaimIds": [
+          "ecoway-film",
+          "safety",
+          "design"
+        ],
+        "visualPurpose": "ECO WAY의 열이 노면에 닿는 과정을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "원리 설명 · 가열 ON이 통행 안전을 보증하지 않음 · 열전달·융설 효과는 현장에서 확인",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "발열체의 가동과 노면의 변화는 순서대로 확인",
+          "encoding": "safesurface:heat-path; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "ecoway-film",
+            "safety",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "전용 제어",
+              "detail": "가열 구역의 전력 공급",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "면상 발열",
+              "detail": "필름 영역에서 열 발생",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "포장에 열 전달",
+              "detail": "포장·기층·기상 조건 영향",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "노면 상태 확인",
+              "detail": "온도·수분·잔설을 관측",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": ""
+            }
+          ],
+          "legend": "원리 설명 · 가열 ON이 통행 안전을 보증하지 않음 · 열전달·융설 효과는 현장에서 확인",
+          "readingGuide": {
+            "message": "발열체의 가동과 노면의 변화는 순서대로 확인",
+            "keyPhrase": "발열체의 가동과",
+            "focusPhrases": [
+              "전용 제어",
+              "면상 발열",
+              "포장에 열 전달",
+              "노면 상태 확인"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "ECO WAY의 열이 노면에 닿는 과정의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "원리 설명 · 가열 ON이 통행 안전을 보증하지 않음 · 열전달·융설 효과는 현장에서 확인",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "spatial",
+        "sectionId": "spatial",
+        "stage": "business",
+        "title": "보행접근로에 적용하는 설치 범위",
+        "question": "보행접근로에 적용하는 설치 범위에서 담당자는 무엇을 판단하는가?",
+        "answer": "발열 구간·배수·전력·안내 위치를 함께 계획",
+        "proofClaimIds": [
+          "scope",
+          "sites",
+          "safety",
+          "design"
+        ],
+        "visualPurpose": "보행접근로에 적용하는 설치 범위을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "설치 배치 개념 · 실제 대상지·공법·설비 규격은 현장 조사 후 확정",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "spatial",
+          "takeaway": "발열 구간·배수·전력·안내 위치를 함께 계획",
+          "encoding": "safesurface:annotated-scene; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "scope",
+            "sites",
+            "safety",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "필수 통행 구간",
+              "detail": "20~60㎡는 초기 검토 가정",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "전력·제어 설비",
+              "detail": "보호·차단·센서·배수 확인",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "입구 안내와 통행",
+              "detail": "이용자에게 보이는 위치·우회 확보",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "설치 배치 개념 · 실제 대상지·공법·설비 규격은 현장 조사 후 확정",
+          "readingGuide": {
+            "message": "발열 구간·배수·전력·안내 위치를 함께 계획",
+            "keyPhrase": "발열 구간·배수·전력·안내",
+            "focusPhrases": [
+              "필수 통행 구간",
+              "전력·제어 설비",
+              "입구 안내와 통행"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "보행접근로에 적용하는 설치 범위의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "설치 배치 개념 · 실제 대상지·공법·설비 규격은 현장 조사 후 확정",
+            "requiredMarks": [
+              "scene"
+            ]
+          },
+          "scene": {
+            "path": "projects/safesurface-cheonan/assets/access-deployment-view-v8.png",
+            "rights": "generated",
+            "caption": "설명용 개념 장면",
+            "reuseReason": "각 페이지의 설명 대상에 맞춘 개별 장면이며 다른 페이지에 재사용하지 않음",
+            "annotations": [
+              {
+                "nodeId": "n1",
+                "x": 0.51,
+                "y": 0.56
+              },
+              {
+                "nodeId": "n2",
+                "x": 0.7,
+                "y": 0.42
+              },
+              {
+                "nodeId": "n3",
+                "x": 0.79,
+                "y": 0.31
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "ecoway-fit",
+        "sectionId": "ecoway-fit",
+        "stage": "business",
+        "title": "기존 제설과 ECO WAY의 역할",
+        "question": "기존 제설과 ECO WAY의 역할에서 담당자는 무엇을 판단하는가?",
+        "answer": "잔설 처리와 현장 점검을 유지하면서 노면 가열을 보완",
+        "proofClaimIds": [
+          "ecoway-product",
+          "safety",
+          "sites",
+          "design"
+        ],
+        "visualPurpose": "기존 제설과 ECO WAY의 역할을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "제조사 도로·주차장·교내 적용 소개와 별개로 보행시설 적합성 확인 필요 · 절감률 사전 보장 없음",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "잔설 처리와 현장 점검을 유지하면서 노면 가열을 보완",
+          "encoding": "safesurface:table; 같은 행의 상황·대응·가치를 좌우로 비교",
+          "evidenceIds": [
+            "ecoway-product",
+            "safety",
+            "sites",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "기존 제설과 ECO WAY의 역할",
+              "detail": "잔설 처리와 현장 점검을 유지하면서 노면 가열을 보완",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "제조사 도로·주차장·교내 적용 소개와 별개로 보행시설 적합성 확인 필요 · 절감률 사전 보장 없음",
+          "readingGuide": {
+            "message": "잔설 처리와 현장 점검을 유지하면서 노면 가열을 보완",
+            "keyPhrase": "잔설 처리와",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "기존 제설과 ECO WAY의 역할의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 같은 행의 상황과 바뀌는 대응을 비교한다",
+            "notProven": "제조사 도로·주차장·교내 적용 소개와 별개로 보행시설 적합성 확인 필요 · 절감률 사전 보장 없음",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      {
+        "id": "vision-overview",
+        "sectionId": "vision-overview",
+        "stage": "business",
+        "title": "EcowayVision으로 겨울철 대응을 연결",
+        "question": "현장 관측을 예열 판단·담당자 대응·조치 기록으로 연결을 어떤 정보로 판단할 수 있는가?",
+        "answer": "현장 관측을 예열 판단·담당자 대응·조치 기록으로 연결",
+        "proofClaimIds": [
+          "vision-ui",
+          "vision-ai",
+          "vision-ops",
+          "vision-workflow"
+        ],
+        "visualPurpose": "EcowayVision의 통합 관제 기능을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "EcowayVision 기능명세·사용자 매뉴얼(2026.10.26) 기준 · 적용 환경별 연동 검증 필요",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "현장 관측을 예열 판단·담당자 대응·조치 기록으로 연결",
+          "encoding": "safesurface:flow",
+          "evidenceIds": [
+            "vision-ui",
+            "vision-ai",
+            "vision-ops",
+            "vision-workflow"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "현장 상태 수집",
+              "detail": "CCTV·센서·기상·장비\n노면 변화와 갱신 상태 확인",
+              "icon": "camera"
+            },
+            {
+              "id": "n2",
+              "label": "예열·대응 판단",
+              "detail": "구역별 위험과 판단 이유\n가열·현장 조치 검토",
+              "icon": "server"
+            },
+            {
+              "id": "n3",
+              "label": "담당과 결과 기록",
+              "detail": "경보 확인·담당 배정\n조치·운영일지 보관",
+              "icon": "clipboard"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "관측·예보"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "경보·조치"
+            }
+          ],
+          "legend": "EcowayVision 기능명세·사용자 매뉴얼(2026.10.26) 기준 · 적용 환경별 연동 검증 필요",
+          "readingGuide": {
+            "message": "현장 관측을 예열 판단·담당자 대응·조치 기록으로 연결",
+            "keyPhrase": "현장 관측을",
+            "focusPhrases": [
+              "대시보드·지도",
+              "현장 상세",
+              "AI 관제",
+              "경보 대응"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "현장 관측을 예열 판단·담당자 대응·조치 기록으로 연결의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "EcowayVision 기능명세·사용자 매뉴얼(2026.10.26) 기준 · 적용 환경별 연동 검증 필요",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "vision-dashboard",
+        "sectionId": "vision-dashboard",
+        "stage": "business",
+        "title": "여러 현장의 결빙 상태를 한눈에",
+        "question": "결빙 주의와 관측 지연을 구분해 먼저 대응할 현장을 파악을 어떤 정보로 판단할 수 있는가?",
+        "answer": "결빙 주의와 관측 지연을 구분해 먼저 대응할 현장을 파악",
+        "proofClaimIds": [
+          "vision-ui",
+          "vision-ops",
+          "vision-workflow",
+          "vision-example"
+        ],
+        "visualPurpose": "대시보드에서 먼저 확인할 것을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "결빙 주의와 관측 지연을 구분해 먼저 대응할 현장을 파악",
+          "encoding": "safesurface:interface-dashboard",
+          "evidenceIds": [
+            "vision-ui",
+            "vision-ops",
+            "vision-workflow",
+            "vision-example"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "현장 찾기",
+              "detail": "현장 검색·도시 필터",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "상태 요약",
+              "detail": "노면·전력·장비·기상",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "변화 확인",
+              "detail": "이력 차트·운영지표 추세",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "우선 확인",
+              "detail": "최근 경보에서 현장 상세로",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+          "readingGuide": {
+            "message": "결빙 주의와 관측 지연을 구분해 먼저 대응할 현장을 파악",
+            "keyPhrase": "결빙 주의와",
+            "focusPhrases": [
+              "현장 찾기",
+              "상태 요약",
+              "변화 확인",
+              "우선 확인"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "결빙 주의와 관측 지연을 구분해 먼저 대응할 현장을 파악의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "재구성 화면의 현장별 상태·관측·기록을 읽고 오른쪽의 사례 해석과 담당자 대응을 연결한다",
+            "notProven": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+            "requiredMarks": [
+              "screen"
+            ]
+          },
+          "interfaceExample": {
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "vision-ui",
+              "vision-workflow",
+              "vision-ops"
+            ],
+            "scenario": "개관 전 겨울철 관제 예시",
+            "at": "06:30",
+            "image": {
+              "path": "projects/safesurface-cheonan/assets/dashboard-camera-view-v8.png",
+              "caption": "접근로 전경 · 가상 영상 장면",
+              "origin": "generated-concept"
+            },
+            "kind": "dashboard",
+            "metrics": [
+              {
+                "label": "관리 현장",
+                "value": "3곳",
+                "tone": "neutral"
+              },
+              {
+                "label": "결빙 주의",
+                "value": "1곳",
+                "tone": "caution"
+              },
+              {
+                "label": "정보 지연",
+                "value": "1곳",
+                "tone": "danger"
+              }
+            ],
+            "records": [
+              {
+                "name": "시설 A · 주출입구",
+                "status": "결빙 주의",
+                "detail": "노면 -2.1℃ · 수분 감지",
+                "updated": "06:29 갱신"
+              },
+              {
+                "name": "시설 B · 경사로",
+                "status": "관측 지연",
+                "detail": "최신 노면 상태 확인 필요",
+                "updated": "06:10 갱신"
+              },
+              {
+                "name": "시설 C · 진입로",
+                "status": "가열 유지",
+                "detail": "노면 +1.2℃ · 상태 관찰",
+                "updated": "06:29 갱신"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "최근 경보",
+                "value": "06:28  시설 A · 결빙 위험"
+              },
+              {
+                "label": "최근 경보",
+                "value": "06:27  시설 B · 센서 갱신 지연"
+              }
+            ],
+            "decision": {
+              "title": "우선 대응 현장 식별",
+              "reason": "A는 결빙 주의, B는 관측 지연으로 구분됩니다.",
+              "action": "A의 영상·노면을 대조하고 B는 현장 확인으로 보완합니다."
+            }
+          }
+        }
+      },
+      {
+        "id": "vision-site",
+        "sectionId": "vision-site",
+        "stage": "business",
+        "title": "현장에 가기 전 영상과 노면 상태 확인",
+        "question": "CCTV·센서·가열 상태를 함께 보고 현장 조치를 준비을 어떤 정보로 판단할 수 있는가?",
+        "answer": "CCTV·센서·가열 상태를 함께 보고 현장 조치를 준비",
+        "proofClaimIds": [
+          "vision-ui",
+          "vision-ai",
+          "safety",
+          "vision-workflow",
+          "vision-example",
+          "vision-ops"
+        ],
+        "visualPurpose": "현장 상세에서 상태와 조치를 연결을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "CCTV·센서·가열 상태를 함께 보고 현장 조치를 준비",
+          "encoding": "safesurface:interface-site",
+          "evidenceIds": [
+            "vision-ui",
+            "vision-ai",
+            "safety",
+            "vision-workflow",
+            "vision-example",
+            "vision-ops"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "관측",
+              "detail": "권한 있는 CCTV·센서 차트",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "구역",
+              "detail": "장비와 가열 구역 매핑",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "제어",
+              "detail": "권한 있는 수동제어·감사로그",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "운영",
+              "detail": "에너지·정비·녹화 정보",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+          "readingGuide": {
+            "message": "CCTV·센서·가열 상태를 함께 보고 현장 조치를 준비",
+            "keyPhrase": "CCTV·센서·가열 상태를",
+            "focusPhrases": [
+              "관측",
+              "구역",
+              "제어",
+              "운영"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "CCTV·센서·가열 상태를 함께 보고 현장 조치를 준비의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "재구성 화면의 현장별 상태·관측·기록을 읽고 오른쪽의 사례 해석과 담당자 대응을 연결한다",
+            "notProven": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+            "requiredMarks": [
+              "screen"
+            ]
+          },
+          "interfaceExample": {
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "vision-ui",
+              "vision-workflow",
+              "vision-ops"
+            ],
+            "scenario": "개관 전 겨울철 관제 예시",
+            "at": "06:30",
+            "image": {
+              "path": "projects/safesurface-cheonan/assets/detail-surface-view-v8.png",
+              "caption": "노면·센서·배수구 · 가상 장면",
+              "origin": "generated-concept"
+            },
+            "kind": "site",
+            "metrics": [
+              {
+                "label": "노면 온도",
+                "value": "-2.1℃",
+                "tone": "caution"
+              },
+              {
+                "label": "노면 수분",
+                "value": "감지",
+                "tone": "caution"
+              },
+              {
+                "label": "가열 상태",
+                "value": "예열 중",
+                "tone": "neutral"
+              }
+            ],
+            "records": [
+              {
+                "name": "A-01 · 출입구",
+                "status": "예열 중",
+                "detail": "출력 피드백 ON · 06:29",
+                "updated": "노면 상태 관찰"
+              },
+              {
+                "name": "A-02 · 경사부",
+                "status": "관측 확인",
+                "detail": "센서·영상 갱신 대조",
+                "updated": "현장 점검 검토"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "선택 현장",
+                "value": "시설 A · 주출입구"
+              },
+              {
+                "label": "영상·센서 시각",
+                "value": "06:29 / 06:29"
+              },
+              {
+                "label": "Vision 보조",
+                "value": "젖음(wet) · 수분과 대조"
+              },
+              {
+                "label": "제어 이력",
+                "value": "06:25  자동 예열 요청"
+              }
+            ],
+            "decision": {
+              "title": "가열과 통행을 구분",
+              "reason": "가열 ON만으로 노면 위험이 해소됐다고 판단하지 않습니다.",
+              "action": "영상·수분·온도를 보고 잔설 처리와 우회 여부를 현장에서 확인합니다."
+            }
+          }
+        }
+      },
+      {
+        "id": "vision-ai",
+        "sectionId": "vision-ai",
+        "stage": "business",
+        "title": "강설 전에 예열할 수 있도록 판단 지원",
+        "question": "예보와 노면 상태를 함께 반영하고 판단 사유를 제공을 어떤 정보로 판단할 수 있는가?",
+        "answer": "예보와 노면 상태를 함께 반영하고 판단 사유를 제공",
+        "proofClaimIds": [
+          "vision-ai",
+          "limits",
+          "safety",
+          "vision-workflow",
+          "vision-example",
+          "vision-ui",
+          "vision-ops"
+        ],
+        "visualPurpose": "AI 관제가 예열 시점을 판단하는 방식을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "예보와 노면 상태를 함께 반영하고 판단 사유를 제공",
+          "encoding": "safesurface:interface-ai",
+          "evidenceIds": [
+            "vision-ai",
+            "limits",
+            "safety",
+            "vision-workflow",
+            "vision-example",
+            "vision-ui",
+            "vision-ops"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "기상·센서·영상",
+              "detail": "예보·노면온도·수분·영상 보조",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "구역별 위험 판단",
+              "detail": "조건 융합·판단 사유 확인",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "예열 시점 계산",
+              "detail": "열전달·열용량과 강설 도달 검토",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "가열·상태 확인",
+              "detail": "제어 요청 후 출력·노면 관측",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+          "readingGuide": {
+            "message": "예보와 노면 상태를 함께 반영하고 판단 사유를 제공",
+            "keyPhrase": "예보와 노면",
+            "focusPhrases": [
+              "기상·센서·영상",
+              "구역별 위험 판단",
+              "예열 시점 계산",
+              "가열·상태 확인"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "예보와 노면 상태를 함께 반영하고 판단 사유를 제공의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "재구성 화면의 현장별 상태·관측·기록을 읽고 오른쪽의 사례 해석과 담당자 대응을 연결한다",
+            "notProven": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+            "requiredMarks": [
+              "screen"
+            ]
+          },
+          "interfaceExample": {
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "vision-ui",
+              "vision-workflow",
+              "vision-ops"
+            ],
+            "scenario": "개관 전 겨울철 관제 예시",
+            "at": "06:30",
+            "kind": "ai",
+            "timeline": [
+              {
+                "label": "예열 시작",
+                "time": "06:25",
+                "minute": 25
+              },
+              {
+                "label": "현재 관측",
+                "time": "06:30",
+                "minute": 30
+              },
+              {
+                "label": "강설 예보",
+                "time": "07:00",
+                "minute": 60
+              }
+            ],
+            "metrics": [
+              {
+                "label": "강설 예상 시각",
+                "value": "07:00",
+                "tone": "neutral"
+              },
+              {
+                "label": "예열 시작",
+                "value": "06:25",
+                "tone": "neutral"
+              },
+              {
+                "label": "요청 상태",
+                "value": "예열",
+                "tone": "neutral"
+              }
+            ],
+            "records": [
+              {
+                "name": "판단 근거",
+                "status": "저온·수분",
+                "detail": "노면 -2.1℃ · 수분 감지",
+                "updated": "최신 관측 확인"
+              },
+              {
+                "name": "예열 판단",
+                "status": "강설 전 준비",
+                "detail": "예보·포장 열특성을 반영",
+                "updated": "출력·노면 재확인"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "예보",
+                "value": "강설 가능성 · 07:00"
+              },
+              {
+                "label": "위험 추정 입력",
+                "value": "영상 젖음·노면 -2.1℃·수분"
+              },
+              {
+                "label": "판단 사유",
+                "value": "재결빙 위험을 고려한 예열"
+              },
+              {
+                "label": "운영자 확인",
+                "value": "현장 영상·센서와 대조"
+              }
+            ],
+            "decision": {
+              "title": "강설 전 예열 판단",
+              "reason": "예보·영상·센서로 위험을 추정하고 근거를 보여줍니다.",
+              "action": "실제 출력과 노면 반응을 확인하고 잘못된 판단에는 피드백을 남깁니다."
+            }
+          }
+        }
+      },
+      {
+        "id": "vision-stages",
+        "sectionId": "vision-stages",
+        "stage": "business",
+        "title": "필요할 때 가열하고 이상 시 안전정지",
+        "question": "예열·가열·유지를 구분하고 보호 조건이 생기면 운전 중단을 어떤 정보로 판단할 수 있는가?",
+        "answer": "예열·가열·유지를 구분하고 보호 조건이 생기면 운전 중단",
+        "proofClaimIds": [
+          "vision-workflow",
+          "limits",
+          "safety"
+        ],
+        "visualPurpose": "EcowayVision의 다섯 가열 운전 상태을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "대표 운전 흐름 · 실제 출력은 ON/OFF · 조건에 따라 상태 선택, 안전정지 후 현장 확인·보호조건 해소 필요",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "예열·가열·유지를 구분하고 보호 조건이 생기면 운전 중단",
+          "encoding": "safesurface:control-stages; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "vision-workflow",
+            "limits",
+            "safety"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "정지",
+              "detail": "위험 해소·부하 제한 등",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "예열",
+              "detail": "예보를 반영한 사전 가열",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "가열",
+              "detail": "신뢰 관측·위험도에 따라 운전",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "유지",
+              "detail": "잔류 위험과 재결빙 고려",
+              "icon": "document"
+            },
+            {
+              "id": "n5",
+              "label": "안전정지",
+              "detail": "과열·보호·제어 통신 이상",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": "운전 상태 전환"
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": "운전 상태 전환"
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": "운전 상태 전환"
+            },
+            {
+              "from": "n1",
+              "to": "n5",
+              "label": "보호 조건 발생"
+            },
+            {
+              "from": "n2",
+              "to": "n5",
+              "label": "보호 조건 발생"
+            },
+            {
+              "from": "n3",
+              "to": "n5",
+              "label": "보호 조건 발생"
+            },
+            {
+              "from": "n4",
+              "to": "n5",
+              "label": "보호 조건 발생"
+            },
+            {
+              "from": "n4",
+              "to": "n1",
+              "label": "위험 해소 시 정지"
+            }
+          ],
+          "legend": "대표 운전 흐름 · 실제 출력은 ON/OFF · 조건에 따라 상태 선택, 안전정지 후 현장 확인·보호조건 해소 필요",
+          "readingGuide": {
+            "message": "예열·가열·유지를 구분하고 보호 조건이 생기면 운전 중단",
+            "keyPhrase": "예열·가열·유지를 구분하고",
+            "focusPhrases": [
+              "정지 off",
+              "예열 preheat",
+              "가열 active",
+              "유지 hold"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "예열·가열·유지를 구분하고 보호 조건이 생기면 운전 중단의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "대표 운전 흐름 · 실제 출력은 ON/OFF · 조건에 따라 상태 선택, 안전정지 후 현장 확인·보호조건 해소 필요",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "vision-alerts",
+        "sectionId": "vision-alerts",
+        "stage": "business",
+        "title": "경보가 현장 조치와 기록으로 이어짐",
+        "question": "발생·담당 배정·조치·해결을 구분해 대응 누락을 확인을 어떤 정보로 판단할 수 있는가?",
+        "answer": "발생·담당 배정·조치·해결을 구분해 대응 누락을 확인",
+        "proofClaimIds": [
+          "vision-ui",
+          "vision-ops",
+          "safety",
+          "vision-workflow",
+          "vision-example"
+        ],
+        "visualPurpose": "경보를 담당자의 현장 대응으로 연결을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "발생·담당 배정·조치·해결을 구분해 대응 누락을 확인",
+          "encoding": "safesurface:interface-alerts",
+          "evidenceIds": [
+            "vision-ui",
+            "vision-ops",
+            "safety",
+            "vision-workflow",
+            "vision-example"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "경보 발생",
+              "detail": "강설·결빙·장비·통신 이상",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "확인과 담당 배정",
+              "detail": "경보 확인·담당자 배정",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "현장 조치",
+              "detail": "점검·수동 제설·우회 등 대응",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "해결 기록",
+              "detail": "조치 메모·미해결 경보 격상",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+          "readingGuide": {
+            "message": "발생·담당 배정·조치·해결을 구분해 대응 누락을 확인",
+            "keyPhrase": "발생·담당 배정·조치·해결을",
+            "focusPhrases": [
+              "경보 발생",
+              "확인과 담당 배정",
+              "현장 조치",
+              "해결 기록"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "발생·담당 배정·조치·해결을 구분해 대응 누락을 확인의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "재구성 화면의 현장별 상태·관측·기록을 읽고 오른쪽의 사례 해석과 담당자 대응을 연결한다",
+            "notProven": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+            "requiredMarks": [
+              "screen"
+            ]
+          },
+          "interfaceExample": {
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "vision-ui",
+              "vision-workflow",
+              "vision-ops"
+            ],
+            "scenario": "개관 전 겨울철 관제 예시",
+            "at": "06:30",
+            "kind": "alerts",
+            "metrics": [
+              {
+                "label": "미확인",
+                "value": "1건",
+                "tone": "danger"
+              },
+              {
+                "label": "조치 중",
+                "value": "1건",
+                "tone": "caution"
+              },
+              {
+                "label": "해결 기록",
+                "value": "1건",
+                "tone": "neutral"
+              }
+            ],
+            "records": [
+              {
+                "name": "시설 A · 결빙 위험",
+                "status": "미확인",
+                "detail": "담당 미배정",
+                "updated": "06:28"
+              },
+              {
+                "name": "시설 B · 센서 지연",
+                "status": "조치 중",
+                "detail": "시설 담당자 배정",
+                "updated": "06:27"
+              },
+              {
+                "name": "시설 C · 점검 완료",
+                "status": "해결",
+                "detail": "점검 결과 메모 저장",
+                "updated": "06:20"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "선택 경보",
+                "value": "시설 B · 센서 갱신 지연"
+              },
+              {
+                "label": "담당자",
+                "value": "시설 담당자 B"
+              },
+              {
+                "label": "현장 조치",
+                "value": "센서 배선·상태 점검"
+              },
+              {
+                "label": "기록할 내용",
+                "value": "관측 재개 시각·조치 결과"
+              }
+            ],
+            "decision": {
+              "title": "담당과 결과가 남음",
+              "reason": "미확인 경보와 조치 중인 경보가 구분됩니다.",
+              "action": "담당자를 배정하고 실제 조치를 마친 뒤 결과를 메모로 남깁니다."
+            }
+          }
+        }
+      },
+      {
+        "id": "vision-operations",
+        "sectionId": "vision-operations",
+        "stage": "business",
+        "title": "가동 이력을 다음 점검에 활용",
+        "question": "전력·노면 반응·조치 기록을 함께 보며 유지관리를 준비을 어떤 정보로 판단할 수 있는가?",
+        "answer": "전력·노면 반응·조치 기록을 함께 보며 유지관리를 준비",
+        "proofClaimIds": [
+          "vision-ops",
+          "metrics",
+          "limits",
+          "vision-workflow",
+          "vision-example",
+          "vision-ui"
+        ],
+        "visualPurpose": "에너지와 정비를 운영 판단에 활용을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "전력·노면 반응·조치 기록을 함께 보며 유지관리를 준비",
+          "encoding": "safesurface:interface-maintenance",
+          "evidenceIds": [
+            "vision-ops",
+            "metrics",
+            "limits",
+            "vision-workflow",
+            "vision-example",
+            "vision-ui"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "에너지 확인",
+              "detail": "사용 전력·기상 조건",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "운전 검토",
+              "detail": "가동 기록과 기상 조건 대조",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "정비 확인",
+              "detail": "센서·온도·전력 이상 징후",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "점검 기록",
+              "detail": "현장 점검·정비·보고 이력",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+          "readingGuide": {
+            "message": "전력·노면 반응·조치 기록을 함께 보며 유지관리를 준비",
+            "keyPhrase": "전력·노면 반응·조치",
+            "focusPhrases": [
+              "에너지 확인",
+              "운전 검토",
+              "정비 확인",
+              "점검 기록"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "전력·노면 반응·조치 기록을 함께 보며 유지관리를 준비의 실제 정보와 담당자의 대응을 이해",
+            "howToRead": "재구성 화면의 현장별 상태·관측·기록을 읽고 오른쪽의 사례 해석과 담당자 대응을 연결한다",
+            "notProven": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+            "requiredMarks": [
+              "screen"
+            ]
+          },
+          "interfaceExample": {
+            "dataStatus": "illustrative",
+            "basisClaimIds": [
+              "vision-ui",
+              "vision-workflow",
+              "vision-ops"
+            ],
+            "scenario": "개관 전 겨울철 관제 예시",
+            "at": "06:30",
+            "kind": "maintenance",
+            "metrics": [
+              {
+                "label": "금일 사용전력량",
+                "value": "12.4 kWh",
+                "tone": "neutral"
+              },
+              {
+                "label": "구역 A-02 노면",
+                "value": "-1.8℃",
+                "tone": "caution"
+              },
+              {
+                "label": "정비 경보",
+                "value": "1건",
+                "tone": "caution"
+              }
+            ],
+            "records": [
+              {
+                "name": "구역 A-01",
+                "status": "가열 중",
+                "detail": "노면 -3.4→-2.1℃ · 상승",
+                "updated": "06:29"
+              },
+              {
+                "name": "구역 A-02",
+                "status": "점검 필요",
+                "detail": "노면 -1.8℃ 유지 · 승온 부족",
+                "updated": "06:29"
+              },
+              {
+                "name": "운영일지",
+                "status": "작성 중",
+                "detail": "센서·전기 연결 점검 배정",
+                "updated": "06:30"
+              }
+            ],
+            "evidence": [
+              {
+                "label": "선택 경보",
+                "value": "구역 A-02 · 승온 부족"
+              },
+              {
+                "label": "함께 볼 자료",
+                "value": "전력·기상·센서 이력"
+              },
+              {
+                "label": "현장 점검",
+                "value": "배수·잔설·전기 연결·센서"
+              },
+              {
+                "label": "남길 기록",
+                "value": "점검 원인·조치·재확인 결과"
+              }
+            ],
+            "decision": {
+              "title": "점검 대상과 사유 확인",
+              "reason": "A-02는 가열 중 승온 부족 경보가 남아 있습니다.",
+              "action": "전력·기상 이력을 대조하고 현장에서 원인을 확인해 조치 결과를 기록합니다."
+            }
+          }
+        }
+      },
+      {
+        "id": "integrated-day",
+        "sectionId": "integrated-day",
+        "stage": "business",
+        "title": "새벽 재결빙에 대응하는 운영 예시",
+        "question": "새벽 재결빙에 대응하는 운영 예시에서 담당자는 무엇을 판단하는가?",
+        "answer": "예열·노면 확인·시민 안내를 같은 현장 상태로 연결",
+        "proofClaimIds": [
+          "vision-ai",
+          "bridge",
+          "safety",
+          "design"
+        ],
+        "visualPurpose": "새벽 재결빙에 대응하는 운영 예시을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "설치 후 검증할 운영 시나리오 · 무인·무정지·사고감소 보장 아님",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "예열·노면 확인·시민 안내를 같은 현장 상태로 연결",
+          "encoding": "safesurface:integrated-day; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "vision-ai",
+            "bridge",
+            "safety",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "위험 가능성 확인",
+              "detail": "예보·노면 관측을 검토",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "구역 예열·가열",
+              "detail": "출력과 장비 상태 확인",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "위험 잔류 안내",
+              "detail": "가열 중에도 주의 유지",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "현장 확인·기록",
+              "detail": "필요한 제설·우회와 상태 확인",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": ""
+            }
+          ],
+          "legend": "설치 후 검증할 운영 시나리오 · 무인·무정지·사고감소 보장 아님",
+          "readingGuide": {
+            "message": "예열·노면 확인·시민 안내를 같은 현장 상태로 연결",
+            "keyPhrase": "예열·노면 확인·시민",
+            "focusPhrases": [
+              "위험 가능성 확인",
+              "구역 예열·가열",
+              "위험 잔류 안내",
+              "현장 확인·기록"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "새벽 재결빙에 대응하는 운영 예시의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "설치 후 검증할 운영 시나리오 · 무인·무정지·사고감소 보장 아님",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "states",
+        "sectionId": "states",
+        "stage": "business",
+        "title": "시민에게는 현재의 주의 상태를 안내",
+        "question": "시민에게는 현재의 주의 상태를 안내에서 담당자는 무엇을 판단하는가?",
+        "answer": "가열 중이라는 사실과 노면 위험의 해소를 구분",
+        "proofClaimIds": [
+          "bridge",
+          "safety",
+          "design"
+        ],
+        "visualPurpose": "시민에게는 현재의 주의 상태를 안내을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "SLT LED 연계와 승인 문구는 신규 통합 범위 · EcowayVision의 시민 알림 완성 기능으로 주장하지 않음",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "가열 중이라는 사실과 노면 위험의 해소를 구분",
+          "encoding": "safesurface:states; 같은 행의 상황·대응·가치를 좌우로 비교",
+          "evidenceIds": [
+            "bridge",
+            "safety",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "시민에게는 현재의 주의 상태를 안내",
+              "detail": "가열 중이라는 사실과 노면 위험의 해소를 구분",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "SLT LED 연계와 승인 문구는 신규 통합 범위 · EcowayVision의 시민 알림 완성 기능으로 주장하지 않음",
+          "readingGuide": {
+            "message": "가열 중이라는 사실과 노면 위험의 해소를 구분",
+            "keyPhrase": "가열 중이라는",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "amber"
+          },
+          "explanation": {
+            "readerTask": "시민에게는 현재의 주의 상태를 안내의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 같은 행의 상황과 바뀌는 대응을 비교한다",
+            "notProven": "SLT LED 연계와 승인 문구는 신규 통합 범위 · EcowayVision의 시민 알림 완성 기능으로 주장하지 않음",
+            "requiredMarks": [
+              "screen",
+              "comparison"
+            ]
+          }
+        }
+      },
+      {
+        "id": "buyer-value",
+        "sectionId": "buyer-value",
+        "stage": "business",
+        "title": "시민과 담당자에게 기대하는 변화",
+        "question": "시민과 담당자에게 기대하는 변화에서 담당자는 무엇을 판단하는가?",
+        "answer": "접근로 이용과 현장 대응을 함께 개선할 수 있는지 실증",
+        "proofClaimIds": [
+          "access-value",
+          "vision-ui",
+          "vision-ops",
+          "metrics"
+        ],
+        "visualPurpose": "시민과 담당자에게 기대하는 변화을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "기대 가설 · 사고감소·전력 절감 성과는 실증 전이며 수치로 약속하지 않음",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "접근로 이용과 현장 대응을 함께 개선할 수 있는지 실증",
+          "encoding": "safesurface:table; 같은 행의 상황·대응·가치를 좌우로 비교",
+          "evidenceIds": [
+            "access-value",
+            "vision-ui",
+            "vision-ops",
+            "metrics"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "시민과 담당자에게 기대하는 변화",
+              "detail": "접근로 이용과 현장 대응을 함께 개선할 수 있는지 실증",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "기대 가설 · 사고감소·전력 절감 성과는 실증 전이며 수치로 약속하지 않음",
+          "readingGuide": {
+            "message": "접근로 이용과 현장 대응을 함께 개선할 수 있는지 실증",
+            "keyPhrase": "접근로 이용과",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "시민과 담당자에게 기대하는 변화의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 같은 행의 상황과 바뀌는 대응을 비교한다",
+            "notProven": "기대 가설 · 사고감소·전력 절감 성과는 실증 전이며 수치로 약속하지 않음",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      {
+        "id": "pilot",
+        "sectionId": "pilot",
+        "stage": "business",
+        "title": "첫 실증에서 확인할 범위",
+        "question": "첫 실증에서 확인할 범위에서 담당자는 무엇을 판단하는가?",
+        "answer": "1개소에서 접근로 상태와 운영 가능성을 확인한 뒤 도입 판단",
+        "proofClaimIds": [
+          "scope",
+          "metrics",
+          "decision"
+        ],
+        "visualPurpose": "첫 실증에서 확인할 범위을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "시 전체 도로·교통신호·자동 통행차단은 이번 검토 범위 제외 · 수치 목표는 기준선 조사 후 합의",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "1개소에서 접근로 상태와 운영 가능성을 확인한 뒤 도입 판단",
+          "encoding": "safesurface:flow; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "scope",
+            "metrics",
+            "decision"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "필수 접근로 1곳",
+              "detail": "후보 1~2곳 공동조사\n면적 20~60㎡ 가정",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "설비·관제·안내",
+              "detail": "ECO WAY·EcowayVision\nSLT LED/CCTV 연계",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "현장 변화 확인",
+              "detail": "위험 지속시간·실제 전력\n경고·현장 조치·이용 불편",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "시 전체 도로·교통신호·자동 통행차단은 이번 검토 범위 제외 · 수치 목표는 기준선 조사 후 합의",
+          "readingGuide": {
+            "message": "1개소에서 접근로 상태와 운영 가능성을 확인한 뒤 도입 판단",
+            "keyPhrase": "1개소에서 접근로",
+            "focusPhrases": [
+              "필수 접근로 1곳",
+              "설비·관제·안내",
+              "현장 변화 확인"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "첫 실증에서 확인할 범위의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "시 전체 도로·교통신호·자동 통행차단은 이번 검토 범위 제외 · 수치 목표는 기준선 조사 후 합의",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "sites",
+        "sectionId": "sites",
+        "stage": "business",
+        "title": "후보 접근로를 함께 살펴볼 기준",
+        "question": "후보 접근로를 함께 살펴볼 기준에서 담당자는 무엇을 판단하는가?",
+        "answer": "결빙 기록·필수 통행·공사 여건이 맞는 시설부터 검토",
+        "proofClaimIds": [
+          "sites",
+          "scope",
+          "design"
+        ],
+        "visualPurpose": "후보 접근로를 함께 살펴볼 기준을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "특정 시설 도입 가능성·소유/공사 권한 미확정 · 담당부서와 현장 조사 후 결정",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "comparative",
+          "takeaway": "결빙 기록·필수 통행·공사 여건이 맞는 시설부터 검토",
+          "encoding": "safesurface:table; 같은 행의 상황·대응·가치를 좌우로 비교",
+          "evidenceIds": [
+            "sites",
+            "scope",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "후보 접근로를 함께 살펴볼 기준",
+              "detail": "결빙 기록·필수 통행·공사 여건이 맞는 시설부터 검토",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "특정 시설 도입 가능성·소유/공사 권한 미확정 · 담당부서와 현장 조사 후 결정",
+          "readingGuide": {
+            "message": "결빙 기록·필수 통행·공사 여건이 맞는 시설부터 검토",
+            "keyPhrase": "결빙 기록·필수",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "후보 접근로를 함께 살펴볼 기준의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 같은 행의 상황과 바뀌는 대응을 비교한다",
+            "notProven": "특정 시설 도입 가능성·소유/공사 권한 미확정 · 담당부서와 현장 조사 후 결정",
+            "requiredMarks": [
+              "comparison"
+            ]
+          }
+        }
+      },
+      {
+        "id": "schedule",
+        "sectionId": "schedule",
+        "stage": "business",
+        "title": "현장 확인에서 겨울 운영 검증까지",
+        "question": "현장 확인에서 겨울 운영 검증까지에서 담당자는 무엇을 판단하는가?",
+        "answer": "설치 전 연동을 확인하고 겨울 현장에서 실제 상태 변화를 검증",
+        "proofClaimIds": [
+          "schedule",
+          "design"
+        ],
+        "visualPurpose": "현장 확인에서 겨울 운영 검증까지을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "2026.11~2028.03 제안 일정 · 착수·설치 시점 미확정 · 기상·현장 여건에 따라 조정",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "temporal",
+          "takeaway": "설치 전 연동을 확인하고 겨울 현장에서 실제 상태 변화를 검증",
+          "encoding": "safesurface:schedule; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "schedule",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "현장·제품 확인",
+              "detail": "권리·후보·시공 조건",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "실물 연동 확인",
+              "detail": "출력·보호·표출 동작",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "현장 설계 검토",
+              "detail": "전력·접근·포장",
+              "icon": "document"
+            },
+            {
+              "id": "n4",
+              "label": "시공·운영 준비",
+              "detail": "설치·현장 확인·인계",
+              "icon": "document"
+            },
+            {
+              "id": "n5",
+              "label": "겨울 운영 검증",
+              "detail": "기상별 노면·전력·조치",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n3",
+              "to": "n4",
+              "label": ""
+            },
+            {
+              "from": "n4",
+              "to": "n5",
+              "label": ""
+            }
+          ],
+          "legend": "2026.11~2028.03 제안 일정 · 착수·설치 시점 미확정 · 기상·현장 여건에 따라 조정",
+          "readingGuide": {
+            "message": "설치 전 연동을 확인하고 겨울 현장에서 실제 상태 변화를 검증",
+            "keyPhrase": "설치 전",
+            "focusPhrases": [
+              "현장·제품 확인",
+              "실물 연동 확인",
+              "현장 설계 검토",
+              "시공·운영 준비"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "현장 확인에서 겨울 운영 검증까지의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "2026.11~2028.03 제안 일정 · 착수·설치 시점 미확정 · 기상·현장 여건에 따라 조정",
+            "requiredMarks": [
+              "timeline"
+            ]
+          },
+          "schedule": {
+            "slots": 17,
+            "unitLabel": "월",
+            "ranges": [
+              {
+                "nodeId": "n1",
+                "start": 0,
+                "length": 2
+              },
+              {
+                "nodeId": "n2",
+                "start": 1,
+                "length": 3
+              },
+              {
+                "nodeId": "n3",
+                "start": 2,
+                "length": 6
+              },
+              {
+                "nodeId": "n4",
+                "start": 8,
+                "length": 6
+              },
+              {
+                "nodeId": "n5",
+                "start": 12,
+                "length": 5
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "slt-offer",
+        "sectionId": "slt-offer",
+        "stage": "business",
+        "title": "SLT의 통합 제안과 기술협력",
+        "question": "SLT의 통합 제안과 기술협력에서 담당자는 무엇을 판단하는가?",
+        "answer": "SLT가 현장 설계와 관제·안내 연계를 총괄해 협의",
+        "proofClaimIds": [
+          "identity",
+          "rights",
+          "bridge",
+          "design"
+        ],
+        "visualPurpose": "SLT의 통합 제안과 기술협력을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "제안 역할 구분 · ECO WAY 기술협력: (주)나노일렉트로닉스 / 관제 SW 사용권·시공 참여범위는 별도 협의",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "SLT가 현장 설계와 관제·안내 연계를 총괄해 협의",
+          "encoding": "safesurface:support-model; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "identity",
+            "rights",
+            "bridge",
+            "design"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "천안시 시설 담당",
+              "detail": "후보·운영 여건·시민 안내 협의",
+              "icon": "city"
+            },
+            {
+              "id": "n2",
+              "label": "SLT 통합 창구",
+              "detail": "현장 설계·LED/CCTV·연계\n설치·운영 지원 협의",
+              "icon": "team"
+            },
+            {
+              "id": "n3",
+              "label": "(주)나노일렉트로닉스",
+              "detail": "ECO WAY 기술협력\nSW·시공 참여범위 별도 협의",
+              "icon": "shield"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n1",
+              "label": "협의·지원"
+            },
+            {
+              "from": "n3",
+              "to": "n2",
+              "label": "기술 확인"
+            }
+          ],
+          "legend": "제안 역할 구분 · ECO WAY 기술협력: (주)나노일렉트로닉스 / 관제 SW 사용권·시공 참여범위는 별도 협의",
+          "readingGuide": {
+            "message": "SLT가 현장 설계와 관제·안내 연계를 총괄해 협의",
+            "keyPhrase": "SLT가 현장",
+            "focusPhrases": [
+              "천안시 시설 담당",
+              "SLT 통합 창구",
+              "(주)나노일렉트로닉스"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "SLT의 통합 제안과 기술협력의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "제안 역할 구분 · ECO WAY 기술협력: (주)나노일렉트로닉스 / 관제 SW 사용권·시공 참여범위는 별도 협의",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "decision",
+        "sectionId": "decision",
+        "stage": "business",
+        "title": "후보지 1~2곳 공동 현장조사 제안",
+        "question": "후보지 1~2곳 공동 현장조사 제안에서 담당자는 무엇을 판단하는가?",
+        "answer": "후보지와 시설 담당 창구를 정해 실증 가능성을 검토",
+        "proofClaimIds": [
+          "decision",
+          "sites"
+        ],
+        "visualPurpose": "후보지 1~2곳 공동 현장조사 제안을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "첫 협의에서 즉시 납품·대규모 확대를 요청하지 않음 · 조사 결과에 따라 대안·보류 판단",
+        "visualPlan": {
+          "kind": "existing",
+          "intent": "structural",
+          "takeaway": "후보지와 시설 담당 창구를 정해 실증 가능성을 검토",
+          "encoding": "safesurface:flow; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "decision",
+            "sites"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "후보 접근로 공유",
+              "detail": "결빙·민원·제설 기록\n필수 통행 여건 확인",
+              "icon": "document"
+            },
+            {
+              "id": "n2",
+              "label": "시설 담당자 협의",
+              "detail": "운영·전기·공사 담당\n현장 방문과 자료 범위 협의",
+              "icon": "document"
+            },
+            {
+              "id": "n3",
+              "label": "다음 검토 결정",
+              "detail": "적합 현장·설치 범위\n겨울 실증 추진 여부 검토",
+              "icon": "document"
+            }
+          ],
+          "edges": [
+            {
+              "from": "n1",
+              "to": "n2",
+              "label": ""
+            },
+            {
+              "from": "n2",
+              "to": "n3",
+              "label": ""
+            }
+          ],
+          "legend": "첫 협의에서 즉시 납품·대규모 확대를 요청하지 않음 · 조사 결과에 따라 대안·보류 판단",
+          "readingGuide": {
+            "message": "후보지와 시설 담당 창구를 정해 실증 가능성을 검토",
+            "keyPhrase": "후보지와 시설",
+            "focusPhrases": [
+              "후보 접근로 공유",
+              "시설 담당자 협의",
+              "다음 검토 결정"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "후보지 1~2곳 공동 현장조사 제안의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "첫 협의에서 즉시 납품·대규모 확대를 요청하지 않음 · 조사 결과에 따라 대안·보류 판단",
+            "requiredMarks": [
+              "connectors"
+            ]
+          }
+        }
+      },
+      {
+        "id": "contact",
+        "sectionId": "contact",
+        "stage": "business",
+        "title": "에스엘티 제안·현장 협의 창구",
+        "question": "에스엘티 제안·현장 협의 창구에서 담당자는 무엇을 판단하는가?",
+        "answer": "필수 접근로 한 곳에서 시작할 수 있도록 함께 검토",
+        "proofClaimIds": [
+          "contact",
+          "identity"
+        ],
+        "visualPurpose": "에스엘티 제안·현장 협의 창구을 문장만 읽지 않고 관계와 사례로 이해하게 한다.",
+        "limitation": "제공 원본 SLT 로고·연락처 · 대상지·시공·기술 협력 조건은 협의 전",
+        "visualPlan": {
+          "kind": "contact-card",
+          "intent": "structural",
+          "takeaway": "필수 접근로 한 곳에서 시작할 수 있도록 함께 검토",
+          "encoding": "safesurface:contact; 독자 질문에 맞춘 공간·상태·업무 관계를 편집 가능 도식으로 설명",
+          "evidenceIds": [
+            "contact",
+            "identity"
+          ],
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "에스엘티 제안·현장 협의 창구",
+              "detail": "필수 접근로 한 곳에서 시작할 수 있도록 함께 검토",
+              "icon": "document"
+            }
+          ],
+          "edges": [],
+          "legend": "제공 원본 SLT 로고·연락처 · 대상지·시공·기술 협력 조건은 협의 전",
+          "readingGuide": {
+            "message": "필수 접근로 한 곳에서 시작할 수 있도록 함께 검토",
+            "keyPhrase": "필수 접근로",
+            "focusPhrases": [
+              "확인 전"
+            ],
+            "tone": "teal"
+          },
+          "explanation": {
+            "readerTask": "에스엘티 제안·현장 협의 창구의 필요성과 역할을 이해",
+            "howToRead": "상단 핵심 메시지를 읽고 그림의 공간·순서·상태와 담당자 연결을 따라 읽는다",
+            "notProven": "제공 원본 SLT 로고·연락처 · 대상지·시공·기술 협력 조건은 협의 전",
+            "requiredMarks": [
+              "brand"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "businessCase": {
+    "version": 1,
+    "economicsPresentation": "omitted-by-request",
+    "targetSlideCount": 30,
+    "context": {
+      "entityName": "천안시",
+      "asOf": "2026-10-28, 첨부 FEATURES 원문 및 제조사 공개 제품 설명 확인",
+      "factClaimIds": [
+        "local-material",
+        "local-equipment",
+        "local-priority",
+        "policy"
+      ],
+      "needHypothesis": "필수 경사 접근로의 국소 가열과 위험 안내가 기존 제설 대응을 보완할 가능성",
+      "notEstablished": [
+        "대상 시설",
+        "권리·API·공법/인증 적합성",
+        "설치 견적·운영비·시 예산",
+        "실제 위험·효과 기준선"
+      ]
+    },
+    "requiredDisciplines": [
+      "기획·구매",
+      "지역·현장",
+      "현장안전",
+      "제품·시스템",
+      "시각·편집",
+      "사업·납품"
+    ],
+    "expertReviews": [
+      {
+        "id": "planning",
+        "discipline": "기획·구매",
+        "reviewer": "assistant-perspective",
+        "conclusion": "첫 면담은 시민 접근 문제와 제품 이해, 후보지 협의에 집중하고 시험·계약 상세를 본문에서 제외",
+        "findings": [
+          {
+            "issue": "실증 승인과 구매 결정을 혼동할 수 있음",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "essential-access"
+            ],
+            "recommendation": "1개소 범위와 현재 요청을 구분",
+            "acceptanceCheck": "해당 페이지의 조건·경계를 렌더링으로 확인",
+            "status": "open"
+          },
+          {
+            "issue": "실증 승인과 구매 결정을 혼동할 수 있음에 대한 후속 확인 필요",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "decision"
+            ],
+            "recommendation": "1개소 범위와 현재 요청을 구분",
+            "acceptanceCheck": "시설·공급사 자료 및 실제 시험으로 확인",
+            "status": "open"
+          }
+        ]
+      },
+      {
+        "id": "local",
+        "discipline": "지역·현장",
+        "reviewer": "assistant-perspective",
+        "conclusion": "시설명 미정·결빙기록·선정 보류조건 명시",
+        "findings": [
+          {
+            "issue": "시 제설 행정이 시설별 수요를 입증하지 않음",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "context"
+            ],
+            "recommendation": "시설명 미정·결빙기록·선정 보류조건 명시",
+            "acceptanceCheck": "해당 페이지의 조건·경계를 렌더링으로 확인",
+            "status": "open"
+          },
+          {
+            "issue": "시 제설 행정이 시설별 수요를 입증하지 않음에 대한 후속 확인 필요",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "sites"
+            ],
+            "recommendation": "시설명 미정·결빙기록·선정 보류조건 명시",
+            "acceptanceCheck": "시설·공급사 자료 및 실제 시험으로 확인",
+            "status": "open"
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "discipline": "현장안전",
+        "reviewer": "assistant-perspective",
+        "conclusion": "현장 확인·경고 유지·재개 증거 분리",
+        "findings": [
+          {
+            "issue": "출력 ACK가 노면 안전을 뜻하지 않음",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "ecoway-fit"
+            ],
+            "recommendation": "현장 확인·경고 유지·재개 증거 분리",
+            "acceptanceCheck": "해당 페이지의 조건·경계를 렌더링으로 확인",
+            "status": "open"
+          },
+          {
+            "issue": "출력 ACK가 노면 안전을 뜻하지 않음에 대한 후속 확인 필요",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "states"
+            ],
+            "recommendation": "현장 확인·경고 유지·재개 증거 분리",
+            "acceptanceCheck": "시설·공급사 자료 및 실제 시험으로 확인",
+            "status": "open"
+          }
+        ]
+      },
+      {
+        "id": "system",
+        "discipline": "제품·시스템",
+        "reviewer": "assistant-perspective",
+        "conclusion": "기능명세 요약·API 계약·HIL 범위 분리",
+        "findings": [
+          {
+            "issue": "원문 기능과 신규개발·실물 검증이 혼재",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "vision-overview"
+            ],
+            "recommendation": "기능명세 요약·API 계약·HIL 범위 분리",
+            "acceptanceCheck": "해당 페이지의 조건·경계를 렌더링으로 확인",
+            "status": "open"
+          },
+          {
+            "issue": "원문 기능과 신규개발·실물 검증이 혼재에 대한 후속 확인 필요",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "vision-ai"
+            ],
+            "recommendation": "기능명세 요약·API 계약·HIL 범위 분리",
+            "acceptanceCheck": "시설·공급사 자료 및 실제 시험으로 확인",
+            "status": "open"
+          }
+        ]
+      },
+      {
+        "id": "design-review",
+        "discipline": "시각·편집",
+        "reviewer": "assistant-perspective",
+        "conclusion": "개념 공간과 편집 가능한 데이터 경로 구현",
+        "findings": [
+          {
+            "issue": "물리 배치와 제어 경계가 문장만으로 불명확",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "local-conditions"
+            ],
+            "recommendation": "개념 공간과 편집 가능한 데이터 경로 구현",
+            "acceptanceCheck": "해당 페이지의 조건·경계를 렌더링으로 확인",
+            "status": "open"
+          },
+          {
+            "issue": "물리 배치와 제어 경계가 문장만으로 불명확에 대한 후속 확인 필요",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "ecoway-product"
+            ],
+            "recommendation": "개념 공간과 편집 가능한 데이터 경로 구현",
+            "acceptanceCheck": "시설·공급사 자료 및 실제 시험으로 확인",
+            "status": "open"
+          }
+        ]
+      },
+      {
+        "id": "delivery",
+        "discipline": "사업·납품",
+        "reviewer": "assistant-perspective",
+        "conclusion": "운영 미견적·자산별 재사용 조건 명시",
+        "findings": [
+          {
+            "issue": "초기 예산이 생애주기 비용으로 오인 가능",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "schedule"
+            ],
+            "recommendation": "운영 미견적·자산별 재사용 조건 명시",
+            "acceptanceCheck": "해당 페이지의 조건·경계를 렌더링으로 확인",
+            "status": "open"
+          },
+          {
+            "issue": "초기 예산이 생애주기 비용으로 오인 가능에 대한 후속 확인 필요",
+            "evidenceIds": [
+              "design"
+            ],
+            "storyBeatIds": [
+              "slt-offer"
+            ],
+            "recommendation": "운영 미견적·자산별 재사용 조건 명시",
+            "acceptanceCheck": "시설·공급사 자료 및 실제 시험으로 확인",
+            "status": "open"
+          }
+        ]
+      }
+    ],
+    "resolutions": [
+      {
+        "id": "r1",
+        "perspectives": [
+          "planning",
+          "safety"
+        ],
+        "tradeoff": "빠른 도입과 물리 안전 검증",
+        "decision": "HIL·권리·현장 관문 후 설치",
+        "rationale": "통합 기능 존재가 실제 출력·노면 개선을 입증하지 않음",
+        "remainingCheck": "실물·현장 시험"
+      },
+      {
+        "id": "r2",
+        "perspectives": [
+          "delivery",
+          "local"
+        ],
+        "tradeoff": "확장 가능성과 제한된 현장 근거",
+        "decision": "1개소 검증 후 FLEET/ROAD 별도 결정",
+        "rationale": "관리권한·설비·비용이 현장별로 다름",
+        "remainingCheck": "수요·견적·승인"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "candidate-1",
+        "name": "복지시설 접근로 유형",
+        "address": "시설명·주소 미정",
+        "publishedFacts": "특정 시설의 수요·도입 가능성 공개 확인 없음",
+        "claimIds": [
+          "sites"
+        ],
+        "physicalHypothesis": "그늘·배수·경사와 필수 통행이 겹치는 시설 접근로 가설",
+        "proposedPackage": "조사 후 1개소 20~60㎡ 범위 결정",
+        "constraints": [
+          "관리권한 확인",
+          "동등한 우회 접근·전력·포장 확인"
+        ],
+        "fieldStatus": "not-surveyed",
+        "fieldClaimIds": [],
+        "selection": "priority-survey",
+        "selectionReason": "유형별 후보 조사이며 실제 시설 선정 아님",
+        "readiness": "결빙·민원·통행·전력·공사·계측 여건 조사"
+      },
+      {
+        "id": "candidate-2",
+        "name": "공공청사 접근로 유형",
+        "address": "시설명·주소 미정",
+        "publishedFacts": "특정 시설의 수요·도입 가능성 공개 확인 없음",
+        "claimIds": [
+          "sites"
+        ],
+        "physicalHypothesis": "그늘·배수·경사와 필수 통행이 겹치는 시설 접근로 가설",
+        "proposedPackage": "조사 후 1개소 20~60㎡ 범위 결정",
+        "constraints": [
+          "관리권한 확인",
+          "동등한 우회 접근·전력·포장 확인"
+        ],
+        "fieldStatus": "not-surveyed",
+        "fieldClaimIds": [],
+        "selection": "reserve",
+        "selectionReason": "유형별 후보 조사이며 실제 시설 선정 아님",
+        "readiness": "결빙·민원·통행·전력·공사·계측 여건 조사"
+      }
+    ],
+    "budget": {
+      "currency": "KRW",
+      "status": "planning-assumption",
+      "vatRate": 0.1,
+      "sourceClaimIds": [
+        "budget"
+      ],
+      "scope": "접근로 1개소 20~60㎡ 가정 초기 구축, 운영·전기료 별도",
+      "items": [
+        {
+          "id": "heat",
+          "label": "발열·시공·전기",
+          "low": 40000000,
+          "base": 65000000,
+          "high": 90000000
+        },
+        {
+          "id": "sensor",
+          "label": "센서·Edge",
+          "low": 8000000,
+          "base": 14000000,
+          "high": 20000000
+        },
+        {
+          "id": "display",
+          "label": "LED·CCTV·폴",
+          "low": 8000000,
+          "base": 16500000,
+          "high": 25000000
+        },
+        {
+          "id": "sw",
+          "label": "Bridge·SW 통합",
+          "low": 12000000,
+          "base": 18500000,
+          "high": 25000000
+        },
+        {
+          "id": "test",
+          "label": "계측·시험·교육",
+          "low": 8000000,
+          "base": 13000000,
+          "high": 18000000
+        },
+        {
+          "id": "reserve",
+          "label": "변경·예비비",
+          "low": 10000000,
+          "base": 15000000,
+          "high": 20000000
+        }
+      ],
+      "excluded": [
+        "연간 유지보수·전기·통신·SW 비용",
+        "현장별 전기인입·우회로·외부 공인시험 추가 범위 재견적"
+      ]
+    },
+    "benefits": [
+      {
+        "id": "b0",
+        "beneficiary": "시민",
+        "change": "국소 가열·위험 안내",
+        "expectedBenefit": "필수 접근로 위험시간 감소 가능성",
+        "metricIds": [
+          "risk"
+        ],
+        "claimIds": [
+          "metrics"
+        ],
+        "attributionLimit": "실측 전 기대 가설이며 사고감소 직접 인과 주장 없음"
+      },
+      {
+        "id": "b1",
+        "beneficiary": "운영자",
+        "change": "명령·물리 상태 분리",
+        "expectedBenefit": "확인 가능한 대응 기록",
+        "metricIds": [
+          "response"
+        ],
+        "claimIds": [
+          "metrics"
+        ],
+        "attributionLimit": "실측 전 기대 가설이며 사고감소 직접 인과 주장 없음"
+      },
+      {
+        "id": "b2",
+        "beneficiary": "시설관리부서",
+        "change": "조건별 비용 계측",
+        "expectedBenefit": "후속 도입 판단 자료",
+        "metricIds": [
+          "display"
+        ],
+        "claimIds": [
+          "metrics"
+        ],
+        "attributionLimit": "실측 전 기대 가설이며 사고감소 직접 인과 주장 없음"
+      }
+    ],
+    "metrics": [
+      {
+        "id": "risk",
+        "name": "위험 지속시간",
+        "definition": "위험 지속시간을 실측 원장과 현장관측으로 확인",
+        "formula": "유효 노면 위험기준 초과시간 합계",
+        "unit": "분",
+        "baseline": null,
+        "target": null,
+        "targetPolicy": "교정·기준선 조사 후 시설 운영자와 합의. 분모 0이면 미산출.",
+        "measurement": "시간 동기화된 센서·전력·장치·조치 로그, 독립 노면관측",
+        "owner": "시설 운영자·SLT·검증 참여자 제안",
+        "claimIds": [
+          "metrics"
+        ],
+        "guardrail": false
+      },
+      {
+        "id": "response",
+        "name": "실출력 반응시간",
+        "definition": "실출력 반응시간을 실측 원장과 현장관측으로 확인",
+        "formula": "실출력 피드백시각 - 유효 위험이벤트시각",
+        "unit": "초",
+        "baseline": null,
+        "target": null,
+        "targetPolicy": "교정·기준선 조사 후 시설 운영자와 합의. 분모 0이면 미산출.",
+        "measurement": "시간 동기화된 센서·전력·장치·조치 로그, 독립 노면관측",
+        "owner": "시설 운영자·SLT·검증 참여자 제안",
+        "claimIds": [
+          "metrics"
+        ],
+        "guardrail": false
+      },
+      {
+        "id": "display",
+        "name": "경고 전달률",
+        "definition": "경고 전달률을 실측 원장과 현장관측으로 확인",
+        "formula": "확인된 실제 표출 건수 / 유효 표출명령 건수",
+        "unit": "%",
+        "baseline": null,
+        "target": null,
+        "targetPolicy": "교정·기준선 조사 후 시설 운영자와 합의. 분모 0이면 미산출.",
+        "measurement": "시간 동기화된 센서·전력·장치·조치 로그, 독립 노면관측",
+        "owner": "시설 운영자·SLT·검증 참여자 제안",
+        "claimIds": [
+          "metrics"
+        ],
+        "guardrail": false
+      },
+      {
+        "id": "energy",
+        "name": "전력·운영 부담",
+        "definition": "전력·운영 부담을 실측 원장과 현장관측으로 확인",
+        "formula": "조건별 kWh와 점검·수동대응시간을 별도 기록",
+        "unit": "kWh / 분",
+        "baseline": null,
+        "target": null,
+        "targetPolicy": "교정·기준선 조사 후 시설 운영자와 합의. 분모 0이면 미산출.",
+        "measurement": "시간 동기화된 센서·전력·장치·조치 로그, 독립 노면관측",
+        "owner": "시설 운영자·SLT·검증 참여자 제안",
+        "claimIds": [
+          "metrics"
+        ],
+        "guardrail": true
+      }
+    ],
+    "sections": [
+      {
+        "id": "cover",
+        "chapter": "summary",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "제안사",
+            "detail": "(주)에스엘티"
+          },
+          {
+            "label": "기술협력",
+            "detail": "(주)나노일렉트로닉스"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "(주)에스엘티 / 기술협력 (주)나노일렉트로닉스"
+      },
+      {
+        "id": "essential-access",
+        "chapter": "problem",
+        "visual": "editorial",
+        "kicker": "겨울철 필수 접근로의 문제",
+        "items": [
+          {
+            "label": "반드시 지나는 입구",
+            "detail": "시설 앞 마지막 접근 구간"
+          },
+          {
+            "label": "남아 있는 수분",
+            "detail": "잔설·융설수가 다시 유입"
+          },
+          {
+            "label": "개관 전 현장 확인",
+            "detail": "제설 뒤에도 상태 확인 필요"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "결빙 상황을 설명한 가상 장면 · 천안 특정 시설의 사고·현장 관측 자료 아님"
+      },
+      {
+        "id": "refreeze",
+        "chapter": "problem",
+        "visual": "editorial",
+        "kicker": "겨울철 필수 접근로의 문제",
+        "items": [
+          {
+            "label": "눈·비가 지난 뒤",
+            "detail": "잔설과 물기가 남음"
+          },
+          {
+            "label": "밤·새벽의 냉각",
+            "detail": "그늘·낮은 노면온도"
+          },
+          {
+            "label": "개관 전 확인",
+            "detail": "제설·미끄럼 상태 점검"
+          },
+          {
+            "label": "이용시간 재확인",
+            "detail": "융설수 유입·재결빙 가능"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "재결빙 가능성 설명 · 실제 발생 시간·지속시간·시설별 조건은 현장조사로 확인",
+        "rows": [
+          [
+            "수분 잔류",
+            "재결빙 가능",
+            "현장 조치",
+            "변화 재확인"
+          ]
+        ]
+      },
+      {
+        "id": "local-conditions",
+        "chapter": "problem",
+        "visual": "editorial",
+        "kicker": "겨울철 필수 접근로의 문제",
+        "items": [
+          {
+            "label": "그늘과 노면온도",
+            "detail": "건물 그림자 구간의 냉각"
+          },
+          {
+            "label": "물의 유입과 배수",
+            "detail": "눈이 녹은 물·고인 물 확인"
+          },
+          {
+            "label": "경사와 필수 통행",
+            "detail": "회피하기 어려운 동선 확인"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "그늘·융설수·배수·경사의 개념 장면 · 실제 대상지 조건은 현장 조사로 확인"
+      },
+      {
+        "id": "citizen-impact",
+        "chapter": "problem",
+        "visual": "editorial",
+        "kicker": "겨울철 필수 접근로의 문제",
+        "items": [
+          {
+            "label": "시설로 이동",
+            "detail": "예약·민원·복지서비스 이용"
+          },
+          {
+            "label": "입구 접근",
+            "detail": "경사로·그늘 구간 통과"
+          },
+          {
+            "label": "시설 이용",
+            "detail": "안정적인 접근 동선 필요"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "시민 이용 시나리오 · 실제 불편·민원·동행 지원 빈도는 후보 시설에서 확인",
+        "rows": [
+          [
+            "통행 유지",
+            "예정대로 이동",
+            "입구 통과",
+            "시설 이용"
+          ],
+          [
+            "결빙 잔류",
+            "시설 입구 도착",
+            "우회·도움 필요",
+            "이용 지연 가능"
+          ]
+        ]
+      },
+      {
+        "id": "manager-burden",
+        "chapter": "problem",
+        "visual": "editorial",
+        "kicker": "겨울철 필수 접근로의 문제",
+        "items": [
+          {
+            "label": "현장 상태 확인",
+            "detail": "개관 전·민원·기상 변화"
+          },
+          {
+            "label": "제설·통행 안내",
+            "detail": "작업 배치·주의·우회 안내"
+          },
+          {
+            "label": "통행 상태 재확인",
+            "detail": "다시 얼었는지 현장 점검"
+          },
+          {
+            "label": "다음 변화 대응",
+            "detail": "수분 유입·한파·새로운 강설"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "관리 업무 가설 · 기존 현장 대응을 유지하며 반복 부담과 관찰 공백을 실측",
+        "rows": [
+          [
+            "기상과 노면이 바뀌면 현장 확인을 다시 시작"
+          ]
+        ]
+      },
+      {
+        "id": "context",
+        "chapter": "regional",
+        "visual": "matrix",
+        "kicker": "천안시 적용 방향",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "시 전체 제설 대응에 더해 시설 입구의 짧은 취약구간을 검토"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "R1 뉴시스 2025.12.04 · 시 제설자원이 특정 보행시설의 수요를 입증하는 것은 아님",
+        "rows": [
+          [
+            "이전 겨울 시 대응",
+            "제설제 1만t·장비 45대·인력 104명",
+            "2025.12.04 시 발표 2차 보도"
+          ],
+          [
+            "취약구간 관리",
+            "고지대 급커브·경사도로 집중관리",
+            "시설별 보행로 위험은 추가 확인"
+          ],
+          [
+            "이번 제안의 초점",
+            "공공시설 필수 접근로 한 곳",
+            "도로 전체 제설을 대체하지 않음"
+          ]
+        ],
+        "headers": [
+          "맥락",
+          "확인 내용·제안",
+          "해석 범위"
+        ]
+      },
+      {
+        "id": "priority",
+        "chapter": "sites",
+        "visual": "matrix",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "필요성과 관리 주체가 분명한 작은 구간부터 현장 효과를 확인"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "시설명·위치는 미정 · 후보 1~2곳을 조사한 뒤 적합한 1개소 선정",
+        "rows": [
+          [
+            "이용 필요",
+            "시설 출입에 꼭 필요한 경로",
+            "고령자·보행약자 이용도 함께 관찰"
+          ],
+          [
+            "위험 조건",
+            "그늘·경사·배수와 반복 결빙 기록",
+            "눈에 띄는 장소보다 실제 기록 우선"
+          ],
+          [
+            "운영 여건",
+            "시설 담당자가 점검·안내를 담당",
+            "우회 통행·전력·공사 가능성 확인"
+          ]
+        ],
+        "headers": [
+          "우선 검토 기준",
+          "이유",
+          "현장 확인"
+        ]
+      },
+      {
+        "id": "proposal",
+        "chapter": "summary",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "현장 관측",
+            "detail": "CCTV·노면 센서·기상"
+          },
+          {
+            "label": "EcowayVision",
+            "detail": "위험 추정·예열 판단"
+          },
+          {
+            "label": "ECO WAY",
+            "detail": "나노필름 가열·출력 확인"
+          },
+          {
+            "label": "SLT 현장 안내",
+            "detail": "운영자 승인 문구·주의 표출"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "1개소·20~60㎡ 가정 / LED 안내는 신규 연계 제안 · 실제 출력·노면 및 현장 대응 확인"
+      },
+      {
+        "id": "ecoway-origin",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "기존 도로면 융설",
+            "detail": "필름으로 도로 노면 가열\n도로·주차장·교내 적용"
+          },
+          {
+            "label": "같은 열 전달 원리",
+            "detail": "발열층에서 포장 표면으로\n열을 전달해 융설을 보조"
+          },
+          {
+            "label": "보행접근로 적용 검토",
+            "detail": "경사·배수·포장 조건 확인\n필수 동선의 가열 구역 설계"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "제조사 공개 도로히팅·적용 사례 기반 / 천안 보행시설 설치 실적·적합성 보증 아님"
+      },
+      {
+        "id": "ecoway-product",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "노면 포장",
+            "detail": "이용자가 걷는 표면에 열 전달"
+          },
+          {
+            "label": "나노히팅필름",
+            "detail": "구리나노섬유 기반 면상 발열체"
+          },
+          {
+            "label": "전용 제어와 센서",
+            "detail": "전력 공급·구역 제어·상태 확인"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "제조사 제시: 도로열선 대비 소비에너지 최대 90% 절감 / 정격전력 10% 의미 아님 · 천안 현장 효과 별도 검증"
+      },
+      {
+        "id": "ecoway-operation",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "전용 제어",
+            "detail": "가열 구역의 전력 공급"
+          },
+          {
+            "label": "면상 발열",
+            "detail": "필름 영역에서 열 발생"
+          },
+          {
+            "label": "포장에 열 전달",
+            "detail": "포장·기층·기상 조건 영향"
+          },
+          {
+            "label": "노면 상태 확인",
+            "detail": "온도·수분·잔설을 관측"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "원리 설명 · 가열 ON이 통행 안전을 보증하지 않음 · 열전달·융설 효과는 현장에서 확인",
+        "rows": [
+          [
+            "전력 공급 확인",
+            "가열 구역 확인",
+            "현장 조건 반영",
+            "제설·안내와 병행"
+          ]
+        ]
+      },
+      {
+        "id": "spatial",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "필수 통행 구간",
+            "detail": "20~60㎡는 초기 검토 가정"
+          },
+          {
+            "label": "전력·제어 설비",
+            "detail": "보호·차단·센서·배수 확인"
+          },
+          {
+            "label": "입구 안내와 통행",
+            "detail": "이용자에게 보이는 위치·우회 확보"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "설치 배치 개념 · 실제 대상지·공법·설비 규격은 현장 조사 후 확정"
+      },
+      {
+        "id": "ecoway-fit",
+        "chapter": "solution",
+        "visual": "matrix",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "잔설 처리와 현장 점검을 유지하면서 노면 가열을 보완"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "제조사 도로·주차장·교내 적용 소개와 별개로 보행시설 적합성 확인 필요 · 절감률 사전 보장 없음",
+        "rows": [
+          [
+            "잔설·이물·배수",
+            "제설·청소·배수 점검",
+            "노면 가열만으로 해결하지 않음"
+          ],
+          [
+            "저온·재결빙",
+            "구역 가열과 노면 계측",
+            "설비·전력·포장 조건에 맞춰 적용"
+          ],
+          [
+            "위험 안내·통행",
+            "담당자 확인과 주의·우회 안내",
+            "위험이 남으면 안내·현장 대응 유지"
+          ]
+        ],
+        "headers": [
+          "관리 대상",
+          "결합할 수단",
+          "현장 운영"
+        ]
+      },
+      {
+        "id": "vision-overview",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "현장 상태 수집",
+            "detail": "CCTV·센서·기상·장비\n노면 변화와 갱신 상태 확인"
+          },
+          {
+            "label": "예열·대응 판단",
+            "detail": "구역별 위험과 판단 이유\n가열·현장 조치 검토"
+          },
+          {
+            "label": "담당과 결과 기록",
+            "detail": "경보 확인·담당 배정\n조치·운영일지 보관"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "EcowayVision 기능명세·사용자 매뉴얼(2026.10.26) 기준 · 적용 환경별 연동 검증 필요"
+      },
+      {
+        "id": "vision-dashboard",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "우선 대응 현장 식별",
+            "detail": "A는 결빙 주의, B는 관측 지연으로 구분됩니다."
+          },
+          {
+            "label": "현장 대응",
+            "detail": "A의 영상·노면을 대조하고 B는 현장 확인으로 보완합니다."
+          }
+        ],
+        "candidateIds": [],
+        "caption": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님"
+      },
+      {
+        "id": "vision-site",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "가열과 통행을 구분",
+            "detail": "가열 ON만으로 노면 위험이 해소됐다고 판단하지 않습니다."
+          },
+          {
+            "label": "현장 대응",
+            "detail": "영상·수분·온도를 보고 잔설 처리와 우회 여부를 현장에서 확인합니다."
+          }
+        ],
+        "candidateIds": [],
+        "caption": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님"
+      },
+      {
+        "id": "vision-ai",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "강설 전 예열 판단",
+            "detail": "예보·영상·센서로 위험을 추정하고 근거를 보여줍니다."
+          },
+          {
+            "label": "현장 대응",
+            "detail": "실제 출력과 노면 반응을 확인하고 잘못된 판단에는 피드백을 남깁니다."
+          }
+        ],
+        "candidateIds": [],
+        "caption": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "rows": [
+          [
+            "판단의 이유를 CCTV·센서와 대조하고 필요하면 운영자 피드백을 기록"
+          ]
+        ]
+      },
+      {
+        "id": "vision-stages",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "정지",
+            "detail": "위험 해소·부하 제한 등"
+          },
+          {
+            "label": "예열",
+            "detail": "예보를 반영한 사전 가열"
+          },
+          {
+            "label": "가열",
+            "detail": "신뢰 관측·위험도에 따라 운전"
+          },
+          {
+            "label": "유지",
+            "detail": "잔류 위험과 재결빙 고려"
+          },
+          {
+            "label": "안전정지",
+            "detail": "과열·보호·제어 통신 이상"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "대표 운전 흐름 · 실제 출력은 ON/OFF · 조건에 따라 상태 선택, 안전정지 후 현장 확인·보호조건 해소 필요"
+      },
+      {
+        "id": "vision-alerts",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "담당과 결과가 남음",
+            "detail": "미확인 경보와 조치 중인 경보가 구분됩니다."
+          },
+          {
+            "label": "현장 대응",
+            "detail": "담당자를 배정하고 실제 조치를 마친 뒤 결과를 메모로 남깁니다."
+          }
+        ],
+        "candidateIds": [],
+        "caption": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님",
+        "rows": [
+          [
+            "무엇이 문제인가",
+            "누가 대응하는가",
+            "무엇을 조치했나",
+            "무엇을 남길까"
+          ]
+        ]
+      },
+      {
+        "id": "vision-operations",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "점검 대상과 사유 확인",
+            "detail": "A-02는 가열 중 승온 부족 경보가 남아 있습니다."
+          },
+          {
+            "label": "현장 대응",
+            "detail": "전력·기상 이력을 대조하고 현장에서 원인을 확인해 조치 결과를 기록합니다."
+          }
+        ],
+        "candidateIds": [],
+        "caption": "기능명세·사용자 매뉴얼 기반 재구성 화면 · 시설·수치·시각은 예시, 천안 실측 아님"
+      },
+      {
+        "id": "integrated-day",
+        "chapter": "solution",
+        "visual": "editorial",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "관제·설비",
+            "detail": "관측·가열·잔류위험·기록"
+          },
+          {
+            "label": "현장·시민",
+            "detail": "주의·현장 확인·제설·통행"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "설치 후 검증할 운영 시나리오 · 무인·무정지·사고감소 보장 아님",
+        "rows": [
+          [
+            "관측·예보 대조",
+            "가열·출력 확인",
+            "위험 잔류 관측",
+            "조치·상태 기록"
+          ],
+          [
+            "주의 대상 확인",
+            "접근로 상태 확인",
+            "미끄럼 주의 안내",
+            "잔설 처리·통행 확인"
+          ]
+        ]
+      },
+      {
+        "id": "states",
+        "chapter": "solution",
+        "visual": "matrix",
+        "kicker": "ECO WAY와 EcowayVision",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "가열 중이라는 사실과 노면 위험의 해소를 구분"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "SLT LED 연계와 승인 문구는 신규 통합 범위 · EcowayVision의 시민 알림 완성 기능으로 주장하지 않음",
+        "rows": [
+          [
+            "위험 감지 / 가열 요청",
+            "결빙 주의",
+            "노면 위험·최신 관측 확인"
+          ],
+          [
+            "실제 가열 중 / 위험 잔류",
+            "미끄럼 주의",
+            "잔설·배수·우회 등 현장 대응"
+          ],
+          [
+            "노면 개선 관측",
+            "노면 상태 확인 중",
+            "운영자 현장 확인·해제기준 검토"
+          ],
+          [
+            "상태 확인 불가 / 장애",
+            "상태 확인 불가, 주의",
+            "고정 안내·점검·필요시 우회"
+          ]
+        ],
+        "headers": [
+          "현장·시스템 상태",
+          "시민 안내 예시",
+          "담당자 대응"
+        ]
+      },
+      {
+        "id": "buyer-value",
+        "chapter": "impact",
+        "visual": "matrix",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "접근로 이용과 현장 대응을 함께 개선할 수 있는지 실증"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "기대 가설 · 사고감소·전력 절감 성과는 실증 전이며 수치로 약속하지 않음",
+        "rows": [
+          [
+            "시민",
+            "위험 구간에서 우회·도움이 필요할 수 있음",
+            "결빙 예방과 이해하기 쉬운 현장 안내"
+          ],
+          [
+            "시설 담당자",
+            "순찰·제설·재확인을 반복",
+            "원격 상태 확인과 경보별 현장 조치"
+          ],
+          [
+            "천안시 관리부서",
+            "문제·조치·가동 기록이 흩어질 수 있음",
+            "시설별 위험시간·전력·조치 이력 축적"
+          ]
+        ],
+        "headers": [
+          "대상",
+          "현재 확인할 문제",
+          "검증할 변화"
+        ]
+      },
+      {
+        "id": "pilot",
+        "chapter": "summary",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "필수 접근로 1곳",
+            "detail": "후보 1~2곳 공동조사\n면적 20~60㎡ 가정"
+          },
+          {
+            "label": "설비·관제·안내",
+            "detail": "ECO WAY·EcowayVision\nSLT LED/CCTV 연계"
+          },
+          {
+            "label": "현장 변화 확인",
+            "detail": "위험 지속시간·실제 전력\n경고·현장 조치·이용 불편"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "시 전체 도로·교통신호·자동 통행차단은 이번 검토 범위 제외 · 수치 목표는 기준선 조사 후 합의"
+      },
+      {
+        "id": "sites",
+        "chapter": "sites",
+        "visual": "matrix",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "결빙 기록·필수 통행·공사 여건이 맞는 시설부터 검토"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "특정 시설 도입 가능성·소유/공사 권한 미확정 · 담당부서와 현장 조사 후 결정",
+        "rows": [
+          [
+            "실제 불편·위험",
+            "결빙·제설·민원 기록, 그늘·배수",
+            "위험·시민 편익 확인이 어려우면 보류"
+          ],
+          [
+            "관리와 통행",
+            "운영 책임자, 이용자·우회 동선",
+            "공사 중 접근성 훼손 시 재검토"
+          ],
+          [
+            "설비·공사 여건",
+            "전력 인입, 포장, 배수·점검 공간",
+            "전력·공사 여건이 맞지 않으면 재검토"
+          ],
+          [
+            "측정 가능성",
+            "노면·전력·조치·이용 기록 확보",
+            "측정을 위해 시민 위험을 방치하지 않음"
+          ]
+        ],
+        "headers": [
+          "확인 기준",
+          "함께 볼 자료",
+          "선정 판단"
+        ]
+      },
+      {
+        "id": "schedule",
+        "chapter": "delivery",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "현장·제품 확인",
+            "detail": "권리·후보·시공 조건"
+          },
+          {
+            "label": "실물 연동 확인",
+            "detail": "출력·보호·표출 동작"
+          },
+          {
+            "label": "현장 설계 검토",
+            "detail": "전력·접근·포장"
+          },
+          {
+            "label": "시공·운영 준비",
+            "detail": "설치·현장 확인·인계"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "2026.11~2028.03 제안 일정 · 착수·설치 시점 미확정 · 기상·현장 여건에 따라 조정"
+      },
+      {
+        "id": "slt-offer",
+        "chapter": "governance",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "천안시 시설 담당",
+            "detail": "후보·운영 여건·시민 안내 협의"
+          },
+          {
+            "label": "SLT 통합 창구",
+            "detail": "현장 설계·LED/CCTV·연계\n설치·운영 지원 협의"
+          },
+          {
+            "label": "(주)나노일렉트로닉스",
+            "detail": "ECO WAY 기술협력\nSW·시공 참여범위 별도 협의"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "제안 역할 구분 · ECO WAY 기술협력: (주)나노일렉트로닉스 / 관제 SW 사용권·시공 참여범위는 별도 협의"
+      },
+      {
+        "id": "decision",
+        "chapter": "decision",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "후보 접근로 공유",
+            "detail": "결빙·민원·제설 기록\n필수 통행 여건 확인"
+          },
+          {
+            "label": "시설 담당자 협의",
+            "detail": "운영·전기·공사 담당\n현장 방문과 자료 범위 협의"
+          },
+          {
+            "label": "다음 검토 결정",
+            "detail": "적합 현장·설치 범위\n겨울 실증 추진 여부 검토"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "첫 협의에서 즉시 납품·대규모 확대를 요청하지 않음 · 조사 결과에 따라 대안·보류 판단"
+      },
+      {
+        "id": "contact",
+        "chapter": "decision",
+        "visual": "editorial",
+        "kicker": "천안시 보행접근로 실증 제안",
+        "items": [
+          {
+            "label": "핵심 제안",
+            "detail": "필수 접근로 한 곳에서 시작할 수 있도록 함께 검토"
+          }
+        ],
+        "candidateIds": [],
+        "caption": "제공 원본 SLT 로고·연락처 · 대상지·시공·기술 협력 조건은 협의 전"
+      }
+    ]
+  },
+  "geographicAssets": [],
+  "quantitativeDatasets": [
+    {
+      "id": "initial-budget",
+      "title": "1개소 초기 기획예산 범위",
+      "population": "천안시 필수 보행접근로 1개소, 면적 20~60㎡ 가정",
+      "unit": "만원, VAT 별도",
+      "status": "planning-assumption",
+      "period": "2026.10.26 제안 원문",
+      "sourceClaimIds": [
+        "budget"
+      ],
+      "limitation": "확정견적·승인예산 아님. 운영비·전기료 별도, 추가 현장공사 변동.",
+      "rows": [
+        {
+          "category": "발열·시공·전기",
+          "series": "하한",
+          "value": 4000
+        },
+        {
+          "category": "발열·시공·전기",
+          "series": "상한",
+          "value": 9000
+        },
+        {
+          "category": "센서·Edge",
+          "series": "하한",
+          "value": 800
+        },
+        {
+          "category": "센서·Edge",
+          "series": "상한",
+          "value": 2000
+        },
+        {
+          "category": "LED·CCTV·폴",
+          "series": "하한",
+          "value": 800
+        },
+        {
+          "category": "LED·CCTV·폴",
+          "series": "상한",
+          "value": 2500
+        },
+        {
+          "category": "Bridge·SW 통합",
+          "series": "하한",
+          "value": 1200
+        },
+        {
+          "category": "Bridge·SW 통합",
+          "series": "상한",
+          "value": 2500
+        },
+        {
+          "category": "계측·시험·교육",
+          "series": "하한",
+          "value": 800
+        },
+        {
+          "category": "계측·시험·교육",
+          "series": "상한",
+          "value": 1800
+        },
+        {
+          "category": "변경·예비비",
+          "series": "하한",
+          "value": 1000
+        },
+        {
+          "category": "변경·예비비",
+          "series": "상한",
+          "value": 2000
+        }
+      ],
+      "disjointSeries": false
+    },
+    {
+      "id": "ecoway-relative-energy",
+      "title": "제조사 최대 에너지 절감 주장 환산",
+      "population": "제조사 공개 ECO WAY와 기존 도로열선 비교; 천안 현장 실측 아님",
+      "unit": "상대 소비에너지 지수, 기존 도로열선=100",
+      "status": "derived-assumption",
+      "period": "2026.10.29 제조사 공개 페이지 확인; 시험 기간 미공개",
+      "sourceClaimIds": [
+        "ecoway-energy"
+      ],
+      "limitation": "최대 90% 절감 주장을 100 대비 약 10으로 환산. 동일 정격전력 비율·연간 사용량 보장 아님. 공개 비교표 단위·시험조건의 추가 확인 필요.",
+      "rows": [
+        {
+          "category": "기존 도로열선",
+          "series": "최대 절감 조건 환산",
+          "value": 100
+        },
+        {
+          "category": "ECO WAY",
+          "series": "최대 절감 조건 환산",
+          "value": 10
+        }
+      ],
+      "disjointSeries": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-30",
+  "method": "built-in imagegen generation then edit",
+  "asset": "examples/assets/public-safety-spaces-v1.png",
+  "sourceGenerated": "exec-acf8c0f9-a705-4ceb-902f-fb0973a9d952.png",
+  "selectedGenerated": "exec-88d950e6-bacd-4d07-95d4-7c0c6c8ce8d6.png",
+  "purpose": "Three generic public-safety spatial concepts: parking exit, park maintenance access, market/event vehicle interface",
+  "editReason": "Public-facing displays must not expose CCTV/recognition views. Replace all screen footage with safety symbols and directions.",
+  "rights": "generated",
+  "limits": "Not real Cheonan sites, surveyed entrances, final hardware dimensions or measured detection/impact. AI output does not verify a safe physical path.",
+  "externalModelAPIUsed": false
+}

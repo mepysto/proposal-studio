@@ -1,0 +1,8 @@
+{
+  "prompt": "Use case: product-mockup. Asset type: a realistic concept scene for a Korean municipal proposal, wide landscape about 2:1. Subject: a modular full-color outdoor AIoT LED display mounted securely along a public construction-site fence facing the pedestrian sidewalk, in a modern Korean mid-sized city. The large actual LED screen must be visually prominent, with a black powder-coated metal frame, subtle LED pixel texture, weatherproof sensor housing and small CCTV unit on the fence. Display a professionally designed public-information creative with a blue/teal city skyline illustration and just the Korean words '공공 안내' in large clean typography, plus a small subordinate safety caution stripe. This is public information, no commercial ads. Two ordinary pedestrians use a physically separated sidewalk, not entering the yard, with no recognizable faces. Show the construction fence and a little realistic background context, no unsafe traffic conflict. Camera: eye-level oblique view, screen face occupying center-right of image, all essential subjects safely within central 80 percent, balanced daylight, premium architectural visualization with realistic materials, no excessive glow. No logos, no company names, no invented certification, no watermarks, no UI controls. This is a proposal illustration, not an actual photographed Cheonan installation.",
+  "method": "built-in image_gen; no API key",
+  "asset": "examples/assets/public-information-value-v11.png",
+  "sourcePath": "/Users/baekseongeun/.codex/generated_images/01a17891-e22e-7240-b4dc-76053d007aa6/exec-d2df9f3a-4b11-45fa-a2fa-b4c3db9a3ee3.png",
+  "purpose": "19페이지 천안시 공공정보·광고 활용 가치",
+  "limits": "제안 개념 장면. 실제 천안 설치·성과 또는 지리적 경관의 증거 아님."
+}

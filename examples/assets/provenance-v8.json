@@ -1,0 +1,14 @@
+{
+  "origin": "Codex built-in imagegen",
+  "externalModelAPIUsed": false,
+  "assets": [
+    {
+      "path": "examples/assets/cover-crossing-problem-v8.png",
+      "sourcePath": "/Users/baekseongeun/.codex/generated_images/01a17891-e22e-7240-b4dc-76053d007aa6/exec-2412e07e-735e-4b4b-b9b8-bb147887fa20.png",
+      "rights": "generated",
+      "purpose": "Problem illustration for the first BODY page after the cover; user clarified that the cover itself may introduce the solution.",
+      "prompt": "Square premium architectural editorial scene: opaque gray construction fence and open gate; yellow dump truck inside site approaching a public sidewalk, two adult pedestrians outside; clear crossing geometry and blocked sightlines, safe separation, no collision or injury; believable proportions. No cameras, warning beacons, LED, smart poles, futuristic UI, text, arrows, logos or identifiable Cheonan landmark. Central composition protects gate, vehicle and pedestrians from minimal aspect cropping. Generic illustrative problem scene, not a real site.",
+      "evidenceStatus": "AI-generated generic problem illustration; not a real Cheonan location, observed incident or proposed installation."
+    }
+  ]
+}

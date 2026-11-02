@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "id": "smartfence",
+  "title": "천안시 SmartFence AI",
+  "audience": "천안시 및 공공공사 발주기관",
+  "proposalType": "municipality-technology",
+  "mode": "quick",
+  "provider": "offline",
+  "design": {
+    "name": "Civic Editorial / SmartFence",
+    "font": "Apple SD Gothic Neo",
+    "colors": {
+      "ink": "132B36",
+      "paper": "F5F3EB",
+      "accent": "007C78",
+      "muted": "536C75",
+      "dark": "102F3A"
+    },
+    "titleSize": 32,
+    "bodySize": 19,
+    "margin": 0.62
+  },
+  "materials": [
+    {
+      "path": "examples/Cheonan_SmartFence_AI.md",
+      "role": "content"
+    },
+    {
+      "path": "references/AI스마트도시정보시스템제안서(에스엘티)_천안.pdf",
+      "role": "design-reference"
+    },
+    {
+      "path": "references/(강민코퍼레이션) Edge-AI 및 디지털트윈 기반 능동형 산업안전 통합관제 시스템 개발.pdf",
+      "role": "design-reference"
+    },
+    {
+      "path": "references/(시장님보고용)제천_의림지뜰_순환형_태양광_치유길_제안서.pdf",
+      "role": "design-reference"
+    }
+  ],
+  "sources": [
+    {
+      "id": "M1",
+      "title": "사용자 제공 Cheonan_SmartFence_AI.md",
+      "materialId": "examples/Cheonan_SmartFence_AI.md"
+    }
+  ],
+  "claims": [
+    {
+      "id": "scope",
+      "text": "공공공사 출입구 1개소와 가설울타리 일부를 대상으로 제안한다.",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ]
+    },
+    {
+      "id": "risk",
+      "text": "공사차량과 보행자의 동선 혼재 위험은 후보 현장의 관찰로 확인해야 한다.",
+      "status": "assumption",
+      "sourceIds": [
+        "M1"
+      ]
+    },
+    {
+      "id": "policy",
+      "text": "원본은 2025년 천안시 가설울타리 공공디자인 사례를 정책 출발점으로 제시한다.",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ]
+    },
+    {
+      "id": "process",
+      "text": "감지·판단·경고 이후 유도원·안전관리자가 통제하고 실제 조치를 기록한다.",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ]
+    },
+    {
+      "id": "readiness",
+      "text": "통합제품의 실외 성능과 설치조건은 현장 도입 전 검증해야 한다.",
+      "status": "user-provided",
+      "sourceIds": [
+        "M1"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "cover",
+      "layout": "hero",
+      "title": "공사장 경계에서\n시민의 안전을 잇다",
+      "message": "천안시 SmartFence AI\n가설울타리·출입구 보행안전 실증 제안",
+      "items": [
+        {
+          "label": "출입구 1개소",
+          "detail": ""
+        },
+        {
+          "label": "현장 조치 기록",
+          "detail": ""
+        }
+      ],
+      "claimIds": [
+        "scope",
+        "readiness"
+      ],
+      "footnote": "SLT · 강민코퍼레이션 · 비트리 | 협의용 초안 · 대상지·예산·성능 미확정",
+      "image": {
+        "path": "examples/assets/smartfence-concept.png",
+        "rights": "generated",
+        "caption": "AI 생성 설치 제안 개념도 · 실제 천안 현장 아님"
+      }
+    },
+    {
+      "id": "problem",
+      "layout": "editorial",
+      "title": "공사장 밖 보행안전까지 살피는 실증",
+      "message": "가설울타리의 정보 전달에 위험 인지와 현장 대응을 더하는 제안",
+      "items": [
+        {
+          "label": "정책의 출발점",
+          "detail": "원본은 천안시의 가설울타리 공공디자인 사례를 제시합니다. 최신 적용 현황은 재확인이 필요합니다."
+        },
+        {
+          "label": "현장에서 볼 문제",
+          "detail": "차량 출입 시 보행동선 교차·시야 가림·경고 공백이 실제로 발생하는지 먼저 관찰합니다."
+        },
+        {
+          "label": "도입의 판단 기준",
+          "detail": "위험 노출과 관리자의 대응 수요가 확인된 현장만 선정하고, 실익이 낮으면 확대를 보류합니다."
+        }
+      ],
+      "claimIds": [
+        "policy",
+        "risk"
+      ],
+      "footnote": "근거: 제공 원본 §01–02, R1·R2 기재 | 외부 재검증 미실행 · 지역 사고통계 추정 없음"
+    },
+    {
+      "id": "risk",
+      "layout": "scenario",
+      "title": "차량 출입과 보행이 만나는 접점을 확인",
+      "message": "위험 접근 시나리오를 정의하고, 경고에서 실제 현장 조치까지 시험",
+      "items": [
+        {
+          "label": "공사차량 출입 동선",
+          "detail": "진출입 방향·차폐 조건 확인"
+        },
+        {
+          "label": "시민 보행 동선",
+          "detail": "보행량·임시 우회 경로 관찰"
+        },
+        {
+          "label": "유도원 대응 위치",
+          "detail": "경고 인지·통제·확인 기록"
+        }
+      ],
+      "claimIds": [
+        "risk",
+        "process"
+      ],
+      "footnote": "도식: 위험 시나리오 가정 · 실제 천안 현장 도면 아님 | 제공 원본 §02–03"
+    },
+    {
+      "id": "concept",
+      "layout": "architecture",
+      "title": "출입구 1개소에 집중하는 FenceGate CORE",
+      "message": "기존 울타리·CCTV 활용을 우선하고, 장비와 운영 소프트웨어를 연결",
+      "items": [
+        {
+          "label": "관측 장비",
+          "detail": "보행자·차량 관측\n실외 감지 성능 시험"
+        },
+        {
+          "label": "Edge · 운영 SW",
+          "detail": "위험구역 설정\n이벤트·장치 상태 기록"
+        },
+        {
+          "label": "현장 경고",
+          "detail": "담당자 우선 알림\n수동 경고 백업"
+        },
+        {
+          "label": "운영자 조치",
+          "detail": "유도원 동선 통제\n조치 결과·시간 확인"
+        }
+      ],
+      "claimIds": [
+        "scope",
+        "process",
+        "readiness"
+      ],
+      "footnote": "제공 원본 §03–04 | 시민 안내장치 설치·표시 적합성 사전검토 · 광고 매출은 초도 범위 제외"
+    },
+    {
+      "id": "operation",
+      "layout": "process",
+      "title": "감지·판단·경고 이후 현장 조치까지 기록",
+      "message": "경고 송신과 위험 해소를 구분하고, 장애 시 기존 수동 절차를 유지",
+      "items": [
+        {
+          "label": "감지",
+          "detail": "보행자·차량\n카메라 상태 확인"
+        },
+        {
+          "label": "판단",
+          "detail": "승인 위험구역\n방향·거리 조건"
+        },
+        {
+          "label": "경고",
+          "detail": "담당자 알림\n장치 응답 확인"
+        },
+        {
+          "label": "현장 조치",
+          "detail": "유도원 통제\n수동 운영 유지"
+        },
+        {
+          "label": "기록·검증",
+          "detail": "조치 시간·이력\n정탐·오탐 검토"
+        }
+      ],
+      "claimIds": [
+        "process",
+        "readiness"
+      ],
+      "footnote": "제공 원본 §03·07 | AI가 운행 허가·교통신호를 자동 제어하지 않음 · 목표 성능은 시험 후 합의"
+    }
+  ]
+}

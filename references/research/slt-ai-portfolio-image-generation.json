@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-29",
+  "externalModelAPIUsed": false,
+  "assets": [
+    {
+      "name": "gate",
+      "prompt": "Use case: stylized-concept. Landscape 16:9 premium realistic architectural visualization for public-sector safety proposal. High oblique view of a generic Korean construction gate and sidewalk. Show opaque fence, stopped yellow dump truck inside yard facing open gate, two pedestrians on outside sidewalk and a flagger at inside edge. Install CCTV and white horn speaker on outer side of left gatepost, horn clearly facing external sidewalk pedestrians. Install a LARGE real framed LED screen on INNER right fence wall facing truck driver; screen shows sidewalk video with two pedestrians, no text, no fake HUD. Preserve physical geometry: exterior sidewalk continuous horizontal, yard behind gate, pedestrians outside, truck stopped inside. All equipment visible together with safe proportions and uncluttered view, no labels or arrows or logos. Generic proposed installation, not actual Cheonan site.",
+      "origin": "Codex built-in imagegen",
+      "sourceHint": "Generated images are saved to /Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab as /Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab/exec-4bc4ff09-53ad-4d59-8bc8-785c31b71f9a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "name": "blocked-walkway",
+      "prompt": "Use case: stylized-concept. Landscape 3:2 premium realistic architectural visualization, high oblique view of temporary pedestrian corridor alongside opaque construction fence in generic Korean city. Show pallet with stacked construction material partly encroaching on clearly marked protected walkway; two pedestrians have stopped at a safe distance waiting, reflective vest site worker stands ready to inspect and remove obstruction. Protective barriers separate roadway from corridor. CCTV and modest LED caution board mounted on fence face approaching pedestrians. No car/person imminent collision, no blocked tactile paving used as intended access, no logos, no text, no arrows, no boxes. Purpose: visibly explain persistent walkway occupation and responsible worker response, not actual city location. Restrained gray/cream/teal colors. Entire scene and equipment protected from cropping.",
+      "origin": "Codex built-in imagegen",
+      "sourceHint": "Generated images are saved to /Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab as /Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab/exec-bac3cd3f-24ed-4b35-b4ff-7c74d219f349.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "revision": "v9-audited-interface-semantics",
+  "sourceDocuments": [
+    {
+      "path": "references/research/ecowayvision-user-manual-2026-10-26.md",
+      "sha256": "f4eba106f988afdb7a516be394c82b910037bf2b9ccb1e2441a90756bd69c4b5"
+    },
+    {
+      "path": "references/research/ecowayvision-FEATURES-2026-10-26.md",
+      "sha256": "051746e0a1e3896a2a76108232e800e1a3b002a16c845ee0ccf567579bd896d0"
+    }
+  ],
+  "referencedScreenshotFilesAvailable": false,
+  "method": "Read supplied manual and feature specification; searched linked screenshot filenames in supplied local materials and Development. No matching capture files found. Reconstructed documented information as editable native PPT shapes/text, without claiming exact original UI styling.",
+  "changedPages": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "interfaceExamples": [
+    {
+      "page": 16,
+      "id": "vision-dashboard",
+      "example": {
+        "kind": "dashboard",
+        "dataStatus": "illustrative",
+        "basisClaimIds": [
+          "vision-ui",
+          "vision-workflow",
+          "vision-ops"
+        ],
+        "scenario": "개관 전 겨울철 관제 예시",
+        "at": "06:30",
+        "metrics": [
+          {
+            "label": "관리 현장",
+            "value": "3곳",
+            "tone": "neutral"
+          },
+          {
+            "label": "결빙 주의",
+            "value": "1곳",
+            "tone": "caution"
+          },
+          {
+            "label": "정보 지연",
+            "value": "1곳",
+            "tone": "danger"
+          }
+        ],
+        "records": [
+          {
+            "name": "시설 A · 주출입구",
+            "status": "결빙 주의",
+            "detail": "노면 -2.1℃ · 수분 감지",
+            "updated": "06:29 갱신"
+          },
+          {
+            "name": "시설 B · 경사로",
+            "status": "관측 지연",
+            "detail": "최신 노면 상태 확인 필요",
+            "updated": "06:10 갱신"
+          },
+          {
+            "name": "시설 C · 진입로",
+            "status": "가열 유지",
+            "detail": "노면 +1.2℃ · 상태 관찰",
+            "updated": "06:29 갱신"
+          }
+        ],
+        "evidence": [
+          {
+            "label": "최근 경보",
+            "value": "06:28  시설 A · 결빙 위험"
+          },
+          {
+            "label": "최근 경보",
+            "value": "06:27  시설 B · 센서 갱신 지연"
+          }
+        ],
+        "decision": {
+          "title": "우선 대응 현장 식별",
+          "reason": "A는 결빙 주의, B는 관측 지연으로 구분됩니다.",
+          "action": "A의 영상·노면을 대조하고 B는 현장 확인으로 보완합니다."
+        },
+        "image": {
+          "path": "projects/safesurface-cheonan/assets/dashboard-camera-view-v8.png",
+          "caption": "접근로 전경 · 가상 영상 장면",
+          "origin": "generated-concept"
+        }
+      }
+    },
+    {
+      "page": 17,
+      "id": "vision-site",
+      "example": {
+        "kind": "site",
+        "dataStatus": "illustrative",
+        "basisClaimIds": [
+          "vision-ui",
+          "vision-workflow",
+          "vision-ops"
+        ],
+        "scenario": "개관 전 겨울철 관제 예시",
+        "at": "06:30",
+        "metrics": [
+          {
+            "label": "노면 온도",
+            "value": "-2.1℃",
+            "tone": "caution"
+          },
+          {
+            "label": "노면 수분",
+            "value": "감지",
+            "tone": "caution"
+          },
+          {
+            "label": "가열 상태",
+            "value": "예열 중",
+            "tone": "neutral"
+          }
+        ],
+        "records": [
+          {
+            "name": "A-01 · 출입구",
+            "status": "예열 중",
+            "detail": "출력 피드백 ON · 06:29",
+            "updated": "노면 상태 관찰"
+          },
+          {
+            "name": "A-02 · 경사부",
+            "status": "관측 확인",
+            "detail": "센서·영상 갱신 대조",
+            "updated": "현장 점검 검토"
+          }
+        ],
+        "evidence": [
+          {
+            "label": "선택 현장",
+            "value": "시설 A · 주출입구"
+          },
+          {
+            "label": "영상·센서 시각",
+            "value": "06:29 / 06:29"
+          },
+          {
+            "label": "Vision 보조",
+            "value": "젖음(wet) · 수분과 대조"
+          },
+          {
+            "label": "제어 이력",
+            "value": "06:25  자동 예열 요청"
+          }
+        ],
+        "decision": {
+          "title": "가열과 통행을 구분",
+          "reason": "가열 ON만으로 노면 위험이 해소됐다고 판단하지 않습니다.",
+          "action": "영상·수분·온도를 보고 잔설 처리와 우회 여부를 현장에서 확인합니다."
+        },
+        "image": {
+          "path": "projects/safesurface-cheonan/assets/detail-surface-view-v8.png",
+          "caption": "노면·센서·배수구 · 가상 장면",
+          "origin": "generated-concept"
+        }
+      }
+    },
+    {
+      "page": 18,
+      "id": "vision-ai",
+      "example": {
+        "kind": "ai",
+        "dataStatus": "illustrative",
+        "basisClaimIds": [
+          "vision-ui",
+          "vision-workflow",
+          "vision-ops"
+        ],
+        "scenario": "개관 전 겨울철 관제 예시",
+        "at": "06:30",
+        "timeline": [
+          {
+            "label": "예열 시작",
+            "time": "06:25",
+            "minute": 25
+          },
+          {
+            "label": "현재 관측",
+            "time": "06:30",
+            "minute": 30
+          },
+          {
+            "label": "강설 예보",
+            "time": "07:00",
+            "minute": 60
+          }
+        ],
+        "metrics": [
+          {
+            "label": "강설 예상 시각",
+            "value": "07:00",
+            "tone": "neutral"
+          },
+          {
+            "label": "예열 시작",
+            "value": "06:25",
+            "tone": "neutral"
+          },
+          {
+            "label": "요청 상태",
+            "value": "예열",
+            "tone": "neutral"
+          }
+        ],
+        "records": [
+          {
+            "name": "판단 근거",
+            "status": "저온·수분",
+            "detail": "노면 -2.1℃ · 수분 감지",
+            "updated": "최신 관측 확인"
+          },
+          {
+            "name": "예열 판단",
+            "status": "강설 전 준비",
+            "detail": "예보·포장 열특성을 반영",
+            "updated": "출력·노면 재확인"
+          }
+        ],
+        "evidence": [
+          {
+            "label": "예보",
+            "value": "강설 가능성 · 07:00"
+          },
+          {
+            "label": "위험 추정 입력",
+            "value": "영상 젖음·노면 -2.1℃·수분"
+          },
+          {
+            "label": "판단 사유",
+            "value": "재결빙 위험을 고려한 예열"
+          },
+          {
+            "label": "운영자 확인",
+            "value": "현장 영상·센서와 대조"
+          }
+        ],
+        "decision": {
+          "title": "강설 전 예열 판단",
+          "reason": "예보·영상·센서로 위험을 추정하고 근거를 보여줍니다.",
+          "action": "실제 출력과 노면 반응을 확인하고 잘못된 판단에는 피드백을 남깁니다."
+        }
+      }
+    },
+    {
+      "page": 20,
+      "id": "vision-alerts",
+      "example": {
+        "kind": "alerts",
+        "dataStatus": "illustrative",
+        "basisClaimIds": [
+          "vision-ui",
+          "vision-workflow",
+          "vision-ops"
+        ],
+        "scenario": "개관 전 겨울철 관제 예시",
+        "at": "06:30",
+        "metrics": [
+          {
+            "label": "미확인",
+            "value": "1건",
+            "tone": "danger"
+          },
+          {
+            "label": "조치 중",
+            "value": "1건",
+            "tone": "caution"
+          },
+          {
+            "label": "해결 기록",
+            "value": "1건",
+            "tone": "neutral"
+          }
+        ],
+        "records": [
+          {
+            "name": "시설 A · 결빙 위험",
+            "status": "미확인",
+            "detail": "담당 미배정",
+            "updated": "06:28"
+          },
+          {
+            "name": "시설 B · 센서 지연",
+            "status": "조치 중",
+            "detail": "시설 담당자 배정",
+            "updated": "06:27"
+          },
+          {
+            "name": "시설 C · 점검 완료",
+            "status": "해결",
+            "detail": "점검 결과 메모 저장",
+            "updated": "06:20"
+          }
+        ],
+        "evidence": [
+          {
+            "label": "선택 경보",
+            "value": "시설 B · 센서 갱신 지연"
+          },
+          {
+            "label": "담당자",
+            "value": "시설 담당자 B"
+          },
+          {
+            "label": "현장 조치",
+            "value": "센서 배선·상태 점검"
+          },
+          {
+            "label": "기록할 내용",
+            "value": "관측 재개 시각·조치 결과"
+          }
+        ],
+        "decision": {
+          "title": "담당과 결과가 남음",
+          "reason": "미확인 경보와 조치 중인 경보가 구분됩니다.",
+          "action": "담당자를 배정하고 실제 조치를 마친 뒤 결과를 메모로 남깁니다."
+        }
+      }
+    },
+    {
+      "page": 21,
+      "id": "vision-operations",
+      "example": {
+        "kind": "maintenance",
+        "dataStatus": "illustrative",
+        "basisClaimIds": [
+          "vision-ui",
+          "vision-workflow",
+          "vision-ops"
+        ],
+        "scenario": "개관 전 겨울철 관제 예시",
+        "at": "06:30",
+        "metrics": [
+          {
+            "label": "금일 사용전력량",
+            "value": "12.4 kWh",
+            "tone": "neutral"
+          },
+          {
+            "label": "구역 A-02 노면",
+            "value": "-1.8℃",
+            "tone": "caution"
+          },
+          {
+            "label": "정비 경보",
+            "value": "1건",
+            "tone": "caution"
+          }
+        ],
+        "records": [
+          {
+            "name": "구역 A-01",
+            "status": "가열 중",
+            "detail": "노면 -3.4→-2.1℃ · 상승",
+            "updated": "06:29"
+          },
+          {
+            "name": "구역 A-02",
+            "status": "점검 필요",
+            "detail": "노면 -1.8℃ 유지 · 승온 부족",
+            "updated": "06:29"
+          },
+          {
+            "name": "운영일지",
+            "status": "작성 중",
+            "detail": "센서·전기 연결 점검 배정",
+            "updated": "06:30"
+          }
+        ],
+        "evidence": [
+          {
+            "label": "선택 경보",
+            "value": "구역 A-02 · 승온 부족"
+          },
+          {
+            "label": "함께 볼 자료",
+            "value": "전력·기상·센서 이력"
+          },
+          {
+            "label": "현장 점검",
+            "value": "배수·잔설·전기 연결·센서"
+          },
+          {
+            "label": "남길 기록",
+            "value": "점검 원인·조치·재확인 결과"
+          }
+        ],
+        "decision": {
+          "title": "점검 대상과 사유 확인",
+          "reason": "A-02는 가열 중 승온 부족 경보가 남아 있습니다.",
+          "action": "전력·기상 이력을 대조하고 현장에서 원인을 확인해 조치 결과를 기록합니다."
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Illustrative facilities, timestamps, values and actions, not Cheonan observations",
+    "Distinct generated winter scenes in video panes; no actual CCTV capture",
+    "No application runtime/code/test/certification verification",
+    "No demonstrated accident, labor or energy benefit from the sample screens"
+  ],
+  "reviewScope": {
+    "problemAndProductPages": "Retained: cause, local limits, road origin, manufacturer-attributed energy differentiation and physical deployment explain buyer questions",
+    "softwarePages": "Changed 15–21: menu inventory/tutorial prose replaced by documented interfaces, populated scenarios and buyer decisions",
+    "closingPages": "Retained: field operation, citizen warning, unmeasured expected value, pilot scope/selection, schedule and next meeting decision; no cost page"
+  },
+  "finalApproval": false
+}

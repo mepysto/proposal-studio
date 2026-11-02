@@ -1,0 +1,13 @@
+{
+  "references": [
+    {
+      "id": "external-agent-cheonan-walkway",
+      "path": "references/external-agent-cheonan-walkway.pdf",
+      "role": "selective-design-and-structure-reference",
+      "review": "docs/reference-walkway-review.md",
+      "record": "references/research/external-agent-cheonan-walkway-review.json",
+      "sha256": "5dfd206b540a413febd68d8ca98217280b34f8f741d93c7e123bd6296caa2856",
+      "verifiedBusinessEvidence": false
+    }
+  ]
+}

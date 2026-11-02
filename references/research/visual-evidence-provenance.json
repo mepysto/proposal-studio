@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-27T06:00:00+00:00",
+  "inspection": "Public source inspection and geometry download during the 2026-10-27 authoring session; this timestamp records that session, not the underlying data update.",
+  "mapSource": "https://overpass-api.de/api/interpreter",
+  "queryScript": "references/research/maps/fetch-osm.py",
+  "geocoding": "https://nominatim.openstreetmap.org/search",
+  "geocodingFiles": [
+    "maps/geocode-0.json",
+    "maps/geocode-1.json",
+    "maps/geocode-2.json",
+    "maps/geocode-3.json",
+    "maps/geocode-4.json",
+    "maps/geocode-5.json",
+    "maps/geocode-6.json",
+    "maps/geocode-7.json"
+  ],
+  "sourceGeometry": "maps/cheonan-osm.json",
+  "license": "OpenStreetMap contributors / ODbL 1.0",
+  "trafficSources": [
+    "https://v.daum.net/v/20250226112656936",
+    "https://v.daum.net/v/bJDjdnrNsK"
+  ],
+  "trafficEvidence": "Secondary reports citing city/TAAS; not a direct raw-data retrieval. Whole city annual fatalities; not construction or SmartFence outcomes."
+}

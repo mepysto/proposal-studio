@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-29",
+  "method": "공식 페이지 열람 및 작성자 검토",
+  "independentReview": false,
+  "sources": [
+    {
+      "url": "https://seyeon.co.kr/aisdk",
+      "supports": "자체 AI 모델 카메라 통합·컴파일·검증·배포 흐름",
+      "doesNotEstablish": "계약·특정 모델 성능·모든 NPU 호환"
+    },
+    {
+      "url": "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html",
+      "supports": "양자화 보정과 정확도 재검증 필요",
+      "doesNotEstablish": "대상 장비의 INT8 지원·속도·정확도"
+    },
+    {
+      "url": "https://onnxruntime.ai/docs/execution-providers/",
+      "supports": "하드웨어별 실행 제공자와 지원 연산에 따른 실행 분담",
+      "doesNotEstablish": "모든 ONNX 모델의 모든 NPU 호환"
+    },
+    {
+      "url": "https://www.onvif.org/profiles/profile-m/",
+      "supports": "분석 메타데이터·이벤트 연동, 기능 지원에 따른 인터페이스",
+      "doesNotEstablish": "후보 장비의 Profile M·MQTT 지원"
+    }
+  ],
+  "proposedOnly": [
+    "분야별 객체검출·추적·밀도 추정 모델 구성",
+    "사건 스키마·규칙·만료·중복 억제 정책",
+    "데이터 분리·사건 단위 평가·복구 절차"
+  ],
+  "noExternalModelAPIs": true
+}

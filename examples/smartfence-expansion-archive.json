@@ -1,0 +1,140 @@
+{
+  "beat": {
+    "visualPlan": {
+      "explanation": {
+        "readerTask": "후속 권역의 조건부 재투입 경로를 이해",
+        "howToRead": "지도 A·B 참고 위치와 단계별 현장 재확인 조건을 대조",
+        "notProven": "지도는 운송 경로가 아니며 문성·성정 설치 수요는 미확정",
+        "requiredMarks": [
+          "map",
+          "connectors"
+        ]
+      },
+      "readingGuide": {
+        "message": "와촌동에서 시작해 후속 공사 수요에 맞춰 재투입",
+        "keyPhrase": "후속 공사 수요",
+        "focusPhrases": [
+          "와촌동 대표 현장",
+          "오룡·원성권",
+          "다음 생활권 사업"
+        ],
+        "tone": "teal"
+      },
+      "intent": "geographic",
+      "map": {
+        "assetId": "cheonan-center",
+        "markers": [
+          {
+            "id": "A",
+            "label": "와촌동권 참고점",
+            "lon": 127.1443358,
+            "lat": 36.8092011,
+            "precision": "locality-reference",
+            "basis": "Nominatim relation/2515711 와촌동 대표 위치. 실제 사업 필지·출입구가 아님.",
+            "sourceClaimIds": [
+              "osm-geography"
+            ]
+          },
+          {
+            "id": "B",
+            "label": "원성1동 행정복지센터",
+            "lon": 127.1630194,
+            "lat": 36.8118367,
+            "precision": "reference-poi",
+            "basis": "Nominatim way/815678957 시설 좌표. 오룡지구 주변 위치 설명용이며 사업 필지·출입구가 아님.",
+            "sourceClaimIds": [
+              "osm-geography"
+            ]
+          }
+        ]
+      },
+      "kind": "expansion-path",
+      "takeaway": "와촌동 대표 출입구에서 적합성을 확인한 뒤 오룡·원성권과 문성·성정 등 공개 계획 권역의 실제 공정·수요에 맞춰 회수 장비와 운영서비스의 후속 적용을 검토합니다.",
+      "encoding": "투영 지도 A·B 참고점과 오른쪽 조건부 재투입 단계. 화살표는 판단 순서이며 운송 경로가 아님.",
+      "evidenceIds": [
+        "reuse-strategy",
+        "city-plan",
+        "readiness",
+        "roadmap-plan",
+        "own-npu",
+        "own-color-led",
+        "integrated-control",
+        "city-reuse-opportunity",
+        "product-platform",
+        "aiot-content",
+        "display-priority",
+        "osm-geography"
+      ],
+      "nodes": [
+        {
+          "id": "m1",
+          "label": "와촌동 대표 현장",
+          "detail": "천안역세권 혁신지구 공개 계획",
+          "icon": "route"
+        },
+        {
+          "id": "m2",
+          "label": "오룡·원성권 후속 현장",
+          "detail": "오룡 리츠·원성권 사업의 잔여 공정 탐색",
+          "icon": "route"
+        },
+        {
+          "id": "m3",
+          "label": "다음 생활권 사업",
+          "detail": "문성·성정 등 공개된 후속 사업 계획",
+          "icon": "route"
+        }
+      ],
+      "edges": [],
+      "legend": "© OpenStreetMap contributors · 참고 위치, 출입구·운송 경로 아님 · 후속 사업·보관·재원·설치 수요 미확정"
+    },
+    "id": "risks",
+    "stage": "business",
+    "sectionId": "risks",
+    "title": "천안의 공사 일정에 맞춘 후속 사업 기회",
+    "question": "실증이 일회성 설치로 끝나지 않으려면 어떻게 확대하는가?",
+    "answer": "와촌동 대표 출입구에서 적합성을 확인한 뒤 오룡·원성권과 문성·성정 등 공개 계획 권역의 실제 공정·수요에 맞춰 회수 장비와 운영서비스의 후속 적용을 검토합니다.",
+    "proofClaimIds": [
+      "privacy-boundary",
+      "readiness",
+      "manual-authority",
+      "governance-plan",
+      "roadmap-plan",
+      "pilot-package",
+      "reuse-strategy",
+      "city-plan",
+      "own-npu",
+      "own-color-led",
+      "integrated-control",
+      "city-reuse-opportunity",
+      "product-platform",
+      "aiot-content",
+      "display-priority",
+      "osm-geography"
+    ],
+    "visualPurpose": "처음부터 일괄 확대하기보다, 기능과 재사용 가치를 확인한 범위에서 다음 현장으로 연결. 관계와 추진 결과를 시각적으로 연결",
+    "limitation": "근거: 제공 사업자료·제안 설계 · 세부 범위와 조건은 협의안"
+  },
+  "section": {
+    "id": "risks",
+    "chapter": "governance",
+    "visual": "municipal",
+    "kicker": "천안시 확산 전략",
+    "items": [
+      {
+        "label": "와촌동 대표 현장",
+        "detail": "천안역세권 혁신지구 공개 계획"
+      },
+      {
+        "label": "오룡·원성권 후속 현장",
+        "detail": "오룡 리츠·원성권 사업의 잔여 공정 탐색"
+      },
+      {
+        "label": "다음 생활권 사업",
+        "detail": "문성·성정 등 공개된 후속 사업 계획"
+      }
+    ],
+    "candidateIds": [],
+    "caption": "확산 경로 제안 · 시 보관 공간·후속 현장·재원은 미확정 · 현장별 적합성·촬영 조건·총비용 재검토"
+  }
+}

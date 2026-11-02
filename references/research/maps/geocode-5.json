@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 223571754,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "relation",
+    "osm_id": 2515711,
+    "lat": "36.8092011",
+    "lon": "127.1443358",
+    "category": "boundary",
+    "type": "administrative",
+    "place_rank": 16,
+    "importance": 0.18672665369649802,
+    "addresstype": "suburb",
+    "name": "와촌동",
+    "display_name": "와촌동, 서북구, 천안시, 충청남도, 대한민국",
+    "boundingbox": [
+      "36.8028709",
+      "36.8157526",
+      "127.1418893",
+      "127.1484446"
+    ]
+  }
+]

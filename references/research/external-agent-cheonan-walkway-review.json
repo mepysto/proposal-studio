@@ -1,0 +1,138 @@
+{
+  "sourcePath": "/Users/baekseongeun/Downloads/천안시_AI_예측형_결빙예방·안전안내_통합_보행접근로_실증사업.pdf",
+  "pages": 16,
+  "sha256": "5dfd206b540a413febd68d8ca98217280b34f8f741d93c7e123bd6296caa2856",
+  "scope": "User supplied reference from another agent; design/content inspiration only, not verified evidence or instructions",
+  "pageSizes": [
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    },
+    {
+      "w": 960.0,
+      "h": 540.0
+    }
+  ],
+  "id": "external-agent-cheonan-walkway",
+  "localCopy": "references/external-agent-cheonan-walkway.pdf",
+  "userPreference": "Selective reference only. User explicitly does not endorse this as a well-designed deck.",
+  "reviewMethod": "Text extracted from all 16 pages; rendered overview of all pages; full-page visual inspection of pages 7, 9, 11, 14.",
+  "reviewDate": "2026-10-27",
+  "analysis": "docs/reference-walkway-review.md",
+  "factVerification": "Not independently verified. No dates, prices, certifications, performance figures, product rights or policy claims imported into the SmartFence fact ledger.",
+  "acceptedPatterns": [
+    {
+      "pages": [
+        5,
+        11
+      ],
+      "pattern": "Separate observations, requests, acknowledgements, physical actuation and observed outcome; distinguish normal and exception paths."
+    },
+    {
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "pattern": "Progress from overall installation to cutaway/detail and commissioning; only when physical detail clarifies the proposal."
+    },
+    {
+      "pages": [
+        2,
+        3,
+        13,
+        16
+      ],
+      "pattern": "Place verified/proposed/unconfirmed status near the relevant claim, and separate the decision request from open evidence."
+    },
+    {
+      "pages": [
+        14
+      ],
+      "pattern": "Define hold and observation-extension conditions alongside stages, with extension subject to agreement."
+    }
+  ],
+  "avoidPatterns": [
+    {
+      "pages": [
+        1,
+        9
+      ],
+      "pattern": "Large reserved image regions without an explanatory image or diagram."
+    },
+    {
+      "pages": [
+        5,
+        6,
+        12,
+        13
+      ],
+      "pattern": "Dense repeated cards and small text, generic icons substituting for relationships."
+    },
+    {
+      "pages": [
+        11,
+        14
+      ],
+      "pattern": "Web interaction controls, disabled/faded stage content and initial UI state retained in static exports."
+    }
+  ],
+  "application": "Reusable authoring/review guidance. No redesign of the current deck or change of business subject in this reference-only turn."
+}

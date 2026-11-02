@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 221463774,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "way",
+    "osm_id": 815678957,
+    "lat": "36.8118367",
+    "lon": "127.1630194",
+    "category": "amenity",
+    "type": "townhall",
+    "place_rank": 30,
+    "importance": 5.99870298313423e-05,
+    "addresstype": "amenity",
+    "name": "원성1동 행정복지센터",
+    "display_name": "원성1동 행정복지센터, 125, 성황로, 원성동, 동남구, 천안시, 충청남도, 31125, 대한민국",
+    "boundingbox": [
+      "36.8117078",
+      "36.8119354",
+      "127.1628889",
+      "127.1631464"
+    ]
+  }
+]

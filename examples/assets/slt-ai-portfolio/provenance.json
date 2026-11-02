@@ -1,0 +1,42 @@
+{
+  "createdAt": "2026-10-29",
+  "origin": "Codex built-in imagegen",
+  "externalModelAPIUsed": false,
+  "assets": [
+    {
+      "path": "examples/assets/slt-ai-portfolio/parking-concept.png",
+      "sourcePath": "/Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab/exec-f8bc1da4-250f-4dca-ba75-c18cd75f5a62.png",
+      "rights": "generated",
+      "purpose": "주차면·보행 접점·LED의 공간 관계 설명",
+      "promptSummary": "Premium generic Korean municipal parking lot, high oblique daylight, marked occupied/empty bays, protected pedestrian crossing, stopped car, CCTV and entrance LED with blank screen, no logos or text, no actual location."
+    },
+    {
+      "path": "examples/assets/slt-ai-portfolio/festival-concept.png",
+      "sourcePath": "/Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab/exec-16dd9156-67e3-4d47-8a3b-07e4a227b962.png",
+      "rights": "generated",
+      "purpose": "혼잡 구역·대체 동선·현장 요원·LED 관계 설명",
+      "promptSummary": "Premium generic Korean public festival entrance, two physically separated routes, left queue and lighter right route, stewards, CCTV, mobile blank LED, high oblique view, safe spacing, no text or actual landmark."
+    },
+    {
+      "path": "examples/assets/slt-ai-portfolio/cover-led-cctv-v1.png",
+      "rights": "generated",
+      "purpose": "대형 LED 전광판·지능형 CCTV를 중심으로 한 도시 솔루션 표지 배경",
+      "promptRecord": "references/research/slt-ai-cover-led-cctv.json",
+      "evidenceLimit": "일반 도시 개념 배경·실제 천안 설치 현장·확정 제품 아님"
+    },
+    {
+      "path": "examples/assets/slt-ai-portfolio/park-safety-concept-v1.png",
+      "rights": "generated",
+      "purpose": "공원 관리차량·보행자·AI CCTV·LED·담당자의 관계 설명",
+      "promptRecord": "references/research/slt-ai-public-space-scene.json",
+      "evidenceLimit": "일반 공원 개념도·실제 천안 시설·발생 사고·확정 배치 아님"
+    }
+  ],
+  "reuse": [
+    {
+      "path": "examples/assets/product-driver-led-v8.png",
+      "purpose": "현재 장표의 실제 공간·수신자 관계를 설명하는 기존 생성 자산 재사용",
+      "evidenceLimit": "일반 개념도·실제 현장 또는 실측 성능 아님"
+    }
+  ]
+}

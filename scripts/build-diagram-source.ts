@@ -1,0 +1,86 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+const source = {
+  meta: {
+    title: "SmartFence AI 제안 시스템",
+    profile: "engineering-review",
+    theme: "tech-blue",
+    source: "generated",
+    layout: "horizontal",
+    canvas: "1280x480",
+    routing: "orthogonal",
+    description: "제안 구조이며 실제 API·설치·성능 검증 전",
+    legend: "실선: 처리·대응 / 점선: 이벤트·기록",
+  },
+  nodes: [
+    {
+      id: "camera",
+      label: "현장 카메라\n영상·장비 상태",
+      type: "service",
+      bounds: { x: 40, y: 100, width: 216, height: 92 },
+    },
+    {
+      id: "edge",
+      label: "현장 Edge\n객체·위험 조건 비교",
+      type: "service",
+      bounds: { x: 352, y: 100, width: 216, height: 92 },
+    },
+    {
+      id: "warning",
+      label: "담당자 경고\n장치 응답·실동작",
+      type: "service",
+      bounds: { x: 664, y: 100, width: 216, height: 92 },
+    },
+    {
+      id: "ledger",
+      label: "운영 원장\n이벤트·장치 이력",
+      type: "database",
+      bounds: { x: 1000, y: 100, width: 216, height: 92 },
+    },
+    {
+      id: "human",
+      label: "유도원\n실제 통행 관리",
+      type: "user",
+      bounds: { x: 664, y: 320, width: 216, height: 92 },
+    },
+    {
+      id: "record",
+      label: "조치 기록\n담당자·시각·결과",
+      type: "document",
+      bounds: { x: 1000, y: 320, width: 216, height: 92 },
+    },
+  ],
+  edges: [
+    { from: "camera", to: "edge", type: "primary" },
+    { from: "edge", to: "warning", type: "primary" },
+    { from: "warning", to: "human", type: "primary" },
+    { from: "human", to: "record", type: "primary" },
+    { from: "record", to: "ledger", type: "data" },
+  ],
+};
+for (const n of source.nodes)
+  Object.assign(n, {
+    style: {
+      fontFamily: "Apple SD Gothic Neo",
+      fontSize: 18,
+      fillColor: n.id === "human" ? "#F5EBDD" : "#FFFFFF",
+      strokeColor: "#B9CBD9",
+      fontColor: "#142C40",
+    },
+  });
+const dest = "examples/diagrams/smartfence-architecture.spec.yaml";
+await fs.writeFile(dest, JSON.stringify(source, null, 2));
+const home = process.env.CODEX_HOME || path.join(process.env.HOME!, ".codex");
+const cli = path.join(home, "skills/professional-drawio/scripts/cli.js");
+for (const extension of ["drawio", "svg"])
+  execFileSync(
+    process.execPath,
+    [
+      cli,
+      dest,
+      `examples/diagrams/smartfence-architecture.${extension}`,
+      "--validate",
+    ],
+    { stdio: "inherit" },
+  );

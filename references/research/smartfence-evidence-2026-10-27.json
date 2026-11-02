@@ -1,0 +1,66 @@
+{
+  "method": "manual web-source inspection during development; not an app search adapter",
+  "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+  "sources": [
+    {
+      "id": "H1",
+      "title": "HSE · Traffic management on site",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/vehiclestrafficmanagement.htm",
+      "scope": "general",
+      "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+      "excerpt": "provide separate entry and exit gateways for pedestrians and vehicles",
+      "applicability": "일반적인 건설현장 동선·시야 설계 원칙. 천안 사고·민원·설치 적합성 또는 한국 법규를 입증하지 않음."
+    },
+    {
+      "id": "H2",
+      "title": "HSE · Protecting the public",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/publicprotection.htm",
+      "scope": "general",
+      "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+      "excerpt": "Make sure pedestrians cannot be struck by vehicles entering or leaving the site.",
+      "applicability": "현장 출입 차량과 시민 통행의 접점을 다루는 일반 지침. 특정 천안 현장의 위험도는 관찰이 필요함."
+    },
+    {
+      "id": "N1",
+      "title": "CDC/NIOSH · Construction Equipment Visibility",
+      "url": "https://www.cdc.gov/niosh/motor-vehicle/constructionequipmentvisibilitydiagram/",
+      "scope": "general",
+      "checkedAt": "2026-10-26T16:01:21.873110+00:00",
+      "excerpt": "Blind areas refer to spaces of limited visibility around construction vehicles and equipment.",
+      "applicability": "차량 주변의 제한 시야에 대한 일반 근거. 차량 기종·울타리 배치별 실제 사각은 별도 실측."
+    }
+  ],
+  "claims": [
+    {
+      "id": "separation",
+      "text": "HSE 지침은 차량·보행 동선 분리와 출입구·교차점의 시야 확보를 강조한다.",
+      "status": "externally-verified",
+      "scope": "general",
+      "sourceIds": [
+        "H1"
+      ],
+      "verifiedAt": "2026-10-26T16:01:21.873110+00:00"
+    },
+    {
+      "id": "public-boundary",
+      "text": "HSE 시민 보호 지침은 출입 차량이 보행자를 위험하게 하지 않도록 동선을 관리하는 문제를 다룬다.",
+      "status": "externally-verified",
+      "scope": "general",
+      "sourceIds": [
+        "H2"
+      ],
+      "verifiedAt": "2026-10-26T16:01:21.873110+00:00"
+    },
+    {
+      "id": "blind-area",
+      "text": "NIOSH는 건설 차량·장비 주변에 제한된 시야 영역이 존재함을 설명한다.",
+      "status": "externally-verified",
+      "scope": "general",
+      "sourceIds": [
+        "N1"
+      ],
+      "verifiedAt": "2026-10-26T16:01:21.873110+00:00"
+    }
+  ],
+  "scopeLimit": "일반 안전 설계 근거만 확인. 천안 현장·사고·성능·한국 법규는 확인하지 않음."
+}

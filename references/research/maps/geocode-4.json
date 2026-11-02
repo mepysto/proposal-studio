@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 222944060,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 415157966,
+    "lat": "36.8090900",
+    "lon": "127.1609600",
+    "category": "place",
+    "type": "quarter",
+    "place_rank": 20,
+    "importance": 0.1333933203631647,
+    "addresstype": "quarter",
+    "name": "원성동",
+    "display_name": "원성동, 동남구, 천안시, 충청남도, 31127, 대한민국",
+    "boundingbox": [
+      "36.7990900",
+      "36.8190900",
+      "127.1509600",
+      "127.1709600"
+    ]
+  }
+]

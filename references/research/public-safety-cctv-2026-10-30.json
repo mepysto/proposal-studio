@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-30",
+  "scope": "Public-safety extension; fair CCTV baseline",
+  "sources": [
+    {
+      "url": "https://help.axis.com/en-us/axis-camera-station-feature-guide",
+      "finding": "Action rules can connect video analytics with recording, audio messages, outputs and operator alerts; integration depends on supported devices and configuration."
+    },
+    {
+      "url": "https://www.axis.com/products/video-analytics",
+      "finding": "Edge camera analytics and object/event analysis exist in marketed CCTV ecosystems."
+    },
+    {
+      "url": "https://www.axis.com/solutions/sound-detection",
+      "finding": "Audio/video event systems can trigger connected speakers and other outputs."
+    }
+  ],
+  "authorInference": "Differentiate the proposed package by site-specific field guidance, two product functions, integrated support, response records and redeployment, not exclusive AI/speakers/monitoring. No performance rank or new public-space demand is established.",
+  "sites": "Facility types only; no coordinates or confirmed Cheonan installations",
+  "compatibilityToVerify": [
+    "camera stream/interface access",
+    "codec and resolution",
+    "latency/time synchronization",
+    "network and permissions",
+    "physical sightline and mounting",
+    "retention/access controls"
+  ]
+}

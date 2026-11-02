@@ -1,0 +1,20 @@
+{
+  "reviewDate": "2026-10-27",
+  "primaryBusinessInput": "User request in this conversation: pedestrian sound alert, inside-yard driver LED with sidewalk situation and construction info, recovery/storage/redeployment after project completion.",
+  "status": "User requirements plus proposed design; not independently measured product readiness or price",
+  "checkedPublicSources": [
+    {
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2118229",
+      "title": "천안시 물품 관리 조례",
+      "readScope": "Title and effective-date listing read; dynamic article body not reliably accessible",
+      "use": "Identify the need for city property/custody procedure review; no conclusion that a chosen storage or contracting arrangement is approved"
+    },
+    {
+      "url": "https://m.privacy.go.kr/front/per/chk/cctv/improveChkCctvQ2.do",
+      "title": "개인정보 포털 CCTV 운영 안내",
+      "readScope": "Search result snippet reviewed; direct opening failed with 502",
+      "use": "Pointer for further privacy review; not legal clearance for live-video display"
+    }
+  ],
+  "notEstablished": ["actual product dimensions and certifications", "field accuracy, alert audibility or driver perception", "approved camera/display processing basis", "city storage space", "ownership and service contract", "expanded purchase and repeat-deployment costs", "savings, break-even or product lifetime"]
+}

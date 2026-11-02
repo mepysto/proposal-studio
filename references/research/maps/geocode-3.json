@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 221467080,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "relation",
+    "osm_id": 2508099,
+    "lat": "36.8065649",
+    "lon": "127.1373904",
+    "category": "boundary",
+    "type": "administrative",
+    "place_rank": 16,
+    "importance": 0.24158668584662718,
+    "addresstype": "quarter",
+    "name": "봉명동",
+    "display_name": "봉명동, 동남구, 천안시, 충청남도, 대한민국",
+    "boundingbox": [
+      "36.8001788",
+      "36.8201980",
+      "127.1241917",
+      "127.1435523"
+    ]
+  }
+]

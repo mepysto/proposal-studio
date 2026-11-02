@@ -1,0 +1,23 @@
+[
+  {
+    "place_id": 226331864,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 368636171,
+    "lat": "36.8102804",
+    "lon": "127.1468400",
+    "category": "railway",
+    "type": "station",
+    "place_rank": 30,
+    "importance": 0.49055877157016814,
+    "addresstype": "railway",
+    "name": "천안",
+    "display_name": "천안, 239, 대흥로, 대흥동, 동남구, 천안시, 충청남도, 31122, 대한민국",
+    "boundingbox": [
+      "36.8052804",
+      "36.8152804",
+      "127.1418400",
+      "127.1518400"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "asOf": "2026-10-30",
+  "authoringMethod": "작성자가 공식 제품 문서와 사용자 요청을 검토해 기획",
+  "comparisonSources": [
+    {
+      "url": "https://help.axis.com/en-us/axis-object-analytics",
+      "supported": "사람·차량·구역·체류 분석과 녹화·음성 메시지·보안 담당자 알림 연계",
+      "limits": "일부 상용 제품 사례; 모든 기존 CCTV 기능으로 일반화하지 않음"
+    },
+    {
+      "url": "https://www.hanwhavision.com/us/products/product-details/SPS-A8016",
+      "supported": "AI 분석·스피커·LED 링·이벤트 연계",
+      "limits": "LED 링은 대형 전광판과 다름; 지역별 공급 조건 별도; SLT보다 부족하다는 근거 아님"
+    }
+  ],
+  "positioning": "현장 대응형 AI 공공안전: 위험 접점·수신자별 안내·담당자 실제 조치·납품/운영 인수 범위를 묶는 제안",
+  "notClaimed": [
+    "SLT 독점 객체검출·경고 기술",
+    "타사 미지원 기능 단정",
+    "성능·비용 우위",
+    "확정된 공공공간 설치 수요"
+  ],
+  "scopeBoundary": "공사장 우선 3개 현장·출입구 각 1곳·12주 협의안 유지. 학교·공원·공공시설 등은 후속 수요·권한·시야·기존 사업 조사 대상."
+}

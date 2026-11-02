@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-29",
+  "origin": "Codex built-in imagegen",
+  "mode": "edit",
+  "externalModelAPIUsed": false,
+  "prompt": "Edit only the yellow dump truck orientation. Keep the entire construction gate scene, pedestrians, CCTV and OUTSIDE-facing horn speaker on left post, flagger, and LARGE LED screen on inner right wall in the SAME positions and with identical proportions. Rotate the dump truck 180 degrees in place so its FRONT CAB and windshield face the viewer, approaching the open gate from INSIDE the yard and stopped well before the sidewalk. The driver must now be able to see the large LED on the right inner wall. Do not put the truck on the sidewalk or outside. Keep the existing two pedestrian video on the LED, no text, no logos, no arrows. Preserve landscape framing and daylight realism.",
+  "input": "examples/assets/slt-ai-portfolio/gate-concept.png",
+  "output": "examples/assets/slt-ai-portfolio/gate-concept-v2.png",
+  "sourceHint": "Generated images are saved to /Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab as /Users/baekseongeun/.codex/generated_images/01a18394-47c9-7473-9e2e-ec112e2cb8ab/exec-11baab3e-1c5f-475c-887e-bf0b92ff3192.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "purpose": "출입구 접근 차량 운전자가 내부 LED를 볼 수 있도록 차량 방향 수정"
+}
